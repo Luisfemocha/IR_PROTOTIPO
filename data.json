@@ -1,0 +1,29 @@
+{"DATABASE":[
+  {"TABLE":[
+      {"name": "CODE","fields": "['MISTAKE','LANGUAGE']"},
+      {"name": "DOCUMENTATION","fields": "['PART']"},
+      {"name": "REQUIREMENT","fields": "['TASK']"},
+      {"name": "DESIGN","fields": "['PHASE']"},
+      {"name": "INDUSTRY_REPRESENTATIVE","fields": "['ID','NAME','ADDRESS','EMAIL','CELLPHONE']"},
+      {"name": "PRESENTATION","fields": "['AUTHOR','CONTENT']"},
+      {"name": "PROJECT","fields": "['NAME','SCRUM_MODEL','DEADLINE','REPOSITORY']"},
+      {"name": "SYSTEM","fields": "['ID','NAME']"},
+      {"name": "STUDENT","fields": "['ID','NAME','ADDRESS','EMAIL','CELLPHONE','SEMESTER','AVERAGE','EXPERIENCE','KNOWLEDGE','MAJOR','SKILL']"},
+      {"name": "CODE","fields": "['MISTAKE','LANGUAGE']"},
+      {"name": "CODE","fields": "['MISTAKE','LANGUAGE']"},
+      {"name": "CODE","fields": "['MISTAKE','LANGUAGE']"},
+      {"name": "CODE","fields": "['MISTAKE','LANGUAGE']"},
+      {"name": "CODE","fields": "['MISTAKE','LANGUAGE']"},
+      {"name": "CODE","fields": "['MISTAKE','LANGUAGE']"}
+    ]
+  },
+  {"STUDENT":[
+    {"ID":100, "NAME":"Ricardo","ADDRESS":"Calle 40 Medellin", "EMAIL":"ricardo@unal.edu.co","CELLPHONE":"3109106542", "SEMESTER":3,"AVERAGE":3.8, "EXPERIENCE":0,"KNOWLEDGE":4, "MAJOR":"Ingeniería de sistemas","SKILL":"['Web designing','Logic modeling','Databases']"},
+    {"ID":101, "NAME":"Andrés","ADDRESS":"Calle 10 Medellin", "EMAIL":"andres@unal.edu.co","CELLPHONE":"3109106542", "SEMESTER":3,"AVERAGE":4.2, "EXPERIENCE":0,"KNOWLEDGE":3, "MAJOR":"Ingeniería de sistemas","SKILL":"['Web designing','Logic modeling','Databases']"},
+    {"ID":102, "NAME":"Maria","ADDRESS":"Carrera 80 Medellin", "EMAIL":"marimari@unal.edu.co","CELLPHONE":"3109106542", "SEMESTER":2,"AVERAGE":3.5, "EXPERIENCE":0,"KNOWLEDGE":3, "MAJOR":"Ingeniería de sistemas","SKILL":"['Web designing','Logic modeling','Databases']"},
+    {"ID":103, "NAME":"Ana","ADDRESS":"Calle 35 Medellin", "EMAIL":"anita@unal.edu.co","CELLPHONE":"3109106542", "SEMESTER":1,"AVERAGE":4.6, "EXPERIENCE":0,"KNOWLEDGE":0, "MAJOR":"Ingeniería de sistemas","SKILL":"['Web designing','Logic modeling','Databases']"},
+    {"ID":104, "NAME":"Mariana","ADDRESS":"Calle 50 Medellin", "EMAIL":"marimar@unal.edu.co","CELLPHONE":"3109106542", "SEMESTER":5,"AVERAGE":3.2, "EXPERIENCE":1,"KNOWLEDGE":6, "MAJOR":"Ingeniería de sistemas","SKILL":"['Web designing','Logic modeling','Databases']"},
+    {"ID":105, "NAME":"José","ADDRESS":"Avenida Bolivariana Medellin", "EMAIL":"josealejandro.martinez@unal.edu.co","CELLPHONE":"3109106542", "SEMESTER":6,"AVERAGE":4.0, "EXPERIENCE":2,"KNOWLEDGE":8, "MAJOR":"Ingeniería de sistemas","SKILL":"['Web designing','Logic modeling','Databases']"}
+    ]
+  }
+]}
