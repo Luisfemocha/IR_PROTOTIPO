@@ -1,28 +1,37 @@
-function modal(a,b){
-    var modal= document.getElementById('modal');
-    var cuerpo= document.getElementById('modalBody');
-    /*while(cuerpo.firstChild){ //limpiar el cuerpo del modal
-        cuerpo.removeChild(cuerpo.firstChild);
-    }*/
-    var tit= b;
-    if (! b) {
-        tit= a.replace(/\.png$/gi,'');
-        var h= document.createElement("h1");
-        h.innerHTML='CUERPO DEL CASO DE USO DE '+a.toUpperCase();
-        cuerpo.appendChild(h);
-        document.getElementById("imagen").src="media/"+a;
-        var but= document.getElementById("aceptarModal");
-        but.innerHTML ='ACEPTAR CASO DE USO';
-        but.hidden="";
-        but.onclick=function(){alert('Se acepta el caso de uso de '+tit)}
+let mod= $("#modal");
+let tabla= $('#modalTable')
+let but= $("#aceptarModal");
+
+function modalIndex(a){
+    tabla.empty();
+    switch (a) {
+        case 1: InsRep();// install repository
+        case 2: // write code
+        case 3: // commit activity
+        case 4: // read documentation
+        case 5: // extract requirement
+        case 6: // extract task
+        case 7: // delegate task
+        case 8: // evaluate activity
+        case 9: // design rubric
+        case 10: // evaluate sprint
+        case 11: // provide feedback
+        case 12: // design activity
+        case 13: // select project
+        case 14: // give template
+        case 15: // realize task
+        case 16: // present project
+        case 17: // communicate industry_representative
     }
-    else cuerpo.innerHTML= document.getElementById('STUDENT').innerHTML;
-    document.getElementById('titModal').innerHTML= 'CASO DE USO DE '+tit;
-
-    modal.style.display = "block";
+    mod.modal('show');
 }
-function guardar(tabla, objeto){
-
+function InsRep(){ // install repository
+    but.hidden='hidden';
+    tabla.append($("<a download='Repository.java'>PULL</a>").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("import java.util.*;\nclass main{\n  public static void main(String[] args){\n       System.out.println('Hello world :D');\n  }\n}")));
+    tabla.on('click', function (){
+        console.log("import java.util.*;\nclass main{\n  public static void main(String[] args){\n       System.out.println('Hello world :D');\n  }\n}");
+        mod.modal('hide');
+    });
 }
-function modificar(tabla, objeto, mod){
-}
+function guardar(tabla, objeto){}
+function modificar(tabla, objeto, mod){}
