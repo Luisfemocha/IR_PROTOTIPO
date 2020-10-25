@@ -5,14 +5,8 @@ let tit=   $('#titModal');
 let but=   $("#aceptarModal");
 
 function modalIndex(a){
-    // while(table.firstChild) table.removeChild(table.firstChild);
-    // if      (a==1) InsRep();
-    // else if (a==2) WriCod();
     table.empty();
     $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');
-    var uc='UC0';
-    if (a>9) uc='UC'
-    console.log(uc+a);
     switch (a) {
         case 1: InsRep(); // install repository
             break;
@@ -52,10 +46,32 @@ function modalIndex(a){
             break;
         case 19: SupTea(); // Supervise Team
             break;
-        default: alert('ERROR IN THE USER CASE NUMBER');
+        case 20: console.log('???'); //-BREAK CASE-//^ USER CASES UP ^//v KEEP PERFORMANCE INDICATOR DOWN v
+            break;
+        case 21: getGrade();
+            break; // grade                1. Knowledge increase
+        case 22: getActivityPerformed();
+            break; // activityPerformed    2. Skills increase
+        case 23: getMajorAdvance();
+            break; // majorAdvance         3. Student’s grades availability
+        case 24: getActivityAvailability();
+            break; // activityAvailability 4. Activities availability
+        case 25: getDeadline();
+            break; // deadline             5. Project's deadline control
+        case 26: getSprintsPerformed();
+            break; // sprintsPerformed     6. Projects delivery
+        case 27: getTeamSize();
+            break; // teamSize             7. Team management
+        default: alert('ERROR IN THE USER CASE // KPI NUMBER');
     }
+    var b='UC0';
+    if (a>20) {
+        b='KPI-';
+        a-=20;
+    }
+    else if (a>9) b='UC'
+    console.log(b+a);
     $('#modal').modal('show');
-    //but.hidden='';
 }
 
 function showTable(title, elements, bol){ /// *WITH CHECKBOXES OR RADIO*
@@ -80,7 +96,6 @@ function showTable(title, elements, bol){ /// *WITH CHECKBOXES OR RADIO*
         j++;
     });
 } /// *WITH CHECKBOXES OR RADIO*
-
 function showForm(title, elements, tip, type){
     var j=0;
     table.append($("<caption style='caption-side: top;'></caption>").html(title));
@@ -100,7 +115,15 @@ function showForm(title, elements, tip, type){
         j++;
     });
 }
+function number_format(val, decimals){
+    //Parse the value as a float value
+    val = parseFloat(val);
+    //Format the value w/ the specified number
+    //of decimal places and return it.
+    return val.toFixed(decimals);
+}
 
+// USER CASES //
 function InsRep(){ // UC01 - INSTALL REPOSITORY
     table.empty();
     tit.html('INSTALL REPOSITORY');
@@ -109,7 +132,6 @@ function InsRep(){ // UC01 - INSTALL REPOSITORY
     table.append($("<a download='Repository.java' class='btn btn-success btn-lg'>pull</a>").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("import java.util.*;\nclass main{\n  public static void main(String[] args){\n       System.out.println('Hello world :D');\n  }\n}")));
     table.append($("<button class='btn btn-primary btn-lg mx-3'>see</button>").on('click', function (){ console.log("import java.util.*;\nclass main{\n  public static void main(String[] args){\n       System.out.println('Hello world :D');\n  }\n}")}));
 } // UC01 - INSTALL REPOSITORY
-
 function WriCod(){ // UC02 - WRITE CODE
     table.empty();
     but.show();
@@ -126,7 +148,6 @@ function WriCod(){ // UC02 - WRITE CODE
         setTimeout(() => { table.empty();} , 1000);
     });
 } // UC02 - WRITE CODE
-
 function ComAct(){ // UC03 - COMMIT ACTIVITY
     table.empty();
     but.show();
@@ -145,7 +166,6 @@ function ComAct(){ // UC03 - COMMIT ACTIVITY
         setTimeout(() => { table.empty(); }, 1000);
     });
 } // UC03 - COMMIT ACTIVITY
-
 function ReaDoc(){ // UC04 - READ DOCUMENTATION
     table.empty();
     but.show();
@@ -161,7 +181,6 @@ function ReaDoc(){ // UC04 - READ DOCUMENTATION
         setTimeout(() => { table.empty(); }, 1000);
     });
 } // UC04 - READ DOCUMENTATION
-
 function ExtReq(){ // UC05 - EXTRACT REQUIREMENT
     table.empty();
     but.show();
@@ -178,7 +197,6 @@ function ExtReq(){ // UC05 - EXTRACT REQUIREMENT
         table.empty();
     });
 } // UC05 - EXTRACT REQUIREMENT
-
 function ExtTas(){ // UC06 - EXTRACT TASK
     table.empty();
     but.show();
@@ -195,7 +213,6 @@ function ExtTas(){ // UC06 - EXTRACT TASK
         table.empty();
     });
 } // UC06 - EXTRACT TASK
-
 function DelTas(){ // UC07 - DELEGATE TASK
     table.empty();
     but.show();
@@ -224,7 +241,6 @@ function DelTas(){ // UC07 - DELEGATE TASK
         setTimeout(() => {table.empty(); }, 2000);
     });
 } // UC07 - DELEGATE TASK
-
 function EvaAct(){ // UC08 - EVALUATE ACTIVITY
     table.empty();
     but.show();
@@ -254,21 +270,20 @@ function EvaAct(){ // UC08 - EVALUATE ACTIVITY
         setTimeout(() => { table.empty(); }, 1000);
     });
 } // UC08 - EVALUATE ACTIVITY
-
 function DesRub(){ // UC09 - DESIGN RUBRIC
     table.empty();
     but.show();
     tit.html('DESIGN RUBRIC');
     but.html('SAVE');
     table.append($("<p>Write the criterion for the rubric of the activity, you can push the '+' button to add more criterion. Push 'SAVE' in order to save it/them.</p>"));
-    table.append($("<tr></tr>").append("<td class='pr-0' max-width='414.4px'><input id='dr' placeholder='Criterion' class='form-control pr-0' name='crit' ></td><td width='14.4px' height='38.2px'></td>"));
+    table.append($("<tr></tr>").append("<td class='pr-0' width='414.4px'><input id='dr' placeholder='Criterion' class='form-control pr-0' name='crit' ></td><td width='14.4px' height='38.2px'></td>"));
     table.append($("<caption class='m-0 p-0'><svg id='add' style='caption-side: bottom; color: #212529;' width=\"2.5em\" height=\"2.5em\" viewBox=\"0 0 16 16\" class=\"bi bi-file-plus-fill m-0 float-right\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z\"/></svg></caption>"))
     var i=1;
     $("#add").click(function () {
         i++;
         var t=$("<tr></tr>");
         t.append($("<td class='pr-0'></td>").append($("<input class='form-control' name='crit'>").attr('id','dr'+i).attr('placeholder', 'Criterion')));
-        t.append($("<td class='py-auto px-0 m-0'></td>").append($("<svg width='38px' height='38px' viewBox=\"0 0 16 16\" class='bi bi-file-minus-fill' fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 7.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6z\"/></svg>").attr('id','rem'+i).on('click', function(){this.parentElement.parentElement.remove()})));
+        t.append($("<td class='py-auto px-0 m-0'></td>").append($("<svg width='38px' height='38px' viewBox=\"0 0 16 16\" class='bi bi-file-minus-fill' fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 7.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6z\"/></svg>").attr('id','rem'+i).on('click', function(){this.parentElement.parentElement.remove(); i-=1})));
         table.append(t);
     });
 
@@ -280,10 +295,9 @@ function DesRub(){ // UC09 - DESIGN RUBRIC
         console.log('SAVING THE RUBRIC...');
         setTimeout(() => { console.log('Criterion: '+f.replace(/, $/g, '')); }, 2000);
         mod.modal('hide');
-        table.empty();
+        setTimeout(() => { table.empty();} , 1000);
     });
 } // UC09 - DESIGN RUBRIC
-
 function EvaSpr(){ // UC10 - EVALUATE SPRINT
     table.empty();
     but.show();
@@ -320,7 +334,6 @@ function EvaSpr(){ // UC10 - EVALUATE SPRINT
         setTimeout(() => { table.empty(); }, 1000);
     });
 } // UC10 - EVALUATE SPRINT
-
 function ProFee(){ // UC11 - PROVIDE FEEDBACK
     table.empty();
     but.show();
@@ -339,7 +352,6 @@ function ProFee(){ // UC11 - PROVIDE FEEDBACK
         table.empty();
     });
 } // UC11 - PROVIDE FEEDBACK
-
 function DesAct(){ // UC12 - DESIGN ACTIVITY
     table.empty();
     but.show();
@@ -360,7 +372,6 @@ function DesAct(){ // UC12 - DESIGN ACTIVITY
         table.empty();
     });
 } // UC12 - DESIGN ACTIVITY
-
 function SelPro(){ // UC13 - SELECT PROJECT
     table.empty();
     but.show();
@@ -384,7 +395,6 @@ function SelPro(){ // UC13 - SELECT PROJECT
         else console.log("THERE HASN'T BEEN A SELECTED PROJECT YET.");
     });
 } // UC13 - SELECT PROJECT
-
 function GivTem(){ // UC14 - GIVE TEMPLATE
     table.empty();
     but.show();
@@ -403,7 +413,6 @@ function GivTem(){ // UC14 - GIVE TEMPLATE
         setTimeout(() => { table.empty(); }, 1000);
     });
 } // UC14 - GIVE TEMPLATE
-
 function ReaTas(){ // UC15 - REALIZE TASK
     table.empty();
     but.show();
@@ -427,7 +436,6 @@ function ReaTas(){ // UC15 - REALIZE TASK
         setTimeout(() => { table.empty(); }, 1000);
     });
 } // UC15 - REALIZE TASK
-
 function PrePro(){ // UC16 - PRESENT PROJECT
     table.empty();
     but.show();
@@ -446,7 +454,6 @@ function PrePro(){ // UC16 - PRESENT PROJECT
         setTimeout(() => { table.empty(); }, 1000);
     });
 } // UC16 - PRESENT PROJECT
-
 function ComInd(){ // UC17 - COMMUNICATE INDUSTRY_REPRESENTATIVE
     table.empty();
     but.show();
@@ -463,7 +470,6 @@ function ComInd(){ // UC17 - COMMUNICATE INDUSTRY_REPRESENTATIVE
         setTimeout(() => { table.empty();} , 1000);
     });
 } // UC17 - COMMUNICATE INDUSTRY_REPRESENTATIVE
-
 function SolInq(){ // UC18 - SOLVE INQUIRIES
     table.empty();
     but.show();
@@ -481,7 +487,6 @@ function SolInq(){ // UC18 - SOLVE INQUIRIES
         table.empty();
     });
 } // UC18 - SOLVE INQUIRIES
-
 function SupTea(){ // UC19 - SUPERVISE TEAM
     table.empty();
     but.show();
@@ -496,3 +501,153 @@ function SupTea(){ // UC19 - SUPERVISE TEAM
         setTimeout(() => {table.empty(); }, 2000);
     });
 } // UC19 - SUPERVISE TEAM
+
+// KEEP PERFORMANCE INDICATORS //
+function getGrade() { // KPI-1 - Knowledge increase
+    table.empty();
+    but.show();
+    tit.html('KPI-1 - Knowledge increase');
+    but.html('Get Grade');
+    table.append($("<p>Press '+' to add another student and write the grade of each one. Press 'Get Grade' to calculate the grade.</p>"));
+    table.append($("<p>Formula: sum (grade) / total students</p>"));
+    table.append($("<tr></tr>").append("<td class='pr-0' width='414.4px'><input id='gr1' placeholder='Grade' class='form-control pr-0' name='grad' type='number' required></td><td width='14.4px' height='38.2px'></td>"));
+    table.append($("<caption class='m-0 p-0'><svg id='add' style='caption-side: bottom; color: #212529;' width=\"2.5em\" height=\"2.5em\" viewBox=\"0 0 16 16\" class=\"bi bi-file-plus-fill m-0 float-right\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z\"/></svg></caption>"))
+    var i=1;
+    $("#add").click(function () {
+        i++;
+        var t=$("<tr></tr>");
+        t.append($("<td class='pr-0'></td>").append($("<input class='form-control' name='grad' type='number' required>").attr('id','gr'+i).attr('placeholder', 'Grade')));
+        t.append($("<td class='py-auto px-0 m-0'></td>").append($("<svg name='rem' width='38px' height='38px' viewBox=\"0 0 16 16\" class='bi bi-file-minus-fill' fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 7.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6z\"/></svg>").attr('id','rem'+i).on('click', function(){this.parentElement.parentElement.remove(); i-=1})));
+        table.append(t);
+    });
+    but.off();
+    but.click(function(){ // this will be the future getGrade(), the outer is just design.
+        let a=$("input[name ='grad']");
+        var grade=0;
+        let l=a.length;
+        for(let i=0; i<l; i++) grade+=(a[i].value/l);
+        console.log('Grade: '+number_format(grade, 2));
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+        return grade;
+    });
+}               // KPI-1 - Knowledge increase
+function getActivityPerformed(){ // KPI-2 - Skills increase
+    table.empty();
+    but.show();
+    tit.html('KPI-2 - Skills increase');
+    but.html('Get ActivityPerformed');
+    table.append($("<p>Write the number of completed activities and the total of activities then push 'Get ActivityPerformed' to calculate activityPerformed.</p>"));
+    table.append($("<p>Formula: (completed activities / total activities) * 100</p>"));
+    table.append($("<input id='ap1' class='form-control' placeholder='completed activities' type='number' required>"));
+    table.append($("<input id='ap2' class='form-control' placeholder='total activities' type='number' required>"));
+    but.off();
+    but.click(function(){
+        let activityPerformed= ($('#ap1').val()/$('#ap2').val()) * 100;
+        console.log('ActivityPerformed: '+number_format(activityPerformed, 2));
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+        return activityPerformed;
+    });
+}    // KPI-2 - Skills increase
+function getMajorAdvance(){ // KPI-3 - Student’s grades availability
+    table.empty();
+    but.show();
+    tit.html('KP-3 - Student’s grades availability');
+    but.html('Get MajorAdvance');
+    table.append($("<p>Press '+' to add another student and write the grade of each one. Press 'Get MajorAdvance' to calculate majorAdvance.</p>"));
+    table.append($("<p>Formula: sum (student grade) / total students</p>"));
+    table.append($("<tr></tr>").append("<td class='pr-0' width='414.4px'><input id='gr1' placeholder='Grade' class='form-control pr-0' name='grad' type='number' required></td><td width='14.4px' height='38.2px'></td>"));
+    table.append($("<caption class='m-0 p-0'><svg id='add' style='caption-side: bottom; color: #212529;' width=\"2.5em\" height=\"2.5em\" viewBox=\"0 0 16 16\" class=\"bi bi-file-plus-fill m-0 float-right\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z\"/></svg></caption>"))
+    var i=1;
+    $("#add").click(function () {
+        i++;
+        var t=$("<tr></tr>");
+        t.append($("<td class='pr-0'></td>").append($("<input class='form-control' name='grad' type='number' required>").attr('id','gr'+i).attr('placeholder', 'Grade')));
+        t.append($("<td class='py-auto px-0 m-0'></td>").append($("<svg name='rem' width='38px' height='38px' viewBox=\"0 0 16 16\" class='bi bi-file-minus-fill' fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 7.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6z\"/></svg>").attr('id','rem'+i).on('click', function(){this.parentElement.parentElement.remove(); i-=1})));
+        table.append(t);
+    });
+    but.off();
+    but.click(function(){ // this will be the future getMajorAdvance(), the outer is just design.
+        let a=$("input[name ='grad']");
+        var majorAdvance=0;
+        let l=a.length;
+        for(let i=0; i<l; i++) majorAdvance+=(a[i].value/l);
+        console.log('MajorAdvance: '+number_format(majorAdvance, 2));
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+        return majorAdvance;
+    });
+}         // KPI-3 - Student’s grades availability
+function getActivityAvailability(){ // KPI-4 - Activities availability
+    table.empty();
+    but.show();
+    tit.html('KPI-4 - Activities availability');
+    but.html('Get ActivityAvailability');
+    table.append($("<p>Write the number of finished activities and the total of activities then push 'Get ActivityAvailability' to calculate activityAvailability.</p>"));
+    table.append($("<p>Formula: finished activities / total_activities </p>"));
+    table.append($("<input id='a1' class='form-control' placeholder='finished activities' type='number' required>"));
+    table.append($("<input id='a2' class='form-control' placeholder='total activities' type='number' required>"));
+    but.off();
+    but.click(function(){
+        let activityAvailability= $('#a1').val()/$('#a2').val();
+        console.log('ActivityAvailability: '+number_format(activityAvailability, 2));
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+        return activityAvailability;
+    });
+} // KPI-4 - Activities availability
+function getDeadline(){ // KPI-5 - Project's deadline control
+    table.empty();
+    but.show();
+    tit.html('KPI-5 - Project\'s deadline control');
+    but.html('Get Deadline');
+    table.append($("<p>Write the delivery activity (the due date) and the delivery date (when the team commits the activity) then push 'Get Deadline' to calculate deadline.</p>"));
+    table.append($("<p>Formula: delivery_activity - delivery_date</p>"));
+    table.append($("<label>delivery activity</label><input id='a1' class='form-control' placeholder='delivery activity' type='date' required>"));
+    table.append($("<label>delivery date</label><input id='a2' class='form-control' placeholder='delivery date' type='date' required>"));
+    but.off();
+    but.click(function(){
+        let deadline= new Date($('#a1').val()) - new Date($('#a2').val());
+        console.log('Deadline: '+deadline);
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+        return deadline;
+    });
+}             // KPI-5 - Project's deadline control
+function getSprintsPerformed(){ // KPI-6 - Projects delivery
+    table.empty();
+    but.show();
+    tit.html('KPI-6 - Projects delivery');
+    but.html('Get SprintsPerformed');
+    table.append($("<p>Write the number of commits and the total of sprints then push 'Get SprintsPerformed' to calculate sprintsPerformed.</p>"));
+    table.append($("<p>Formula: (commits number / total sprint)*100</p>"));
+    table.append($("<input id='a1' class='form-control' placeholder='commits number' type='number' required>"));
+    table.append($("<input id='a2' class='form-control' placeholder='total sprints' type='number' required>"));
+    but.off();
+    but.click(function(){
+        let sprintsPerformed= ($('#a1').val()/$('#a2').val()) * 100;
+        console.log('SprintsPerformed: '+number_format(sprintsPerformed, 2));
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+        return sprintsPerformed;
+    });
+}     // KPI-6 - Projects delivery
+function getTeamSize(){ // KPI-7 - Team management
+    table.empty();
+    but.show();
+    tit.html('KPI-7 - Team management');
+    but.html('Get TeamSize');
+    table.append($("<p>Write the total students and expected students then push 'Get TeamSize' to calculate teamSize.</p>"));
+    table.append($("<p>Formula: total students - expected students</p>"));
+    table.append($("<input id='a1' class='form-control' placeholder='total students' type='number' required>"));
+    table.append($("<input id='a2' class='form-control' placeholder='expected students' type='number' required>"));
+    but.off();
+    but.click(function(){
+        let teamSize= $('#a1').val() - $('#a2').val();
+        console.log('TeamSize: '+teamSize);
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+        return teamSize;
+    });
+}             // KPI-7 - Team management
