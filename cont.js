@@ -10,7 +10,9 @@ function modalIndex(a){
     // else if (a==2) WriCod();
     table.empty();
     $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');
-    console.log(a);
+    var uc='UC0';
+    if (a>9) uc='UC'
+    console.log(uc+a);
     switch (a) {
         case 1: InsRep(); // install repository
             break;
@@ -50,15 +52,14 @@ function modalIndex(a){
             break;
         case 19: SupTea(); // Supervise Team
             break;
-        default: alert('ERROR EN EL NUMERO DE CASO DE USO');
+        default: alert('ERROR IN THE USER CASE NUMBER');
     }
     $('#modal').modal('show');
     //but.hidden='';
 }
 
-function showTable(title, elements, bol){ /// *WITH CHECKBOXES OR RADIOS*
+function showTable(title, elements, bol){ /// *WITH CHECKBOXES OR RADIO*
     var j=1;
-
     table.append($("<caption style='caption-side: top;'></caption>").html(title));
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     elements[0].forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
@@ -78,18 +79,23 @@ function showTable(title, elements, bol){ /// *WITH CHECKBOXES OR RADIOS*
         table.append(row);
         j++;
     });
-} /// *WITH CHECKBOXES*
+} /// *WITH CHECKBOXES OR RADIO*
 
-function showForm(title, elements, tip){
-    var j=1;
+function showForm(title, elements, tip, type){
+    var j=0;
     table.append($("<caption style='caption-side: top;'></caption>").html(title));
 
     elements.forEach(function(r){ // FILL THE TABLE AND DO A FORM IN IT. (filling each row)
         var row =$('<tr></tr>');
         row.append($("<td class=''></td>").append("<p></p>").html(r)); //.attr('id',j)
-        if      (tip==1) row.append($("<input class='form-control'>").attr('id',r));
-        else if (tip==2) row.append($("<textarea class='form-control'></textarea>").attr('id',r));
-
+        if (type) {
+            if      (tip == 1) row.append($("<input class='form-control' required>").attr('id', r).attr('type',type[j]));
+            else if (tip == 2) row.append($("<textarea class='form-control' required></textarea>").attr('id', r).attr('type',type[j]));
+        }
+        else{
+            if      (tip == 1) row.append($("<input class='form-control' required>").attr('id', r));
+            else if (tip == 2) row.append($("<textarea class='form-control' required></textarea>").attr('id', r));
+        }
         table.append(row);
         j++;
     });
@@ -195,18 +201,23 @@ function DelTas(){ // UC07 - DELEGATE TASK
     but.show();
     tit.html('DELEGATE TASK');
     but.html('DONE');
-    let e=[['NAME','DIFFICULTY','TYPE'],['LOREM','Manageable','Critical'],['IPSUM','Manageable','Standard'],['DOLOR','Manageable','Standard'],['SI','Manageable','Critical'],['AMET','Unmanageable','Critical']];
+    let e=[['NAME','DIFFICULTY','TYPE'],['Realize the commit.','Manageable.','Critical.'],['Show the progress.','Manageable.','Standard.'],['Talk to the lazy one.','Manageable.','Standard.'],['Help the others with the quiz.','Manageable.','Critical.'],['DOLOR.','Unmanageable.','Critical.']];
     showTable("Check which tasks you'll like to delegate and then push 'DONE' to delegate them.", e, 'check');
+    var a= $("<select id='students' class='form-control'></select>");
+    let f= ['Jairo Andrés Cortés Roncancio.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    table.append($("<td colspan='2'>Student to delegate task(s):</td>"))
+    table.append($("<td colspan='2'></td>").html(a));
     but.off();
     but.on('click', function(){
         var deleg= $('input[name="checkbox"]:checked');
+        var stu= $( "#students option:selected").text();
         if (deleg.length){
-            console.log("THE TASKS TO DELEGATE ARE: ");
+            var s='';
             deleg.each(function(){
-                var s='';
-                e[$(this).val()].forEach(function (r){ s+=''+r+' '; })
-                console.log(s);
-            });
+                s+='\n -';
+                e[$(this).val()].forEach(function (r){ s+=' '+r; }) });
+            console.log("THE TASKS TO DELEGATE ARE: "+s+"\nThey are delegated to "+stu);
         }
         else console.log('THERE ARE NOT TASKS TO DELEGATE.')
         mod.modal('hide');
@@ -237,7 +248,7 @@ function EvaAct(){ // UC08 - EVALUATE ACTIVITY
         let a4= $('#ea4').val();
         let a5= $('#ea5').val();
         console.log('SAVING EVALUATION...');
-        setTimeout(() => { console.log("Evaluation.\n\nFINAL GRADE: "+a+"\n\nCOMMENTS\n - Code: "+a1+"\n - Presentation: "+a2+"\n - Progress: "+a3+"\n - Consistency: "+a4+"\n - Functions: "+a5); }, 2000);
+        setTimeout(() => { alert("FINAL GRADE: "+a); console.log("Evaluation.\n\nFINAL GRADE: "+a+"\n\nCOMMENTS\n - Code: "+a1+"\n - Presentation: "+a2+"\n - Progress: "+a3+"\n - Consistency: "+a4+"\n - Functions: "+a5); }, 2000);
         mod.modal('hide');
         setTimeout(() => { $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');}, 1000);
         setTimeout(() => { table.empty(); }, 1000);
@@ -249,13 +260,25 @@ function DesRub(){ // UC09 - DESIGN RUBRIC
     but.show();
     tit.html('DESIGN RUBRIC');
     but.html('SAVE');
-    table.append($("<p>Write the rubric of the activity and then push 'SAVE' in order to save it.</p>"));
-    table.append($("<textarea id='dr9' class='form-control'></textarea>"));
+    table.append($("<p>Write the criterion for the rubric of the activity, you can push the '+' button to add more criterion. Push 'SAVE' in order to save it/them.</p>"));
+    table.append($("<tr></tr>").append("<td class='pr-0' max-width='414.4px'><input id='dr' placeholder='Criterion' class='form-control pr-0' name='crit' ></td><td width='14.4px' height='38.2px'></td>"));
+    table.append($("<caption class='m-0 p-0'><svg id='add' style='caption-side: bottom; color: #212529;' width=\"2.5em\" height=\"2.5em\" viewBox=\"0 0 16 16\" class=\"bi bi-file-plus-fill m-0 float-right\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z\"/></svg></caption>"))
+    var i=1;
+    $("#add").click(function () {
+        i++;
+        var t=$("<tr></tr>");
+        t.append($("<td class='pr-0'></td>").append($("<input class='form-control' name='crit'>").attr('id','dr'+i).attr('placeholder', 'Criterion')));
+        t.append($("<td class='py-auto px-0 m-0'></td>").append($("<svg width='38px' height='38px' viewBox=\"0 0 16 16\" class='bi bi-file-minus-fill' fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 7.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6z\"/></svg>").attr('id','rem'+i).on('click', function(){this.parentElement.parentElement.remove()})));
+        table.append(t);
+    });
+
     but.off();
     but.click(function(){
-        let a=$('#dr9').val();
+        var a=$("input[name ='crit']");
+        var f='';
+        for(let i=0; i<a.length; i++) f+=''+a[i].value+', ';
         console.log('SAVING THE RUBRIC...');
-        setTimeout(() => { console.log(a); }, 2000);
+        setTimeout(() => { console.log('Criterion: '+f.replace(/, $/g, '')); }, 2000);
         mod.modal('hide');
         table.empty();
     });
@@ -266,15 +289,35 @@ function EvaSpr(){ // UC10 - EVALUATE SPRINT
     but.show();
     tit.html('EVALUATE SPRINT');
     but.html('SAVE');
-    table.append($("<p>Write the evaluation of the sprint and then push 'SAVE' in order to save it.</p>"));
-    table.append($("<textarea id='ev10' class='form-control'></textarea>"));
+    $("#modalDiag").addClass('modal-lg');
+    let e= [['id','name','time_range','theme','type','delivery_date','percentage'], [1,'User Stories', 'Weeks 1-2', 'Agile development', 'Modeling Activities', '24/10/2020','15%'], [2, 'Use case modeling', 'Weeks 2-3', 'Requirement analysis', 'Team Activities', '25/10/2020', '10%'], [3, 'Data flow diagram', 'Weeks 3-4', 'Structured modeling', 'Open Source Activities', '29/10/2020', '5%'], [4, 'Decomposition diagram', 'Weeks 4-5', 'Requirement modeling', 'Modeling Activities', '30/10/2020', '25%']]
+    showTable("Select which sprint and which team to evaluate and then fill the grade and description below. Push 'SAVE' to save the evaluation.", e, 'radio');
+
+    table.append($("<td colspan='4'><textarea id='es1' class='form-control' placeholder='Commentaries' required></textarea></td>"));
+    table.append($("<td colspan='2'><input id='es2' class='form-control' placeholder='Grade' type='number' required></td>"));
+    let f= ['Team 1', 'Team 2','Team 3','Team 4'];
+    var g= $("<select id='teams' class='form-control'></select>");
+    f.forEach(function (r){ g.append($("<option></option>").html(r).attr('id',r).attr('name','team')) });
+    table.append($("<td colspan='2'></td>").html(g));
+
     but.off();
     but.click(function(){
-        let a=$('#ev10').val();
-        console.log('SAVING THE EVALUATION...');
-        setTimeout(() => { console.log(a); }, 2000);
+        let a=$('#es1').val();
+        let b=$('#es2').val();
+        let sel= $('input[name="radio"]:checked');
+        var activity;
+        if (sel.length) {
+            sel.each(function () {
+                activity= e[$(this).val()][1];
+            });
+        }
+        else activity= null;
+        let team= $( "#teams option:selected").text();
+        console.log('SAVING EVALUATION...');
+        setTimeout(() => { console.log('Evaluation of: '+team+'\nACTIVITY: '+activity+"\n\nGRADE: "+b+"\nCOMMENTARIES: "+a) }, 2000);
         mod.modal('hide');
-        table.empty();
+        setTimeout(() => { $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');}, 1000);
+        setTimeout(() => { table.empty(); }, 1000);
     });
 } // UC10 - EVALUATE SPRINT
 
@@ -284,12 +327,14 @@ function ProFee(){ // UC11 - PROVIDE FEEDBACK
     tit.html('PROVIDE FEEDBACK');
     but.html('SAVE');
     table.append($("<p>Write the feedback and then push 'SAVE' in order to send it.</p>"));
-    table.append($("<textarea id='pf11' class='form-control'></textarea>"));
+    table.append($("<input id='pf1' class='form-control' placeholder='Author' required>"));
+    table.append($("<textarea id='pf2' class='form-control' placeholder='Feedback' required></textarea>"));
     but.off();
     but.click(function(){
-        let a=$('#pf11').val();
+        let a=$('#pf1').val();
+        let b=$('#pf2').val();
         console.log('SAVING THE FEEDBACK...');
-        setTimeout(() => { console.log(a); }, 2000);
+        setTimeout(() => { console.log("Feedback:\n\n- Author: "+a+"\n- Feedback: "+b); }, 2000);
         mod.modal('hide');
         table.empty();
     });
@@ -301,7 +346,8 @@ function DesAct(){ // UC12 - DESIGN ACTIVITY
     tit.html('DESIGN ACTIVITY');
     but.html('SAVE');
     let e=['id','name','time_range','theme','type','delivery_date','percentage'];
-    showForm('Complete the form in order to design the activity.', e, 1);
+    let type=['number','text','text','text','text','date','number'];
+    showForm('Complete the form in order to design the activity.', e, 1, type);
     but.off();
     but.click(function(){
         var a=' ACTIVITY ';
@@ -324,10 +370,10 @@ function SelPro(){ // UC13 - SELECT PROJECT
     showTable("Select which project you'll like to select and then push 'DONE' to select it.", e, 'radio');
     but.off();
     but.on('click', function(){
-        var deleg= $('input[name="radio"]:checked');
-        if (deleg.length){
+        var sel= $('input[name="radio"]:checked');
+        if (sel.length){
             console.log("THE PROJECT YOU SELECTED IS: ");
-            deleg.each(function(){
+            sel.each(function(){
                 var s='';
                 e[$(this).val()].forEach(function (r){ s+=''+r+' '; })
                 console.log(s);
@@ -372,11 +418,11 @@ function ReaTas(){ // UC15 - REALIZE TASK
     table.append($("<input id='rt2' type='file' class='form-control-file'>"));
     but.off();
     but.on('click', function(){
-        var deleg= $( "#tasks option:selected").text();
+        var real= $( "#tasks option:selected").text();
         let a= $('#rt1').val();
         let b= $('#rt2').val();
         console.log('REALIZING TASK...\n');
-        setTimeout(() => { console.log("The task "+deleg+" was made by submitting "+a+' and/or the file '+b); }, 2000);
+        setTimeout(() => { console.log("The task "+real+" was made by submitting "+a+' and/or the file '+b); }, 2000);
         mod.modal('hide');
         setTimeout(() => { table.empty(); }, 1000);
     });
