@@ -47,7 +47,7 @@ function modalIndex(a){
             break;
         case 19: SupTea(); // Supervise Team
             break;
-        case 20: alert('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED');console.log('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED'); //-BREAK CASE-//^ USER CASES UP ^//v KEEP PERFORMANCE INDICATOR DOWN v
+        case 20: alert('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED');console.log('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED'); return false; //-BREAK CASE-//^ USER CASES UP ^//v KEEP PERFORMANCE INDICATOR DOWN v
             break;
         case 21: getGrade();
             break; // grade                1. Knowledge increase
