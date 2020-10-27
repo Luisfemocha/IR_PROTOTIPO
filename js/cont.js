@@ -47,7 +47,7 @@ function modalIndex(a){
             break;
         case 19: SupTea(); // Supervise Team
             break;
-        case 20: console.log('???'); //-BREAK CASE-//^ USER CASES UP ^//v KEEP PERFORMANCE INDICATOR DOWN v
+        case 20: alert('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED');console.log('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED'); //-BREAK CASE-//^ USER CASES UP ^//v KEEP PERFORMANCE INDICATOR DOWN v
             break;
         case 21: getGrade();
             break; // grade                1. Knowledge increase
@@ -293,7 +293,7 @@ function EvaAct(){ // UC08 - EVALUATE ACTIVITY
     but.html('DONE');
     table.append($("<caption style='caption-side: top;'><h6>Fill in every field in the form in order to evaluate the student's activity. In each field you'll be given a numeric and a text field to write the grade and the description of each field. Press 'DONE' to calculate the grade and save the form in console.</h6></caption>"));
     $("#modalDiag").addClass('modal-lg');
-    table.append($("<thead><tr><th scope='col'>PARAMETER</th><th scope='col'>DESCRIPTION</th><th scope='col'>GRADE</th></tr></thead>"));
+    table.append($("<thead><tr><th scope='col'>RUBRIC</th><th scope='col'>DESCRIPTION</th><th scope='col'>GRADE</th></tr></thead>"));
     table.append($("<tr><td>Code fullness:</td><td><textarea id='ea1' class='form-control mr-3' style='height: 200px;'>import java.util.*;\nclass main{\n  public static void main(String[] args){\n       System.out.println('Hello world :D');\n  }\n}</textarea></td><td><input id='ea1g' type='number' placeholder='code grade'></td></tr>"));
     table.append($("<tr><td>Presentation:</td><td><textarea id='ea2' class='form-control mr-3'></textarea></td><td><input id='ea2g' type='number' placeholder='presentation grade'></td></tr>"));
     table.append($("<tr><td>Progress report:</td><td><textarea id='ea3' class='form-control mr-3'></textarea></td><td><input id='ea3g' type='number' placeholder='prog. rep. grade'></td></tr>"));
@@ -389,8 +389,7 @@ function ProFee(){ // UC11 - PROVIDE FEEDBACK
     table.append($("<textarea id='pf2' class='form-control' placeholder='Commentary' required></textarea>"));
     but.off();
     but.click(function(){
-        let a=$('#pf1').val();
-        let b=$('#pf2').val();
+        let feedback= {'Author':$('#pf1').val(), 'Commentary':$('#pf2').val()}
         console.log('SAVING THE FEEDBACK...');
         setTimeout(() => { console.log("Feedback:\n\n- Author: "+a+"\n- Feedback: "+b); }, 2000);
         mod.modal('hide');
@@ -407,12 +406,12 @@ function DesAct(){ // UC12 - DESIGN ACTIVITY
     showForm('Complete the form in order to design the activity.', e, 1, type);
     but.off();
     but.click(function(){
-        var a=' ACTIVITY ';
+        var activity={};
         e.forEach(function(r){
-            a+= '\n'+r+': '+document.getElementById(r).value;
+            activity[r]=document.getElementById(r).value;
         });
         console.log('SAVING THE ACTIVITY...');
-        setTimeout(() => { console.log(a); }, 2000);
+        setTimeout(() => { console.log(activity); }, 2000);
         mod.modal('hide');
         table.empty();
     });
