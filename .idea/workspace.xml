@@ -50,8 +50,19 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
+<<<<<<< Updated upstream
+=======
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\luisf\Documents\GitHub\IR_PROTOTIPO\css" />
+      <recent name="C:\Users\luisf\Documents\GitHub\IR_PROTOTIPO\js" />
+      <recent name="C:\Users\luisf\Documents\GitHub\IR_PROTOTIPO" />
+      <recent name="C:\Users\luisf\Documents\GitHub\IR_PROTOTIPO\bootstrap\css" />
+    </key>
+  </component>
+>>>>>>> Stashed changes
   <component name="RunManager">
     <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
@@ -77,7 +88,14 @@
       <workItem from="1603565550387" duration="6619000" />
       <workItem from="1603572977099" duration="33325000" />
       <workItem from="1603610012413" duration="498000" />
+<<<<<<< Updated upstream
       <workItem from="1603644954388" duration="21303000" />
+=======
+      <workItem from="1603644954388" duration="22105000" />
+      <workItem from="1603672951996" duration="1220000" />
+      <workItem from="1603721543277" duration="2704000" />
+      <workItem from="1603751265686" duration="11696000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -101,10 +119,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="897" y="195" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1536.824@0.0.1536.824" timestamp="1603517130283" />
-    <state x="391" y="133" width="974" height="707" key="SettingsEditor" timestamp="1603517207899">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603751872866">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="391" y="133" width="974" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603517207899" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603751872866" />
+    <state x="391" y="117" width="974" height="707" key="SettingsEditor" timestamp="1603763938978">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="391" y="117" width="974" height="707" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603763938978" />
     <state x="762" y="0" width="781" height="830" key="dock-window-1" timestamp="1603608387827">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -113,5 +135,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="863" y="119" width="578" height="592" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603658179946" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603763827196">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603763827196" />
   </component>
 </project>
