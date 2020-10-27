@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Prototipo</title>
-    <link href="estilos.css" rel="stylesheet">
-    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/bootstrap-grid.css" rel="stylesheet"/>
+    <link href="css/bootstrap-reboot.css" rel="stylesheet"/>
 </head>
 <body>
 <header></header>
@@ -15,8 +15,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="titModal"></h5>
-                    <button aria-label="Close" class="close" data-dismiss="modal" onclick="$('#modal').modal('hide')"
-                            type="button">
+                    <button aria-label="Close" class="close" data-dismiss="modal" onclick="$('#modal').modal('hide')" type="button">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -45,25 +44,17 @@
             <g></g>
             <g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M 86.63 510 L -140 510 L -140 964 L -851 964" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
-                    <path d="M 86.63 510 L -140 510 L -140 964 L -851 964" fill="none" pointer-events="stroke"
-                          stroke="#000000" stroke-dasharray="3 3" stroke-miterlimit="10"></path>
+                    <path d="M 86.63 510 L -140 510 L -140 964 L -851 964" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M 86.63 510 L -140 510 L -140 964 L -851 964" fill="none" pointer-events="stroke" stroke="#000000" stroke-dasharray="3 3" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M -350 355 L -350 140 L -553 140" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
-                    <path d="M -350 355 L -350 140 L -553 140" fill="none" pointer-events="stroke" stroke="#000000"
-                          stroke-dasharray="3 3" stroke-miterlimit="10"></path>
+                    <path d="M -350 355 L -350 140 L -553 140" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -350 355 L -350 140 L -553 140" fill="none" pointer-events="stroke" stroke="#000000" stroke-dasharray="3 3" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M -120 257.5 L -120 290 L -347 290 C -347 286.1 -353 286.1 -353 290 L -353 290 L -466.63 290"
-                          fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9"
-                          visibility="hidden"></path>
-                    <path d="M -120 257.5 L -120 290 L -347 290 C -347 286.1 -353 286.1 -353 290 L -353 290 L -466.63 290"
-                          fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"></path>
-                    <path d="M -471.88 290 L -464.88 286.5 L -466.63 290 L -464.88 293.5 Z" fill="#000000"
-                          pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -120 257.5 L -120 290 L -347 290 C -347 286.1 -353 286.1 -353 290 L -353 290 L -466.63 290" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -120 257.5 L -120 290 L -347 290 C -347 286.1 -353 286.1 -353 290 L -353 290 L -466.63 290" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -471.88 290 L -464.88 286.5 L -466.63 290 L -464.88 293.5 Z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
                     <path d="M 1045 1642.5 L 1045 1610 L 814.25 1610" fill="none" pointer-events="stroke" stroke="white"
@@ -4724,74 +4715,46 @@
                           stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 560 -55 L 560 -180 L 686.58 -180" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 560 -55 L 560 -180 L 686.58 -180" fill="none" pointer-events="stroke" stroke="#b3b3b3"
-                          stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 668.29 -167.5 L 693.29 -180 L 668.29 -192.5" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 668.29 -167.5 L 693.29 -180 L 668.29 -192.5" fill="none" pointer-events="all"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 560 -55 L 560 -180 L 686.58 -180" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 560 -55 L 560 -180 L 686.58 -180" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 668.29 -167.5 L 693.29 -180 L 668.29 -192.5" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 668.29 -167.5 L 693.29 -180 L 668.29 -192.5" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 230 -415 L 280 -415 L 280 -370 L 243.42 -370" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 230 -415 L 280 -415 L 280 -370 L 243.42 -370" fill="none" pointer-events="stroke"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 261.71 -382.5 L 236.71 -370 L 261.71 -357.5" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 261.71 -382.5 L 236.71 -370 L 261.71 -357.5" fill="none" pointer-events="all"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 230 -415 L 280 -415 L 280 -370 L 243.42 -370" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 230 -415 L 280 -415 L 280 -370 L 243.42 -370" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 261.71 -382.5 L 236.71 -370 L 261.71 -357.5" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 261.71 -382.5 L 236.71 -370 L 261.71 -357.5" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 230 -350 L 280 -350 L 280 -305 L 243.42 -305" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 230 -350 L 280 -350 L 280 -305 L 243.42 -305" fill="none" pointer-events="stroke"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 261.71 -317.5 L 236.71 -305 L 261.71 -292.5" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 261.71 -317.5 L 236.71 -305 L 261.71 -292.5" fill="none" pointer-events="all"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 230 -350 L 280 -350 L 280 -305 L 243.42 -305" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 230 -350 L 280 -350 L 280 -305 L 243.42 -305" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 261.71 -317.5 L 236.71 -305 L 261.71 -292.5" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 261.71 -317.5 L 236.71 -305 L 261.71 -292.5" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 214.13 -142.5 L 250 -142.5 L 250 -85 L 227.55 -85" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 214.13 -142.5 L 250 -142.5 L 250 -85 L 227.55 -85" fill="none" pointer-events="stroke"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 245.84 -97.5 L 220.84 -85 L 245.84 -72.5" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 245.84 -97.5 L 220.84 -85 L 245.84 -72.5" fill="none" pointer-events="all" stroke="#b3b3b3"
-                          stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 214.13 -142.5 L 250 -142.5 L 250 -85 L 227.55 -85" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 214.13 -142.5 L 250 -142.5 L 250 -85 L 227.55 -85" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 245.84 -97.5 L 220.84 -85 L 245.84 -72.5" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 245.84 -97.5 L 220.84 -85 L 245.84 -72.5" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 210.76 327.5 L 211 327.5 L 240 328 L 240 380 L 224.18 380" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 210.76 327.5 L 211 327.5 L 240 328 L 240 380 L 224.18 380" fill="none" pointer-events="stroke"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 242.47 367.5 L 217.47 380 L 242.47 392.5" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 242.47 367.5 L 217.47 380 L 242.47 392.5" fill="none" pointer-events="all" stroke="#b3b3b3"
-                          stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 210.76 327.5 L 211 327.5 L 240 328 L 240 380 L 224.18 380" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 210.76 327.5 L 211 327.5 L 240 328 L 240 380 L 224.18 380" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 242.47 367.5 L 217.47 380 L 242.47 392.5" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 242.47 367.5 L 217.47 380 L 242.47 392.5" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 126 390 L 100 390 L 100 430 L 117.34 430" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 126 390 L 100 390 L 100 430 L 117.34 430" fill="none" pointer-events="stroke" stroke="#b3b3b3"
-                          stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 99.05 442.5 L 124.05 430 L 99.05 417.5" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 99.05 442.5 L 124.05 430 L 99.05 417.5" fill="none" pointer-events="all" stroke="#b3b3b3"
-                          stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 126 390 L 100 390 L 100 430 L 117.34 430" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 126 390 L 100 390 L 100 430 L 117.34 430" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 99.05 442.5 L 124.05 430 L 99.05 417.5" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 99.05 442.5 L 124.05 430 L 99.05 417.5" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 210.76 435 L 240 435 L 240 490 L 224.18 490" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 210.76 435 L 240 435 L 240 490 L 224.18 490" fill="none" pointer-events="stroke"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 242.47 477.5 L 217.47 490 L 242.47 502.5" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 242.47 477.5 L 217.47 490 L 242.47 502.5" fill="none" pointer-events="all" stroke="#b3b3b3"
-                          stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 210.76 435 L 240 435 L 240 490 L 224.18 490" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 210.76 435 L 240 435 L 240 490 L 224.18 490" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 242.47 477.5 L 217.47 490 L 242.47 502.5" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 242.47 477.5 L 217.47 490 L 242.47 502.5" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
                     <rect fill="#ffffff" height="160" pointer-events="all" rx="22.4" ry="22.4" stroke="#000000" stroke-width="5" width="140"
@@ -6654,13 +6617,11 @@
                           pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="1383.75"
-                          y="626.25"></rect>
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="1383.75" y="626.25"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 646px; margin-left: 1385px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6672,13 +6633,11 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="1540"
-                          y="570"></rect>
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="1540" y="570"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 590px; margin-left: 1541px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6690,13 +6649,11 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="1540"
-                          y="621.25"></rect>
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="1540" y="621.25"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 641px; margin-left: 1541px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6708,19 +6665,15 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M 1720 605 L 1720 641 L 1660 641" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
-                    <path d="M 1720 605 L 1720 641 L 1660 641" fill="none" pointer-events="stroke" stroke="#000000"
-                          stroke-dasharray="3 3" stroke-miterlimit="10"></path>
+                    <path d="M 1720 605 L 1720 641 L 1660 641" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M 1720 605 L 1720 641 L 1660 641" fill="none" pointer-events="stroke" stroke="#000000" stroke-dasharray="3 3" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="30" pointer-events="all" stroke="#000000" stroke-dasharray="3 3" width="100"
-                          x="1711" y="575"></rect>
+                    <rect fill="#ffffff" height="30" pointer-events="all" stroke="#000000" stroke-dasharray="3 3" width="100" x="1711" y="575"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 590px; margin-left: 1712px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6732,21 +6685,16 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M 1865 600 L 1865 628 L 1900 628 L 1900 648.63" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
-                    <path d="M 1865 600 L 1865 628 L 1900 628 L 1900 648.63" fill="none" pointer-events="stroke"
-                          stroke="#000000" stroke-miterlimit="10"></path>
-                    <path d="M 1900 653.88 L 1896.5 646.88 L 1900 648.63 L 1903.5 646.88 Z" fill="#000000"
-                          pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 1865 600 L 1865 628 L 1900 628 L 1900 648.63" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M 1865 600 L 1865 628 L 1900 628 L 1900 648.63" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 1900 653.88 L 1896.5 646.88 L 1900 648.63 L 1903.5 646.88 Z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <ellipse cx="1865" cy="585" fill="#ffffff" pointer-events="all" rx="15" ry="15"
-                             stroke="#000000"></ellipse>
+                    <ellipse cx="1865" cy="585" fill="#ffffff" pointer-events="all" rx="15" ry="15" stroke="#000000"></ellipse>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 585px; margin-left: 1851px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
@@ -6759,17 +6707,14 @@
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)"></g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="172.5" pointer-events="all" rx="27.6" ry="27.6" stroke="#000000" stroke-width="5" width="180"
-                          x="670" y="885"></rect>
+                    <rect fill="#ffffff" height="172.5" pointer-events="all" rx="27.6" ry="27.6" stroke="#000000" stroke-width="5" width="180" x="670" y="885"></rect>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <ellipse cx="754.25" cy="855" fill="#ffffff" pointer-events="all" rx="15" ry="15"
-                             stroke="#000000"></ellipse>
+                    <ellipse cx="754.25" cy="855" fill="#ffffff" pointer-events="all" rx="15" ry="15" stroke="#000000"></ellipse>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 855px; margin-left: 740px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
@@ -6781,13 +6726,11 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <ellipse cx="760" cy="1096.25" fill="#ffffff" pointer-events="all" rx="15" ry="15"
-                             stroke="#000000"></ellipse>
+                    <ellipse cx="760" cy="1096.25" fill="#ffffff" pointer-events="all" rx="15" ry="15" stroke="#000000"></ellipse>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 1096px; margin-left: 746px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
@@ -6799,29 +6742,21 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M 754.25 912.94 L 754.25 876.37" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
-                    <path d="M 754.25 912.94 L 754.25 876.37" fill="none" pointer-events="stroke" stroke="#000000"
-                          stroke-miterlimit="10"></path>
-                    <path d="M 754.25 871.12 L 757.75 878.12 L 754.25 876.37 L 750.75 878.12 Z" fill="#000000"
-                          pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 754.25 912.94 L 754.25 876.37" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M 754.25 912.94 L 754.25 876.37" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 754.25 871.12 L 757.75 878.12 L 754.25 876.37 L 750.75 878.12 Z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M 760 1031.25 L 760 1074.88" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
-                    <path d="M 760 1031.25 L 760 1074.88" fill="none" pointer-events="stroke" stroke="#000000"
-                          stroke-miterlimit="10"></path>
-                    <path d="M 760 1080.13 L 756.5 1073.13 L 760 1074.88 L 763.5 1073.13 Z" fill="#000000"
-                          pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 760 1031.25 L 760 1074.88" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M 760 1031.25 L 760 1074.88" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 760 1080.13 L 756.5 1073.13 L 760 1074.88 L 763.5 1073.13 Z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="37.5" pointer-events="all" rx="18.75" ry="18.75" stroke="#000000" stroke-dasharray="9 9"
-                          stroke-width="3" width="80" x="720" y="993.75"></rect>
+                    <rect fill="#ffffff" height="37.5" pointer-events="all" rx="18.75" ry="18.75" stroke="#000000" stroke-dasharray="9 9" stroke-width="3" width="80" x="720" y="993.75"></rect>
                 </g>
                 <g style="" onclick="modalIndex(11) // UC11 - PROVIDE FEEDBACK">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 1013px; margin-left: 721px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6833,13 +6768,11 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="45.31" pointer-events="all" rx="22.66" ry="22.66" stroke="#000000" stroke-dasharray="9 9"
-                          stroke-width="3" width="80" x="714.25" y="912.94"></rect>
+                    <rect fill="#ffffff" height="45.31" pointer-events="all" rx="22.66" ry="22.66" stroke="#000000" stroke-dasharray="9 9" stroke-width="3" width="80" x="714.25" y="912.94"></rect>
                 </g>
                 <g style="" onclick="modalIndex(10) // UC10 - EVALUATE SPRINT">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 936px; margin-left: 715px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6851,15 +6784,12 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="none" height="20" pointer-events="stroke" stroke="white" stroke-width="9" visibility="hidden" width="40"
-                          x="694.25" y="890"></rect>
-                    <rect fill="none" height="20" pointer-events="all" stroke="none" width="40" x="694.25"
-                          y="890"></rect>
+                    <rect fill="none" height="20" pointer-events="stroke" stroke="white" stroke-width="9" visibility="hidden" width="40" x="694.25" y="890"></rect>
+                    <rect fill="none" height="20" pointer-events="all" stroke="none" width="40" x="694.25" y="890"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 900px; margin-left: 695px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6870,28 +6800,21 @@
                     </g>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 794.25 945 L 840 945 L 840 1006 L 813.42 1006" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 794.25 945 L 840 945 L 840 1006 L 813.42 1006" fill="none" pointer-events="stroke"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 831.71 993.5 L 806.71 1006 L 831.71 1018.5" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 831.71 993.5 L 806.71 1006 L 831.71 1018.5" fill="none" pointer-events="all" stroke="#b3b3b3"
-                          stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 794.25 945 L 840 945 L 840 1006 L 813.42 1006" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 794.25 945 L 840 945 L 840 1006 L 813.42 1006" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 831.71 993.5 L 806.71 1006 L 831.71 1018.5" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 831.71 993.5 L 806.71 1006 L 831.71 1018.5" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)"></g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <ellipse cx="470" cy="1190" fill="#ffffff" pointer-events="all" rx="90" ry="90" stroke="#000000"
-                             stroke-width="3"></ellipse>
+                    <ellipse cx="470" cy="1190" fill="#ffffff" pointer-events="all" rx="90" ry="90" stroke="#000000" stroke-width="3"></ellipse>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="410"
-                          y="1140"></rect>
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="410" y="1140"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 1160px; margin-left: 411px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6902,25 +6825,19 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="50" pointer-events="all" rx="25" ry="25" stroke="#000000" width="95" x="422.5"
-                          y="1205"></rect>
+                    <rect fill="#ffffff" height="50" pointer-events="all" rx="25" ry="25" stroke="#000000" width="95" x="422.5" y="1205"></rect>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M 470 1180 L 470 1200 L 470 1185 L 470 1198.63" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
-                    <path d="M 470 1180 L 470 1200 L 470 1185 L 470 1198.63" fill="none" pointer-events="stroke"
-                          stroke="#000000" stroke-miterlimit="10"></path>
-                    <path d="M 470 1203.88 L 466.5 1196.88 L 470 1198.63 L 473.5 1196.88 Z" fill="#000000"
-                          pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 470 1180 L 470 1200 L 470 1185 L 470 1198.63" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M 470 1180 L 470 1200 L 470 1185 L 470 1198.63" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 470 1203.88 L 466.5 1196.88 L 470 1198.63 L 473.5 1196.88 Z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="430"
-                          y="1210"></rect>
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="430" y="1210"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 1230px; margin-left: 431px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6933,17 +6850,14 @@
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)"></g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <ellipse cx="540" cy="880" fill="#ffffff" pointer-events="all" rx="90" ry="90" stroke="#000000"
-                             stroke-width="3"></ellipse>
+                    <ellipse cx="540" cy="880" fill="#ffffff" pointer-events="all" rx="90" ry="90" stroke="#000000" stroke-width="3"></ellipse>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="480"
-                          y="830"></rect>
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="480" y="830"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 850px; margin-left: 481px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6954,25 +6868,19 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="50" pointer-events="all" rx="25" ry="25" stroke="#000000" width="95" x="492.5"
-                          y="895"></rect>
+                    <rect fill="#ffffff" height="50" pointer-events="all" rx="25" ry="25" stroke="#000000" width="95" x="492.5" y="895"></rect>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M 540 870 L 540 890 L 540 875 L 540 888.63" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
-                    <path d="M 540 870 L 540 890 L 540 875 L 540 888.63" fill="none" pointer-events="stroke"
-                          stroke="#000000" stroke-miterlimit="10"></path>
-                    <path d="M 540 893.88 L 536.5 886.88 L 540 888.63 L 543.5 886.88 Z" fill="#000000" pointer-events="all"
-                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 540 870 L 540 890 L 540 875 L 540 888.63" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M 540 870 L 540 890 L 540 875 L 540 888.63" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 540 893.88 L 536.5 886.88 L 540 888.63 L 543.5 886.88 Z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="500"
-                          y="900"></rect>
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="500" y="900"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 920px; margin-left: 501px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -6984,47 +6892,32 @@
                     </g>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 560 1190 L 710 1190 L 710 1070.92" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 560 1190 L 710 1190 L 710 1070.92" fill="none" pointer-events="stroke" stroke="#b3b3b3"
-                          stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 722.5 1089.21 L 710 1064.21 L 697.5 1089.21" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 722.5 1089.21 L 710 1064.21 L 697.5 1089.21" fill="none" pointer-events="all"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 560 1190 L 710 1190 L 710 1070.92" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 560 1190 L 710 1190 L 710 1070.92" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 722.5 1089.21 L 710 1064.21 L 697.5 1089.21" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 722.5 1089.21 L 710 1064.21 L 697.5 1089.21" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 680 1057.5 L 680 1070 L 370 1070 L 370 1030 L 402.58 1030" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 680 1057.5 L 680 1070 L 370 1070 L 370 1030 L 402.58 1030" fill="none" pointer-events="stroke"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 384.29 1042.5 L 409.29 1030 L 384.29 1017.5" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 384.29 1042.5 L 409.29 1030 L 384.29 1017.5" fill="none" pointer-events="all"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 680 1057.5 L 680 1070 L 370 1070 L 370 1030 L 402.58 1030" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 680 1057.5 L 680 1070 L 370 1070 L 370 1030 L 402.58 1030" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 384.29 1042.5 L 409.29 1030 L 384.29 1017.5" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 384.29 1042.5 L 409.29 1030 L 384.29 1017.5" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#cccccc" height="15.63" pointer-events="all" stroke="#b3b3b3" transform="rotate(90,418.57,998.76)" width="120"
-                          x="358.57" y="990.94"></rect>
+                    <rect fill="#cccccc" height="15.63" pointer-events="all" stroke="#b3b3b3" transform="rotate(90,418.57,998.76)" width="120" x="358.57" y="990.94"></rect>
                 </g>
                 <g style="visibility: visible;">
-                    <path d="M 426.39 1032.94 L 428 1040 L 540 1040 L 540 983.42" fill="none" pointer-events="stroke"
-                          stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 426.39 1032.94 L 428 1040 L 540 1040 L 540 983.42" fill="none" pointer-events="stroke"
-                          stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
-                    <path d="M 552.5 1001.71 L 540 976.71 L 527.5 1001.71" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
-                    <path d="M 552.5 1001.71 L 540 976.71 L 527.5 1001.71" fill="none" pointer-events="all" stroke="#b3b3b3"
-                          stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 426.39 1032.94 L 428 1040 L 540 1040 L 540 983.42" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 426.39 1032.94 L 428 1040 L 540 1040 L 540 983.42" fill="none" pointer-events="stroke" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
+                    <path d="M 552.5 1001.71 L 540 976.71 L 527.5 1001.71" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="14" visibility="hidden"></path>
+                    <path d="M 552.5 1001.71 L 540 976.71 L 527.5 1001.71" fill="none" pointer-events="all" stroke="#b3b3b3" stroke-miterlimit="10" stroke-width="6"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-413"
-                          y="-295"></rect>
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-413" y="-295"></rect>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%" y="-275">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%" y="-275">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; margin-left: -412px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
@@ -7036,21 +6929,16 @@
                     </g>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <path d="M 1190 -260 L 1190 -223.87" fill="none" pointer-events="stroke" stroke="white"
-                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
-                    <path d="M 1190 -260 L 1190 -223.87" fill="none" pointer-events="stroke" stroke="#000000"
-                          stroke-miterlimit="10"></path>
-                    <path d="M 1190 -218.62 L 1186.5 -225.62 L 1190 -223.87 L 1193.5 -225.62 Z" fill="#000000"
-                          pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 1190 -260 L 1190 -223.87" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M 1190 -260 L 1190 -223.87" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M 1190 -218.62 L 1186.5 -225.62 L 1190 -223.87 L 1193.5 -225.62 Z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
                 </g>
                 <g style="visibility: visible;" transform="translate(0.5,0.5)">
-                    <ellipse cx="1190" cy="-275" fill="#ffffff" pointer-events="all" rx="15" ry="15"
-                             stroke="#000000"></ellipse>
+                    <ellipse cx="1190" cy="-275" fill="#ffffff" pointer-events="all" rx="15" ry="15" stroke="#000000"></ellipse>
                 </g>
                 <g style="">
                     <g>
-                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
-                                       width="100%" y="-275">
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%" y="-275">
                             <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; margin-left: 1176px;">
                                 <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
                                     <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
@@ -7099,16 +6987,14 @@
                     <path d="M 1458.76 768.62 L 1462.31 775.59 L 1458.8 773.87 L 1455.31 775.64 Z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
                 </g>
             </g>
-            <g></g>
-            <g></g>
         </g>
     </svg>
 </main>
 
 <footer></footer>
-<script crossorigin="anonymous" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script crossorigin="anonymous" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="cont.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/cont.js"></script> <!-- controlador propio -->
 </body>
 </html>

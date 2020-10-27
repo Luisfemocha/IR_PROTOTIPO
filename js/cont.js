@@ -4,6 +4,7 @@ let table= $('#modalTable');
 let tit=   $('#titModal');
 let but=   $("#aceptarModal");
 
+mod.on('keydown', function(){ if (event.keyCode==13)but.click()});
 function modalIndex(a){
     table.empty();
     $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');
@@ -128,9 +129,13 @@ function InsRep(){ // UC01 - INSTALL REPOSITORY
     table.empty();
     tit.html('INSTALL REPOSITORY');
     but.hide();
-    table.append($("<p>Push the 'pull' button in order to install the student's repository or 'see' to just watch it in the console.</p>"));
-    table.append($("<a download='Repository.java' class='btn btn-success btn-lg'>pull</a>").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("import java.util.*;\nclass main{\n  public static void main(String[] args){\n       System.out.println('Hello world :D');\n  }\n}")));
-    table.append($("<button class='btn btn-primary btn-lg mx-3'>see</button>").on('click', function (){ console.log("import java.util.*;\nclass main{\n  public static void main(String[] args){\n       System.out.println('Hello world :D');\n  }\n}")}));
+    table.append($("<p>Push the 'Install' button in order to install the student's repository or 'see' to just watch it in the console.</p>"));
+    table.append($("<a download='Repository.java' class='btn btn-success btn-lg'>Install</a>").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("import java.util.*;\nclass main{\n  public static void main(String[] args){\n       System.out.println('Hello world :D');\n  }\n}")).on('click', function (){ console.log("import java.util.*;\nclass main{\n  public static void main(String[] args){\n       System.out.println('Hello world :D');\n  }\n}")}));
+    // table.append($("<button class='btn btn-primary btn-lg mx-3'>see</button>"));
+    but.click(function(){
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+    });
 } // UC01 - INSTALL REPOSITORY
 function WriCod(){ // UC02 - WRITE CODE
     table.empty();
@@ -138,12 +143,23 @@ function WriCod(){ // UC02 - WRITE CODE
     tit.html('WRITE CODE');
     but.html('SAVE CODE');
     table.append($("<p>Write your code and when your ready to save it just push the 'SAVE CODE' button and it'll save it on the console.</p>"));
-    table.append($("<textarea id='wc2' class='form-control'></textarea>"));
+    table.append($("<textarea id='wc1' class='form-control my-2' placeholder='CODE' required></textarea>"));
+    var a= $("<select id='languages' class='form-control my-2' required></select>");
+    let lan= ['Java', 'C++','Python','JavaScript'];
+    lan.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','language')) });
+    table.append(a);
+    table.append($("<tr scope='row' class='form-inline my-2'></tr>").append($("<label>Documentation: </label><input type='file' class='form-control-file ml-3 w-50' id='wc2' required>")));
+    //table.append($("<textarea id='wc3' class='form-control my-2' placeholder='MISTAKES' required></textarea>"));
     but.off();
     but.click(function(){
-        let a=$('#wc2').val();
+        let code= {
+            'CODE': $('#wc1').val(),
+            'LANGUAGE': $("#languages option:selected").text(),
+            'DOCUMENTATION': $('#wc2').val(),
+            //'MISTAKES': $('#wc3').val()
+        }
         console.log('SAVING CODE...');
-        setTimeout(() => { console.log(a); }, 2000);
+        setTimeout(() => { console.log(code); }, 2000);
         mod.modal('hide');
         setTimeout(() => { table.empty();} , 1000);
     });
@@ -151,18 +167,32 @@ function WriCod(){ // UC02 - WRITE CODE
 function ComAct(){ // UC03 - COMMIT ACTIVITY
     table.empty();
     but.show();
+    $("#modalDiag").addClass('modal-lg');
     tit.html('COMMIT ACTIVITY');
-    table.append($("<p>Write the code or attach a file in order to commit the activity.</p>"));
-    table.append($("<textarea id='ca31' class='form-control'></textarea>"));
-    table.append($("<input type='file' class='form-control-file' id='ca32'>"));
+    let e= [['id','name','time_range','theme','type','delivery_date','percentage'], [1,'User Stories', 'Weeks 1-2', 'Agile development', 'Modeling Activities', '24/10/2020','15%'], [2, 'Use case modeling', 'Weeks 2-3', 'Requirement analysis', 'Team Activities', '25/10/2020', '10%'], [3, 'Data flow diagram', 'Weeks 3-4', 'Structured modeling', 'Open Source Activities', '29/10/2020', '5%'], [4, 'Decomposition diagram', 'Weeks 4-5', 'Requirement modeling', 'Modeling Activities', '30/10/2020', '25%']]
+    showTable("Select the activity to commit and write the code or attach a file in order to commit it.", e, 'radio');
+    table.append($("<tr></tr>").append($("<td scope='row' colspan='8'><textarea id='ca1' class='form-control' placeholder='CODE'></textarea></td>")));
+    table.append($("<tr></tr>").append($("<td scope='row' class='inline' colspan='8'><label>File: </label><input type='file' class='form-control-file' id='ca2'></td>")));
     but.html('COMMIT');
     but.off();
     but.on('click', function(){
-        let a= $('#ca31').val();
-        let b= $('#ca32').val();
+        let a= $('#ca1').val();
+        let b= $('#ca2').val();
+        let c= $('input[name="radio"]:checked');
+        var act;
+        if (c.length) {
+            c.each(function () {
+                act= e[$(this).val()][1];
+            });
+        }
+        else {
+            console.log('No activity was selected.');
+            return false;
+        }
         console.log('COMMITTING ACTIVITY...\n');
-        setTimeout(() => { console.log(a+' '+b); }, 2000);
+        setTimeout(() => { console.log("The activity: '"+act+"' was submitted. \nCODE: "+a+' \nFILE: '+b); }, 2000);
         mod.modal('hide');
+        setTimeout(() => { $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');}, 1000);
         setTimeout(() => { table.empty(); }, 1000);
     });
 } // UC03 - COMMIT ACTIVITY
@@ -186,13 +216,26 @@ function ExtReq(){ // UC05 - EXTRACT REQUIREMENT
     but.show();
     tit.html('EXTRACT REQUIREMENT');
     but.html('SAVE');
-    table.append($("<p>Write the requirements and then push 'SAVE' in order to save them.</p>"));
-    table.append($("<textarea id='er5' class='form-control'></textarea>"));
+    table.append($("<td colspan='4'><p>Write the tasks of the requirement and then push 'SAVE' in order to save them.</p></td>"));
+    table.append($("<tr class='mx-0 px-0'></tr>").append("<td class='pr-0'><input id='n1' placeholder='Name' class='form-control' name='nam'></td><td class='pr-0'><input id='d1' placeholder='Difficulty' class='form-control' name='dif' ></td><td class='pr-0'><input id='t1' placeholder='Type' class='form-control' name='typ'></td><td height='38.2px'></td>"));
+    table.append($("<caption class='pt-3 m-0 p-0'><svg id='add' style='caption-side: bottom; color: #212529;' width=\"2.5em\" height=\"2.5em\" viewBox=\"0 0 16 16\" class=\"bi bi-file-plus-fill m-0 float-right\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z\"/></svg></caption>"))
+    var i=1;
+    $("#add").click(function () {
+        i++;
+        var tr= $("<tr class='mx-0 px-0'></tr>");
+        tr.append($("<td class='pr-0'><input placeholder='Name' class='form-control pr-0' name='nam' ></td><td class='pr-0'><input placeholder='Difficulty' class='form-control pr-0' name='dif' ></td><td class='pr-0'><input placeholder='Type' class='form-control pr-0' name='typ' ></td>"));
+        tr.append($("<td></td>").append($("<svg width='38px' height='38px' viewBox=\"0 0 16 16\" class='bi bi-file-minus-fill' fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 7.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6z\"/></svg>").attr('id','rem'+i).on('click', function(){this.parentElement.parentElement.remove(); i-=1})));
+        table.append(tr);
+    });
     but.off();
     but.click(function(){
-        let a=$('#er5').val();
+        var a=$("input[name ='nam']");
+        var b=$("input[name ='dif']");
+        var c=$("input[name ='typ']");
+        var req=[];
+        for(let i=0; i<a.length; i++) req.push({'Name': a[i].value, "Difficulty": b[i].value, 'Type':c[i].value});
         console.log('SAVING THE REQUIREMENTS...');
-        setTimeout(() => { console.log(a); }, 2000);
+        setTimeout(() => { console.log(req); }, 2000);
         mod.modal('hide');
         table.empty();
     });
@@ -202,13 +245,15 @@ function ExtTas(){ // UC06 - EXTRACT TASK
     but.show();
     tit.html('EXTRACT TASK');
     but.html('SAVE');
-    table.append($("<p>Write the tasks and then push 'SAVE' in order to save them.</p>"));
-    table.append($("<textarea id='et6' class='form-control'></textarea>"));
+    table.append($("<caption style='caption-side: top; color: black;'>Write the tasks and then push 'SAVE' in order to save them.</caption>"));
+    table.append($("<td class='pr-0'></td>").append("<input id='n1' placeholder='Name' class='form-control' name='nam'>"));
+    table.append($("<td class='pr-0'></td>").append("<input id='d1' placeholder='Difficulty' class='form-control' name='dif' >"));
+    table.append($("<td class='pr-0'></td>").append("<input id='t1' placeholder='Type' class='form-control' name='typ'>"));
     but.off();
     but.click(function(){
-        let a=$('#et6').val();
+        var tas= {'Name': $("#n1").val(), "Difficulty": $("#d1").val(), 'Type':$("#t1").val()};
         console.log('SAVING TASKS...');
-        setTimeout(() => { console.log(a); }, 2000);
+        setTimeout(() => { console.log(tas); }, 2000);
         mod.modal('hide');
         table.empty();
     });
@@ -290,10 +335,10 @@ function DesRub(){ // UC09 - DESIGN RUBRIC
     but.off();
     but.click(function(){
         var a=$("input[name ='crit']");
-        var f='';
-        for(let i=0; i<a.length; i++) f+=''+a[i].value+', ';
+        var rubric=[];
+        for(let i=0; i<a.length; i++) rubric.push(a[i].value);
         console.log('SAVING THE RUBRIC...');
-        setTimeout(() => { console.log('Criterion: '+f.replace(/, $/g, '')); }, 2000);
+        setTimeout(() => { console.log('Criterion: '+rubric)}, 2000);
         mod.modal('hide');
         setTimeout(() => { table.empty();} , 1000);
     });
@@ -341,7 +386,7 @@ function ProFee(){ // UC11 - PROVIDE FEEDBACK
     but.html('SAVE');
     table.append($("<p>Write the feedback and then push 'SAVE' in order to send it.</p>"));
     table.append($("<input id='pf1' class='form-control' placeholder='Author' required>"));
-    table.append($("<textarea id='pf2' class='form-control' placeholder='Feedback' required></textarea>"));
+    table.append($("<textarea id='pf2' class='form-control' placeholder='Commentary' required></textarea>"));
     but.off();
     but.click(function(){
         let a=$('#pf1').val();
