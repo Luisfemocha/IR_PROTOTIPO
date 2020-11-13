@@ -695,3 +695,60 @@ function getTeamSize(){ // KPI-7 - Team management
         return teamSize;
     });
 }             // KPI-7 - Team management
+
+// DATABASE
+
+// JSON FILE READER
+// readJsonFile('./data.json');
+// function readJsonFile(jsonFile) {
+//     var reader = new FileReader();
+//     reader.addEventListener('load', (loadEvent) => {
+//         try {
+//             json = JSON.parse(loadEvent.target.result);
+//             console.log(json);
+//         } catch (error) {
+//             console.error(error);
+//         }
+//     });
+//     reader.readAsText(jsonFile);
+// }
+
+// $.ajax ({ url: './js/data.json', method: "GET"})
+//     .success(function (response) {
+//         var json = $.parseJSON (response);
+//     });
+
+// fetch("file:///C:/Users/luisf/Documents/GitHub/IR_PROTOTIPO/js/data.json")
+//     .then(response => {
+//         return response.json();
+//     })
+//     .then(data => console.log(data));
+
+loadDoc();
+function loadDoc() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+        }
+    };
+    xhttp.open("GET", "./js/data.json", true);
+    xhttp.send();
+}
+
+function myFunction(xml) {
+    var i;
+    var xmlDoc = xml.responseXML;
+    console.log(xmlDoc);
+    /*var table="<tr><th>Title</th><th>Artist</th></tr>";
+    var x = xmlDoc.getElementsByTagName("CD");
+    for (i = 0; i <x.length; i++) {
+        table += "<tr><td>" +
+            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+    }
+    document.getElementById("demo").innerHTML = table;*/
+}
+
