@@ -200,7 +200,7 @@ function ReaDoc(){ // UC04 - READ DOCUMENTATION
     table.empty();
     but.show();
     tit.html('READ DOCUMENTATION');
-    $("#modalDiag").addClass('modal-lg');
+    $("#modalDiag").addClass('modal-xl modal-dialog-scrollable');
     // 3051 CHARS OF JAVA DOCUMENTATION
     table.append($("<article class=\"container-fluid learning-path\" role=\"main\"><h1>Java Documentation</h1><div class=\"description\"><p>Whether you are working on a new cutting edge app or simply ramping up on new technology, Java documentation has all the information you need to make your project a smashing success. Use the rich set of code samples, tutorials, developer guides, API documentation, and more to quickly develop your prototype and scale it up to a real world application.</p></div><h2 id=\"JavaPlatform%2CStandardEdition(JavaSE)\">Java Platform, Standard Edition (Java SE)</h2><div style=\"display:table;width:100%;height:auto;\"><div style=\"display:table-cell;width:100%;height:auto;vertical-align:top;\"><div class=\"description\">Java SE lets you develop and deploy Java applications on desktops and servers. Java SE and component technologies offer the rich user interface, performance, versatility, portability, and security that today's applications require.<p></p><a href=\"https://www.oracle.com/pls/topic/lookup?ctx=en/java/javase&amp;id=javaselatest\"> Java SE documentation</a><p></p>Java SE related products enable you to monitor, profile, track usage, and centrally manage Java-based applications.<p></p><a href=\"https://docs.oracle.com/javacomponents\"> Java SE Components documentation</a><p></p></div><div class=\"section row\" style=\"visibility: visible;\"></div></div></div><h2 id=\"JavaEmbedded\">Java Embedded</h2><div style=\"display:table;width:100%;height:auto;\"><div style=\"display:table-cell;width:100%;height:auto;vertical-align:top;\"><div class=\"description\">Java ME Embedded is designed for resource-constrained devices like wireless modules for M2M, industrial control, smart-grid infrastructure, environmental sensors and tracking, and more.<p></p><a href=\"http://docs.oracle.com/javame\">Java ME Embedded documentation</a><p></p>Oracle Java SE Embedded delivers a secure, optimized runtime environment ideal for network-based devices.<p></p><a href=\"http://docs.oracle.com/javase/8/javase-embedded.htm\">Oracle Java SE Embedded and JDK for ARM documentation</a><p></p>Java Card technology provides a secure environment for applications that run on smart cards and other devices with very limited memory and processing capabilities.<p></p><a href=\"https://docs.oracle.com/javacard/\">Java Card documentation</a></div><div class=\"section row\" style=\"visibility: visible;\"></div></div></div><h2 id=\"JavaPlatform%2CEnterpriseEdition(JavaEE)\">Java Platform, Enterprise Edition (Java EE)</h2><div style=\"display:table;width:100%;height:auto;\"><div style=\"display:table-cell;width:100%;height:auto;vertical-align:top;\"><div class=\"description\">Java EE provides an API and runtime environment for developing and running large, multi-tiered, reliable, and secure enterprise applications that are portable and scalable and that integrate easily with legacy applications and data.<p></p><a href=\"http://docs.oracle.com/javaee\">Java EE documentation</a></div></div></div></article>"));
     but.html('DONE');
@@ -698,57 +698,57 @@ function getTeamSize(){ // KPI-7 - Team management
 
 // DATABASE
 
-// JSON FILE READER
-// readJsonFile('./data.json');
-// function readJsonFile(jsonFile) {
-//     var reader = new FileReader();
-//     reader.addEventListener('load', (loadEvent) => {
-//         try {
-//             json = JSON.parse(loadEvent.target.result);
-//             console.log(json);
-//         } catch (error) {
-//             console.error(error);
-//         }
-//     });
-//     reader.readAsText(jsonFile);
-// }
+$(document).on('ready',() => {
+    !localStorage.cursos && localStorage.setItem(('cursos',JSON.stringify([])));
+    if (! localStorage.usuarios) localStorage.setItem('usuarios',JSON.stringify([]));
 
-// $.ajax ({ url: './js/data.json', method: "GET"})
-//     .success(function (response) {
-//         var json = $.parseJSON (response);
-//     });
+    !localStorage.estudiantes && localStorage.setItem('estudiantes',JSON.stringify([]));
+});
 
-// fetch("file:///C:/Users/luisf/Documents/GitHub/IR_PROTOTIPO/js/data.json")
-//     .then(response => {
-//         return response.json();
-//     })
-//     .then(data => console.log(data));
+var archivo={codigo:654};
+var labID;
+var user={id:321};
 
-loadDoc();
-function loadDoc() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            myFunction(this);
-        }
-    };
-    xhttp.open("GET", "./js/data.json", true);
-    xhttp.send();
-}
+var reportes=[];
+const formData= {
+    archivoCodigo: archivo.codigo,
+    laboratorioCodigo: labID,
+    estudianteCodigo: user.id,
+    calificacion: -1,
+    acceso: 'Permitido'
+};
 
-function myFunction(xml) {
-    var i;
-    var xmlDoc = xml.responseXML;
-    console.log(xmlDoc);
-    /*var table="<tr><th>Title</th><th>Artist</th></tr>";
-    var x = xmlDoc.getElementsByTagName("CD");
-    for (i = 0; i <x.length; i++) {
-        table += "<tr><td>" +
-            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-            "</td><td>" +
-            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-            "</td></tr>";
+function resetValues(){};
+
+$('#submit').on('click', () => {
+    const user= JSON.parse(sessionStorage.getItem(('usuario')));
+
+    if (!localStorage.cursos){
+        //alert(dic.noexcur);
+        return
     }
-    document.getElementById("demo").innerHTML = table;*/
-}
+    else if ($('registra-curso').val() === "-1"){
+        // alert(dic.noselcur);
+        return;
+    }
+    else if (!localStorage.planes){
+        //alert(dic.noexpla);
+        return;
+    }
+});
 
+
+
+var archivo;
+
+reportes.push(formData);
+localStorage.setItem('reportes', JSON.stringify(reportes));
+
+const archivos= JSON.parse(localStorage.getItem('archivos'));
+localStorage.setItem('archivos',JSON.stringify(archivos.concat(archivo)));
+
+//alert(dic.repreg);
+
+console.log(" -- Guardado -- ");
+console.log(JSON.parse(localStorage.getItem('reportes')));
+resetValues();
