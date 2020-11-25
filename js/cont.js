@@ -696,31 +696,412 @@ function getTeamSize(){ // KPI-7 - Team management
     });
 }             // KPI-7 - Team management
 
-// DATABASE
+// DATABASE 27
+// objetos= [student, requirement, design, system, repository, task, code, documentation, project, inquiry, team, tuition, skill, industry_representative, major, university, teacher, evaluation, template, student_list, course, monitor, scrum_model, sprint, feedback, activity, rubric]
 
-$(document).on('ready',() => {
-    !localStorage.cursos && localStorage.setItem(('cursos',JSON.stringify([])));
-    if (! localStorage.usuarios) localStorage.setItem('usuarios',JSON.stringify([]));
+var data={};
 
-    !localStorage.estudiantes && localStorage.setItem('estudiantes',JSON.stringify([]));
-});
+$(document).ready( loadData() );
+function loadData(){
+    // checks if each object is in database, if not it creates it.
+    if (! localStorage.student) localStorage.setItem('student',JSON.stringify([]));
+    if (! localStorage.requirement) localStorage.setItem('requirement',JSON.stringify([]));
+    if (! localStorage.design) localStorage.setItem('design',JSON.stringify([]));
+    if (! localStorage.system) localStorage.setItem('system',JSON.stringify([]));
+    if (! localStorage.repository) localStorage.setItem('repository',JSON.stringify([]));
+    if (! localStorage.task) localStorage.setItem('task',JSON.stringify([]));
+    if (! localStorage.code) localStorage.setItem('code',JSON.stringify([]));
+    if (! localStorage.documentation) localStorage.setItem('documentation',JSON.stringify([]));
+    if (! localStorage.project) localStorage.setItem('project',JSON.stringify([]));
+    if (! localStorage.inquiry) localStorage.setItem('inquiry',JSON.stringify([]));
+    if (! localStorage.team) localStorage.setItem('team',JSON.stringify([]));
+    if (! localStorage.tuition) localStorage.setItem('tuition',JSON.stringify([]));
+    if (! localStorage.skill) localStorage.setItem('skill',JSON.stringify([]));
+    if (! localStorage.industry_representative) localStorage.setItem('industry_representative',JSON.stringify([]));
+    if (! localStorage.major) localStorage.setItem('major',JSON.stringify([]));
+    if (! localStorage.university) localStorage.setItem('university',JSON.stringify([]));
+    if (! localStorage.teacher) localStorage.setItem('teacher',JSON.stringify([]));
+    if (! localStorage.evaluation) localStorage.setItem('evaluation',JSON.stringify([]));
+    if (! localStorage.template) localStorage.setItem('template',JSON.stringify([]));
+    if (! localStorage.student_list) localStorage.setItem('student_list',JSON.stringify([]));
+    if (! localStorage.course) localStorage.setItem('course',JSON.stringify([]));
+    if (! localStorage.monitor) localStorage.setItem('monitor',JSON.stringify([]));
+    if (! localStorage.scrum_model) localStorage.setItem('scrum_model',JSON.stringify([]));
+    if (! localStorage.sprint) localStorage.setItem('sprint',JSON.stringify([]));
+    if (! localStorage.feedback) localStorage.setItem('feedback',JSON.stringify([]));
+    if (! localStorage.activity) localStorage.setItem('activity',JSON.stringify([]));
+    if (! localStorage.rubric) localStorage.setItem('rubric',JSON.stringify([]));
 
-var archivo={codigo:654};
-var labID;
-var user={id:321};
+    // adds each element to the object 'data' for easier usage.
+    data['student']=JSON.parse(localStorage.getItem('student'));
+    data['requirement']=JSON.parse(localStorage.getItem('requirement'));
+    data['design']=JSON.parse(localStorage.getItem('design'));
+    data['system']=JSON.parse(localStorage.getItem('system'));
+    data['repository']=JSON.parse(localStorage.getItem('repository'));
+    data['task']=JSON.parse(localStorage.getItem('task'));
+    data['code']=JSON.parse(localStorage.getItem('code'));
+    data['documentation']=JSON.parse(localStorage.getItem('documentation'));
+    data['project']=JSON.parse(localStorage.getItem('project'));
+    data['inquiry']=JSON.parse(localStorage.getItem('inquiry'));
+    data['team']=JSON.parse(localStorage.getItem('team'));
+    data['tuition']=JSON.parse(localStorage.getItem('tuition'));
+    data['skil']=JSON.parse(localStorage.getItem('skill'));
+    data['industry_representative']=JSON.parse(localStorage.getItem('industry_representative'));
+    data['major']=JSON.parse(localStorage.getItem('major'));
+    data['university']=JSON.parse(localStorage.getItem('university'));
+    data['teacher']=JSON.parse(localStorage.getItem('teacher'));
+    data['evaluation']=JSON.parse(localStorage.getItem('evaluation'));
+    data['template']=JSON.parse(localStorage.getItem('template'));
+    data['student_list']=JSON.parse(localStorage.getItem('student_list'));
+    data['course']=JSON.parse(localStorage.getItem('course'));
+    data['monitor']=JSON.parse(localStorage.getItem('monitor'));
+    data['scrum_model']=JSON.parse(localStorage.getItem('scrum_model'));
+    data['sprint']=JSON.parse(localStorage.getItem('sprint'));
+    data['feedback']=JSON.parse(localStorage.getItem('feedback'));
+    data['activity']=JSON.parse(localStorage.getItem('activity'));
+}
 
-var reportes=[];
-const formData= {
-    archivoCodigo: archivo.codigo,
-    laboratorioCodigo: labID,
-    estudianteCodigo: user.id,
-    calificacion: -1,
-    acceso: 'Permitido'
-};
+// HARD-RESET
+function resetValues(){ localStorage.clear(); };
 
-function resetValues(){};
+// OOP - CRUD
+function Student(name){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
 
-$('#submit').on('click', () => {
+    var aux= JSON.parse(localStorage.getItem('student'));
+    aux.push(this);
+    localStorage.setItem('student',JSON.stringify(aux));
+}
+
+function Requirement(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('requirement'));
+    aux.push(this);
+    localStorage.setItem('requirement',JSON.stringify(aux));
+}
+
+function Design(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('design'));
+    aux.push(this);
+    localStorage.setItem('design',JSON.stringify(aux));
+}
+
+function System(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('system'));
+    aux.push(this);
+    localStorage.setItem('system',JSON.stringify(aux));
+}
+
+function Repository(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('repository'));
+    aux.push(this);
+    localStorage.setItem('repository',JSON.stringify(aux));
+}
+
+function Task(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('task'));
+    aux.push(this);
+    localStorage.setItem('task',JSON.stringify(aux));
+}
+
+function Code(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('code'));
+    aux.push(this);
+    localStorage.setItem('code',JSON.stringify(aux));
+}
+
+function Documentation(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('documentation'));
+    aux.push(this);
+    localStorage.setItem('documentation',JSON.stringify(aux));
+}
+
+function Project(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('project'));
+    aux.push(this);
+    localStorage.setItem('project',JSON.stringify(aux));
+}
+
+function Inquiry(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('inquiry'));
+    aux.push(this);
+    localStorage.setItem('inquiry',JSON.stringify(aux));
+}
+
+function Team(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('team'));
+    aux.push(this);
+    localStorage.setItem('team',JSON.stringify(aux));
+}
+
+function Tuition(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('tuition'));
+    aux.push(this);
+    localStorage.setItem('tuition',JSON.stringify(aux));
+}
+
+function Skill(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('skill'));
+    aux.push(this);
+    localStorage.setItem('skill',JSON.stringify(aux));
+}
+
+function Industry_representative(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('industry_representative'));
+    aux.push(this);
+    localStorage.setItem('industry_representative',JSON.stringify(aux));
+}
+
+function Major(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('major'));
+    aux.push(this);
+    localStorage.setItem('major',JSON.stringify(aux));
+}
+
+function University(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('university'));
+    aux.push(this);
+    localStorage.setItem('university',JSON.stringify(aux));
+}
+
+function Teacher(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('teacher'));
+    aux.push(this);
+    localStorage.setItem('teacher',JSON.stringify(aux));
+}
+
+function Evaluation(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('evaluation'));
+    aux.push(this);
+    localStorage.setItem('evaluation',JSON.stringify(aux));
+}
+
+function Template(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('template'));
+    aux.push(this);
+    localStorage.setItem('template',JSON.stringify(aux));
+}
+
+function Student_list(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('student_list'));
+    aux.push(this);
+    localStorage.setItem('student_list',JSON.stringify(aux));
+}
+
+function Course(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('course'));
+    aux.push(this);
+    localStorage.setItem('course',JSON.stringify(aux));
+}
+
+function Monitor(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('monitor'));
+    aux.push(this);
+    localStorage.setItem('monitor',JSON.stringify(aux));
+}
+
+function Scrum_model(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('scrum_model'));
+    aux.push(this);
+    localStorage.setItem('scrum_model',JSON.stringify(aux));
+}
+
+function Sprint(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('sprint'));
+    aux.push(this);
+    localStorage.setItem('sprint',JSON.stringify(aux));
+}
+
+function Feedback(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('feedback'));
+    aux.push(this);
+    localStorage.setItem('feedback',JSON.stringify(aux));
+}
+
+function Activity(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('activity'));
+    aux.push(this);
+    localStorage.setItem('activity',JSON.stringify(aux));
+}
+
+function Rubric(){
+    this.name=name;
+    this.login= (a) => {
+        console.log(a);
+        console.log(name);
+    }
+
+    var aux= JSON.parse(localStorage.getItem('rubric'));
+    aux.push(this);
+    localStorage.setItem('rubric',JSON.stringify(aux));
+}
+
+// CREATE
+var s1= new Student('Ricado');
+//s1.login('buenas');
+
+// READ
+// data['rubric']=JSON.parse(localStorage.getItem('rubric'));
+
+// UPDATE TODO FUNCTION INSIDE OOP
+
+// DELETE TODO FUNCTION INDEXOF OR fsplit()?
+
+
+/*$('#submit').on('click', () => {
     const user= JSON.parse(sessionStorage.getItem(('usuario')));
 
     if (!localStorage.cursos){
@@ -735,20 +1116,17 @@ $('#submit').on('click', () => {
         //alert(dic.noexpla);
         return;
     }
-});
+});*/
 
+//var archivo;
 
+//reportes.push(formData);
+//localStorage.setItem('reportes', JSON.stringify(reportes));
 
-var archivo;
-
-reportes.push(formData);
-localStorage.setItem('reportes', JSON.stringify(reportes));
-
-const archivos= JSON.parse(localStorage.getItem('archivos'));
-localStorage.setItem('archivos',JSON.stringify(archivos.concat(archivo)));
+//const data= JSON.parse(localStorage.getItem('data'));
+//localStorage.setItem('archivos',JSON.stringify(archivos.concat(archivo)));
 
 //alert(dic.repreg);
 
 console.log(" -- Guardado -- ");
-console.log(JSON.parse(localStorage.getItem('reportes')));
-resetValues();
+//resetValues(); falta TODO
