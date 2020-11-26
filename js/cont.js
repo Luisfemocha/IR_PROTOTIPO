@@ -9,60 +9,75 @@ function modalIndex(a){
     table.empty();
     $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');
     switch (a) {
-        case 1: InsRep(); // install repository
+        case 1: dowTas();
             break;
-        case 2: WriCod(); // write code
+        case 2: wriCod();
             break;
-        case 3: ComAct(); // commit activity
+        case 3: comAct();
             break;
-        case 4: ReaDoc(); // read documentation
+        case 4: reaDoc();
             break;
-        case 5: ExtReq(); // extract requirement
+        case 5: extReq();
             break;
-        case 6: ExtTas(); // extract task
+        case 6: extTas();
             break;
-        case 7: DelTas(); // delegate task
+        case 7: delTas();
             break;
-        case 8: EvaAct(); // evaluate activity
+        case 8: evaAct();
             break;
-        case 9: DesRub(); // design rubric
+        case 9: desRub();
             break;
-        case 10: EvaSpr(); // evaluate sprint
+        case 10: evaSpr();
             break;
-        case 11: ProFee(); // provide feedback
+        case 11: proFee();
             break;
-        case 12: DesAct(); // design activity
+        case 12: desAct();
             break;
-        case 13: SelPro(); // select project
+        case 13: selPro();
             break;
-        case 14: GivTem(); // give template
+        case 14: givTem();
             break;
-        case 15: ReaTas(); // realize task
+        case 15: reaTas();
             break;
-        case 16: PrePro(); // present project
+        case 16: prePro();
             break;
-        case 17: ComInd(); // communicate industry_representative
+        case 17: solInq();
             break;
-        case 18: SolInq();// solves Inquiries
+        case 18: supTea();
             break;
-        case 19: SupTea(); // Supervise Team
+        case 19: cheStL();
             break;
-        case 20: alert('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED');console.log('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED'); return false; //-BREAK CASE-//^ USER CASES UP ^//v KEEP PERFORMANCE INDICATOR DOWN v
+        case 20: crePro();
             break;
-        case 21: getGrade();
+        case 21: cheTas();
+            break;
+        case 22: makInq();
+            break;
+        case 23: desCou();
+            break;
+        case 24: vieEva();
+            break;
+        case 25: vieTem();
+            break;
+
+        case 30: alert('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED');console.log('RELATION DOES NOT HAVE A USER CASE OR KPI ASSOCIATED'); return false; //-BREAK CASE-//^ USER CASES UP ^//v KEEP PERFORMANCE INDICATOR DOWN v
+            break;
+
+        case 31: getCourseaverage();
             break; // grade                1. Knowledge increase
-        case 22: getActivityPerformed();
+        case 32: getActivityPerformed();
             break; // activityPerformed    2. Skills increase
-        case 23: getMajorAdvance();
+        case 33: getAverage();
             break; // majorAdvance         3. Student’s grades availability
-        case 24: getActivityAvailability();
+        case 34: getCourseprogress();
             break; // activityAvailability 4. Activities availability
-        case 25: getDeadline();
+        case 35: getDeadline();
             break; // deadline             5. Project's deadline control
-        case 26: getSprintsPerformed();
+        case 36: getSprintsPerformed();
             break; // sprintsPerformed     6. Projects delivery
-        case 27: getTeamSize();
+        case 37: getTeamSize();
             break; // teamSize             7. Team management
+
         default: alert('ERROR IN THE USER CASE // KPI NUMBER');
     }
     var b='UC0';
@@ -124,8 +139,8 @@ function number_format(val, decimals){
     return val.toFixed(decimals);
 }
 
-// USER CASES //
-function InsRep(){ // UC01 - INSTALL REPOSITORY
+// USER CASES V1.0 //
+/*function InsRep(){ // UC01 - INSTALL REPOSITORY
     table.empty();
     tit.html('INSTALL REPOSITORY');
     but.hide();
@@ -544,15 +559,1030 @@ function SupTea(){ // UC19 - SUPERVISE TEAM
         mod.modal('hide');
         setTimeout(() => {table.empty(); }, 2000);
     });
-} // UC19 - SUPERVISE TEAM
+} // UC19 - SUPERVISE TEAM*/
 
-// KEEP PERFORMANCE INDICATORS //
-function getGrade() { // KPI-1 - Knowledge increase
+// USER CASES V2.0
+function dowTas(){ // UC01: Download Task
+    table.empty();
+    tit.html('UC01: DOWNLOAD TASK');
+    table.append($("<p>Select the task in order to view its attributes. Push the 'DOWNLOAD' button to download the task.</p>"));
+
+    var div= $("<div class='form-inline dropright'></div>");
+    div.append($("<label class='col-sm-2'>Name:</label>"));
+    var sel= $("<select class='form-control col-lg' id='exampleFormControlSelect1'></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+
+    div.append(sel);
+
+    /*
+    <input id='n1' placeholder='Name' class='col-lg form-control dropdown-toggle' name='nam' data-toggle='dropdown' required>")
+    var dropMenu= $("<ul class ='dropdown-menu'></ul>").attr('id', id+'drop').attr('aria-labelledby', id).attr('name', comboBox);
+
+    //first time filling the comboBox
+    var comboMenu= JSON.parse(localStorage.getItem('task'));
+    comboMenu.forEach(function(r){ // r= codigo
+        console.log(r);
+        //var a= $("<a class='dropdown-item'></a>").html(r[1]+": "+r[2]).attr('name',id).attr('data-codigo',r[1]); // OTROS: ID	CODIGO	NOMBRE
+
+        a.on('click', function(){
+            $("#"+$(this).attr('name')).val($(this).attr('data-codigo'));
+        });
+        dropMenu.append(a);
+    });
+
+    div.append(inp);
+    div.append(dropMenu);
+
+    inp.on("keyup", function() {
+        if (event.keyCode==13) but.click()
+        else{
+            var id= $(this)[0]['id'];
+            var menu =  $("#"+id+"drop");
+            var values= $(this).val();
+
+            menu.empty(); //se hace de cero el dropdown.
+
+            var r;
+            var w=[];
+            r= m[menu.attr('name')];
+
+            r.forEach(function(s){ // mira cada campo y lo compara con el input
+                if (typeof values!=='string') values=values.toString();
+
+                if ((s[1]+": "+s[2]).toLowerCase().match(values.toLowerCase())){
+                    w.push(s);
+                }
+            });
+
+            w.forEach(function(c){ // vuelve a llenar el dropdown y le agrega los listeners
+                var a= $("<a class='dropdown-item'></a>").html(c[1]+": "+c[2]).attr('name',id).attr('data-codigo',c[1]);
+                menu.append(a);
+                a.on('click', function(){
+                    $("#"+$(this).attr('name')).val($(this).attr('data-codigo'));
+                });
+            });
+        }
+    });
+
+    */
+    table.append($("<tr class='pr-0'></tr>").append(div));
+
+    div= $("<div class='form-inline'></div>");
+    div.append($("<label class='col-sm-2'>Difficulty:</label>"));
+    div.append($("<input id='n1' placeholder='SEARCH' class='col-lg form-control' readonly>"));
+    table.append($("<tr class='pr-0'></tr>").append(div));
+
+    div= $("<div class='form-inline'></div>");
+    div.append($("<label class='col-sm-2'>Type:</label>"));
+    div.append($("<input id='n1' placeholder='SEARCH' class='col-lg form-control' readonly>"));
+    table.append($("<tr class='pr-0'></tr>").append(div));
+
+    div= $("<div class='form-inline'></div>");
+    div.append($("<label class='col-sm-2'>State:</label>"));
+    div.append($("<input id='n1' placeholder='SEARCH' class='col-lg form-control' readonly>"));
+    table.append($("<tr class='pr-0'></tr>").append(div));
+
+    div= $("<div class='form-inline'></div>");
+    div.append($("<label class='col-sm-2'>Submission:</label>"));
+    div.append($("<input id='n1' placeholder='SEARCH' class='col-lg form-control' readonly>"));
+    table.append($("<tr class='pr-0'></tr>").append(div));
+
+    but.html('DOWNLOAD');
+
+    but.click(function(){
+        mod.modal('hide');
+
+        //table.append($("<a id='download' download='task.json' style='display: none'></a>").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent()));
+        //$('#download').click()
+
+        setTimeout(() => {
+            table.empty();
+
+
+            } , 1000);
+    });
+} // UC01: Download Task
+function wriCod(){ // UC02: Write Code
+    table.empty();
+    tit.html('UC02: WRITE CODE');
+    but.html('SAVE CODE');
+    table.append($("<p>Submit your code and when your ready to save it just push the 'SAVE CODE' button and it'll save it.</p>"));
+
+    //     lan.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','language')) });
+    //     table.append(a);
+    //     table.append($("<tr scope='row' class='form-inline my-2'></tr>").append($("<label>Documentation: </label><input type='file' class='form-control-file ml-3 w-50' id='wc2' required>")));
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>REQUIREMENT: </label>"));
+    var sel= $("<select type='text' class='form-control col' id='requirement' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>CODE: </label>"));
+    tr.append($("<input id='code' class='form-control-file col' type='file' required>"));
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>NAME: </label>"));
+    tr.append($("<input id='name' placeholder='Name' class='form-control col' required>"));
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3  text-right'>LANGUAGE: </label>"));
+    tr.append($("<input id='languages' placeholder='Language' class='form-control  col' required>"));
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>TYPE: </label>"));
+    tr.append($("<input id='type' placeholder='Type' class='form-control  col' required>"));
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>DOCUMENTATION: </label>"));
+    tr.append($("<input id='doc' class='form-control-file col' type='file' required>"));
+    table.append(tr);
+
+    //table.append($("<textarea id='wc3' class='form-control my-2' placeholder='MISTAKES' required></textarea>"));
+    but.off();
+    but.click(function(){
+        let code= {
+            'CODE': $('#wc1').val(),
+            'LANGUAGE': $("#languages option:selected").text(),
+            'DOCUMENTATION': $('#wc2').val(),
+            //'MISTAKES': $('#wc3').val()
+        }
+        console.log('SAVING CODE...');
+        setTimeout(() => { console.log(code); }, 2000);
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+    });
+} // UC02: Write Code
+function comAct(){ // UC03: Commit Activity
     table.empty();
     but.show();
-    tit.html('KPI-1 - Knowledge increase');
-    but.html('Get Grade');
-    table.append($("<p>Press '+' to add another student and write the grade of each one. Press 'Get Grade' to calculate the grade.</p>"));
+    tit.html('UC03: COMMIT ACTIVITY');
+    table.append($("<p>Select the activity to commit, your name and then attach the file to fulfill it.</p>"));
+    but.html('COMMIT');
+
+    let e= ['Realize the commit.', 'Show the progress.','Talk to the lazy one.','Help the others with the quiz.'];
+    var a= $("<select id='tasks' class='form-control'></select>");
+
+    //     lan.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','language')) });
+    //     table.append(a);
+    //     table.append($("<tr scope='row' class='form-inline my-2'></tr>").append($("<label>Documentation: </label><input type='file' class='form-control-file ml-3 w-50' id='wc2' required>")));
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>ACTIVITY: </label>"));
+    var sel= $("<select type='text' class='form-control col' id='wc1' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    a= $("<select id='students' class='form-control col-lg'></select>");
+    f= ['Jairo Andrés Cortés Roncancio.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    tr.append($("<label class='col-sm-3 text-right'>STUDENT: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>COMMIT: </label>"));
+    tr.append($("<input id='commit' class='form-control-file col' type='file' required>"));
+    table.append(tr);
+
+    but.off();
+    but.on('click', function(){
+        var real= $( "#tasks option:selected").text();
+        let a= $('#rt1').val();
+        let b= $('#rt2').val();
+        console.log('REALIZING TASK...\n');
+        setTimeout(() => { console.log("The task "+real+" was made by submitting "+a+' and/or the file '+b); }, 2000);
+        mod.modal('hide');
+        setTimeout(() => { table.empty(); }, 1000);
+    });
+} // UC03: Commit Activity
+function reaDoc(){ // UC04: Read Documentation
+    table.empty();
+    but.show();
+    tit.html('UC04: READ DOCUMENTATION');
+    //     lan.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','language')) });
+    //     table.append(a);
+    //     table.append($("<tr scope='row' class='form-inline my-2'></tr>").append($("<label>Documentation: </label><input type='file' class='form-control-file ml-3 w-50' id='wc2' required>")));
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label>CODE: </label>"));
+    var sel= $("<select type='text' class='form-control col' id='code' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    table.append($("<textarea id='area' class='form-control col' placeholder='Select a code and the documentation will appear here.'></textarea>"));
+
+    but.html('DONE');
+    but.off();
+    but.on('click', function(){
+        mod.modal('hide');
+        setTimeout(() => { $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');}, 1000);
+        setTimeout(() => { table.empty(); }, 1000);
+    });
+} // UC04: Read Documentation
+function extReq(){ // UC05: Extract Requirement
+    table.empty();
+    but.show();
+    tit.html('UC05: EXTRACT REQUIREMENT');
+    but.html('SAVE');
+    table.append($("<caption style='caption-side: top; color: black;'>Select a system, then write a name for a new requirement, then push 'SAVE' in order to save it.</caption>"));
+    //     lan.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','language')) });
+    //     table.append(a);
+    //     table.append($("<tr scope='row' class='form-inline my-2'></tr>").append($("<label>Documentation: </label><input type='file' class='form-control-file ml-3 w-50' id='wc2' required>")));
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>SYSTEM: </label>"));
+    var sel= $("<select type='text' class='form-control col' id='code' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>NAME: </label>"));
+    tr.append($("<input id='name' class='form-control col' type='text' required>"));
+    table.append(tr);
+
+    but.off();
+    but.click(function(){
+        var tas= {'Name': $("#n1").val(), "Difficulty": $("#d1").val(), 'Type':$("#t1").val()};
+        console.log('SAVING TASKS...');
+        setTimeout(() => { console.log(tas); }, 2000);
+        mod.modal('hide');
+        table.empty();
+    });
+} // UC05: Extract Requirement
+function extTas(){ // UC06: Extract Task
+    table.empty();
+    but.show();
+    tit.html('UC06: EXTRACT TASK');
+    but.html('SAVE');
+    table.append($("<caption style='caption-side: top; color: black;'>Write the tasks attributes and then push 'SAVE' in order to save it.</caption>"));
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>NAME: </label>"));
+    tr.append($("<input id='name' class='form-control col' type='text' required>"));
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>DIFFICULTY: </label>"));
+    tr.append($("<input id='difficulty' class='form-control col' type='text' required>"));
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>TYPE: </label>"));
+    tr.append($("<input id='type' class='form-control col' type='text' required>"));
+    table.append(tr);
+
+    //     lan.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','language')) });
+    //     table.append(a);
+    //     table.append($("<tr scope='row' class='form-inline my-2'></tr>").append($("<label>Documentation: </label><input type='file' class='form-control-file ml-3 w-50' id='wc2' required>")));
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>REQUIREMENT: </label>"));
+    var sel= $("<select type='text' class='form-control-file col-sm-2' id='wc1' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    but.off();
+    but.click(function(){
+        var tas= {'Name': $("#n1").val(), "Difficulty": $("#d1").val(), 'Type':$("#t1").val()};
+        console.log('SAVING TASKS...');
+        setTimeout(() => { console.log(tas); }, 2000);
+        mod.modal('hide');
+        table.empty();
+    });
+} // UC06: Extract Task
+function delTas(){ // UC07: Delegate Task
+
+    table.empty();
+    but.show();
+    tit.html('UC07: DELEGATE TASK');
+    but.html('DONE');
+
+    var tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+
+    var a= $("<select id='tasks' class='form-control col-lg'></select>");
+    let f=['Realize the commit.','Show the progress.','Talk to the lazy one.','Help the others with the quiz.','DOLOR.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','task')) });
+    tr.append($("<label class='col-sm-3 text-right'>TASK: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    a= $("<select id='students' class='form-control col-lg'></select>");
+    f= ['Jairo Andrés Cortés Roncancio.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    tr.append($("<label class='col-sm-3 text-right'>STUDENT: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    but.off();
+    but.on('click', function(){
+        var deleg= $('input[name="checkbox"]:checked');
+        var stu= $( "#students option:selected").text();
+        if (deleg.length){
+            var s='';
+            deleg.each(function(){
+                s+='\n -';
+                e[$(this).val()].forEach(function (r){ s+=' '+r; }) });
+            console.log("THE TASKS TO DELEGATE ARE: "+s+"\nThey are delegated to "+stu);
+        }
+        else console.log('THERE ARE NOT TASKS TO DELEGATE.')
+        mod.modal('hide');
+        setTimeout(() => {table.empty(); }, 2000);
+    });
+} // UC07: Delegate Task
+function evaAct(){ // UC08: Evaluate Activity
+    table.empty();
+    but.show();
+    tit.html('UC08: EVALUATE ACTIVITY');
+    but.html('DONE');
+    table.append($("<caption style='caption-side: top;'><h6>Fill in every field in the form in order to evaluate the student's activity. In each field you'll be given a numeric and a text field to write the grade and the description of each field. Press 'DONE' to calculate the grade and save it.</h6></caption>"));
+    $("#modalDiag").addClass('modal-lg');
+
+    var cap= $("<caption style='caption-side: top; color: black;'></caption>")
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>ACTIVITY: </label>"));
+    var sel= $("<select type='text' class='form-control-file col-sm-2' id='wc1' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    cap.append(tr);
+    table.append(cap);
+
+    cap= $("<caption style='caption-side: top; color: black;'></caption>")
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    a= $("<select id='students' class='form-control col-lg'></select>");
+    f= ['Jairo Andrés Cortés Roncancio.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    tr.append($("<label class='col-sm-3 text-right'>STUDENT: </label>"))
+    tr.append(a);
+    cap.append(tr);
+    table.append(cap);
+
+    table.append($("<a id='download' download='activity.rar'>DOWNLOAD ACTIVITY</a>").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent())); // SE MUESTRA EL SUBMISSION DEL ESTUDIANTE
+
+    table.append($("<tr><th class='col-sm-3'>RUBRIC</th><th class='col-sm-3'>PERCENTAGE</th><th class='col' style='min-width: 100px;'>GRADE</th></tr>"));
+    var rub= ['Code fullness','Presentation','Progress report','Consistency','Functions'];
+    var per= [0.5, 0.1, 0.1, 0.2, 0.1];
+    for (let i in rub){
+        tr=$("<tr scope='row'></tr>");
+        tr.append($("<td class='col-sm-3'></td>").html(rub[i]));
+        tr.append($("<td class='col-sm-3'></td>").html(per[i]));
+        tr.append($("<input type='number' class='form-control col' style='min-width: 100px;' required>"));
+        table.append(tr);
+    }
+    //
+
+    but.off();
+    but.click(function(){
+        let a= (parseFloat($('#ea1g').val()) + parseFloat($('#ea2g').val()) + parseFloat($('#ea3g').val()) + parseFloat($('#ea4g').val()) + parseFloat($('#ea5g').val()))/5;
+        let a1= $('#ea1').val();
+        let a2= $('#ea2').val();
+        let a3= $('#ea3').val();
+        let a4= $('#ea4').val();
+        let a5= $('#ea5').val();
+        console.log('SAVING EVALUATION...');
+        setTimeout(() => { alert("FINAL GRADE: "+a); console.log("Evaluation.\n\nFINAL GRADE: "+a+"\n\nCOMMENTS\n - Code: "+a1+"\n - Presentation: "+a2+"\n - Progress: "+a3+"\n - Consistency: "+a4+"\n - Functions: "+a5); }, 2000);
+        mod.modal('hide');
+        setTimeout(() => { $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');}, 1000);
+        setTimeout(() => { table.empty(); }, 1000);
+    });
+} // UC08: Evaluate Activity
+function desRub(){ // UC09: Design Rubric
+    table.empty();
+    but.show();
+    tit.html('UC09: DESIGN RUBRIC');
+    but.html('SAVE');
+    table.append($("<p>Write the criterion for the rubric of the activity, you can push the '+' button to add more criterion. Push 'SAVE' in order to save it/them.</p>"));
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>ACTIVITY: </label>"));
+    var sel= $("<select type='text' class='form-control-file col-sm-2' id='wc1' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    table.append($("<tr></tr>").append("<td class='pr-0' width='414.4px'><input id='dr' placeholder='Criterion' class='form-control pr-0' name='crit' required><input id='pr' placeholder='Percentage' class='form-control pr-0' type='number' name='perc'></td>"));
+    table.append($("<caption class='m-0 p-0'><svg id='add' style='caption-side: bottom; color: #212529;' width=\"2.5em\" height=\"2.5em\" viewBox=\"0 0 16 16\" class=\"bi bi-file-plus-fill m-0 float-right\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z\"/></svg></caption>"))
+    var i=1;
+    $("#add").click(function () {
+        i++;
+        var t=$("<tr></tr>");
+        t.append($("<td class='pr-0'></td>").append($("<input class='form-control' name='crit' placeholder='Criterion' required>").attr('id','dr'+i)).append($("<input class='form-control' type='number' name='perc' placeholder='Percentage'>").attr('id','pr'+i)));
+
+        t.append($("<td class='py-auto px-0 m-0'></td>").append($("<svg width='38px' height='38px' viewBox=\"0 0 16 16\" class='bi bi-file-minus-fill' fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM6 7.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1H6z\"/></svg>").attr('id','rem'+i).on('click', function(){this.parentElement.parentElement.remove(); i-=1})));
+        table.append(t);
+    });
+
+    but.off();
+    but.click(function(){
+        var a=$("input[name ='crit']");
+        var rubric=[];
+        for(let i=0; i<a.length; i++) rubric.push(a[i].value);
+        console.log('SAVING THE RUBRIC...');
+        setTimeout(() => { console.log('Criterion: '+rubric)}, 2000);
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+    });
+} // UC09: Design Rubric
+function evaSpr(){// UC10: Evaluate Sprint
+    table.empty();
+    but.show();
+    tit.html('UC10: Evaluate Sprint');
+    but.html('DONE');
+    table.append($("<caption style='caption-side: top;'><h6>Fill in every field in the form in order to evaluate the student's sprint. In each field you'll be given a numeric and a text field to write the grade and the description of each field. Press 'DONE' to calculate the grade and save it.</h6></caption>"));
+    $("#modalDiag").addClass('modal-lg');
+
+    var tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    var a= $("<select id='students' class='form-control col-lg'></select>");
+    var f= ['1. FIRST SPRINT.', '2. SECOND.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','sprint')) });
+    tr.append($("<label class='col-sm-3 text-right'>SPRINT: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    table.append($("<tr><th class='col-sm-3'>RUBRIC</th><th class='col-sm-3'>PERCENTAGE</th><th class='col' style='min-width: 100px;'>GRADE</th></tr>"));
+    var rub= ['Code fullness','Presentation','Progress report','Consistency','Functions'];
+    var per= [0.5, 0.1, 0.1, 0.2, 0.1];
+    for (let i in rub){
+        tr=$("<tr scope='row'></tr>");
+        tr.append($("<td class='col-sm-3'></td>").html(rub[i]));
+        tr.append($("<td class='col-sm-3'></td>").html(per[i]));
+        tr.append($("<input type='number' class='form-control col' style='min-width: 100px;' required>"));
+        table.append(tr);
+    }
+    //
+
+    but.off();
+    but.click(function(){
+        let a= (parseFloat($('#ea1g').val()) + parseFloat($('#ea2g').val()) + parseFloat($('#ea3g').val()) + parseFloat($('#ea4g').val()) + parseFloat($('#ea5g').val()))/5;
+        let a1= $('#ea1').val();
+        let a2= $('#ea2').val();
+        let a3= $('#ea3').val();
+        let a4= $('#ea4').val();
+        let a5= $('#ea5').val();
+        console.log('SAVING EVALUATION...');
+        setTimeout(() => { alert("FINAL GRADE: "+a); console.log("Evaluation.\n\nFINAL GRADE: "+a+"\n\nCOMMENTS\n - Code: "+a1+"\n - Presentation: "+a2+"\n - Progress: "+a3+"\n - Consistency: "+a4+"\n - Functions: "+a5); }, 2000);
+        mod.modal('hide');
+        setTimeout(() => { $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');}, 1000);
+        setTimeout(() => { table.empty(); }, 1000);
+    });
+} // UC10: Evaluate Sprint
+function proFee(){ // UC11: Provide Feedback
+    table.empty();
+    but.show();
+    tit.html('UC11: Provide Feedback');
+    but.html('SAVE');
+    table.append($("<p>Write the feedback and then push 'SAVE' in order to send it.</p>"));
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    a= $("<select id='students' class='form-control col-lg'></select>");
+    f= ['SprintRun1.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    tr.append($("<label class='col-sm-3 text-right'>SPRINT: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    table.append($("<input id='pf1' class='form-control' placeholder='Author' required>"));
+    table.append($("<textarea id='pf2' class='form-control' placeholder='Commentary' required></textarea>"));
+    but.off();
+    but.click(function(){
+        let feedback= {'Author':$('#pf1').val(), 'Commentary':$('#pf2').val()}
+        console.log('SAVING THE FEEDBACK...');
+        setTimeout(() => { console.log("Feedback:\n\n- Author: "+a+"\n- Feedback: "+b); }, 2000);
+        mod.modal('hide');
+        table.empty();
+    });
+} // UC11: Provide Feedback
+function desAct(){ // UC12: Design Activity
+    table.empty();
+    but.show();
+    tit.html('UC12: Design Activity');
+    but.html('SAVE');
+    let e=['id','name','time_range','theme','type','delivery_date','percentage'];
+    let type=['number','text','text','text','text','date','number'];
+    showForm('Complete the form in order to design the activity.', e, 1, type);
+    but.off();
+    but.click(function(){
+        var activity={};
+        e.forEach(function(r){
+            activity[r]=document.getElementById(r).value;
+        });
+        console.log('SAVING THE ACTIVITY...');
+        setTimeout(() => { console.log(activity); }, 2000);
+        mod.modal('hide');
+        table.empty();
+    });
+} // UC12: Design Activity
+function selPro(){ // UC13: Select Project
+    table.empty();
+    but.show();
+    tit.html('UC13: Select Project');
+    but.html('SELECT');
+    table.append($("<caption style='caption-side: top;'><h6>Select your name and then which project you select.</h6></caption>"));
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>PROJECT: </label>"));
+    var sel= $("<select type='text' class='form-control-file col-sm-2' id='wc1' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    a= $("<select id='students' class='form-control col-lg'></select>");
+    f= ['Jairo Andrés Cortés Roncancio.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    tr.append($("<label class='col-sm-3 text-right'>STUDENT: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    but.off();
+    but.on('click', function(){
+        var sel= $('input[name="radio"]:checked');
+        if (sel.length){
+            console.log("THE PROJECT YOU SELECTED IS: ");
+            sel.each(function(){
+                var s='';
+                e[$(this).val()].forEach(function (r){ s+=''+r+' '; })
+                console.log(s);
+            });
+            mod.modal('hide');
+            setTimeout(() => {table.empty(); }, 2000);
+        }
+        else console.log("THERE HASN'T BEEN A SELECTED PROJECT YET.");
+    });
+} // UC13: Select Project
+function givTem(){ // UC14: Give Template
+    table.empty();
+    tit.html('UC14: Give Template');
+    but.html('GIVE');
+    table.append($("<p>Attach a file in order to give it to the students in the course.</p>"));
+
+    //     lan.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','language')) });
+    //     table.append(a);
+    //     table.append($("<tr scope='row' class='form-inline my-2'></tr>").append($("<label>Documentation: </label><input type='file' class='form-control-file ml-3 w-50' id='wc2' required>")));
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-3'>COURSE: </label>"));
+    var sel= $("<select type='text' class='form-control col-4' id='course' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel);
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>FILE: </label>"));
+    tr.append($("<input id='doc' class='form-control-file col' type='file' required>"));
+    table.append(tr);
+
+    //table.append($("<textarea id='wc3' class='form-control my-2' placeholder='MISTAKES' required></textarea>"));
+    but.off();
+    but.click(function(){
+        let code= {
+            'CODE': $('#wc1').val(),
+            'LANGUAGE': $("#languages option:selected").text(),
+            'DOCUMENTATION': $('#wc2').val(),
+            //'MISTAKES': $('#wc3').val()
+        }
+        console.log('SAVING CODE...');
+        setTimeout(() => { console.log(code); }, 2000);
+        mod.modal('hide');
+        setTimeout(() => { table.empty();} , 1000);
+    });
+} // UC14: Give Template
+function reaTas(){ // UC15: Realize Task
+    table.empty();
+    but.show();
+    tit.html('UC15: Realize Task');
+    table.append($("<p>Select your name, the task to realize and then write or attach the file to fulfill the task.</p>"));
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    a= $("<select id='students' class='form-control col-lg'></select>");
+    f= ['Jairo Andrés Cortés Roncancio.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    tr.append($("<label class='col-sm-3 text-right'>STUDENT: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    but.html('DONE');
+    let e= ['Realize the commit.', 'Show the progress.','Talk to the lazy one.','Help the others with the quiz.'];
+    var a= $("<select id='tasks' class='form-control'></select>");
+    e.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','task')) });
+
+    var tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>TASK: </label>"));
+    tr.append(a);
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>FILE: </label>"));
+    tr.append($("<input id='doc' class='form-control-file col' type='file' required>"));
+    table.append(tr);
+
+    but.off();
+    but.on('click', function(){
+        var real= $( "#tasks option:selected").text();
+        let a= $('#rt1').val();
+        let b= $('#rt2').val();
+        console.log('REALIZING TASK...\n');
+        setTimeout(() => { console.log("The task "+real+" was made by submitting "+a+' and/or the file '+b); }, 2000);
+        mod.modal('hide');
+        setTimeout(() => { table.empty(); }, 1000);
+    });
+} // UC15: Realize Task
+function prePro(){ // UC16: Present Project
+    table.empty();
+    but.show();
+    tit.html('UC16: Present Project');
+    table.append($("<p>In order to present the project attach a video in which you'll be presenting it. </p>"));
+
+    var tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>PRESENTATION: </label>"))
+    tr.append($("<input id='pp2' type='file' class='form-control-file col'>"));
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    var a= $("<select id='students' class='form-control col-lg'></select>");
+    var f= ['Jairo Andrés Cortés Roncancio.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    tr.append($("<label class='col-sm-3 text-right'>STUDENT: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    but.html('PRESENT');
+    but.off();
+    but.on('click', function(){
+        let a= $('#pp1').val();
+        let b= $('#pp2').val();
+        console.log('PRESENTING PROJECT...\n');
+        setTimeout(() => { console.log(a+' '+b); }, 2000);
+        mod.modal('hide');
+        setTimeout(() => { table.empty(); }, 1000);
+    });
+} // UC16: Present Project
+function solInq(){ // UC17: Solve Inquiries
+    table.empty();
+    but.show();
+    tit.html('UC17: Solve Inquiries');
+    but.html('DONE');
+    let e=["I can't seem to find the repository link, could you send it?","My code has this error: 'Main.java:9: error: cannot find symbol' but at that line there's only a comment...","My pc was stolen, I would appreciate if you could give me more time to send the activity.","How do I change the color of the code?","Am I still enrolled in this course? 'cause I wanted out."];
+    showForm("Write in the textarea the solution to each inquiry and then press 'DONE' to save them in console.", e, 2);
+    but.off();
+    but.click(function(){
+        var a=' INQUIRIES ';
+        e.forEach(function(r){ a+= '\n'+r+': '+document.getElementById(r).value });
+        console.log('SAVING THE ACTIVITY...');
+        setTimeout(() => { console.log(a); }, 2000);
+        mod.modal('hide');
+        table.empty();
+    });
+} // UC17: Solve Inquiries
+function supTea(){ // UC18: Supervise Team
+    table.empty();
+    but.show();
+    tit.html('UC18: Supervise Team');
+    but.html('DONE');
+    var cap= $("<caption style='caption-side: top; color: black;'></caption>")
+    var tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    var a= $("<select id='students' class='form-control col-lg'></select>");
+    var f= ['Team1', 'Team2'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','sprint')) });
+    tr.append($("<label class='col-sm-3 text-right'>TEAM: </label>"));
+    tr.append(a);
+    cap.append(tr);
+    table.append(cap);
+
+    let e=[['NAME','DIFFICULTY','TYPE'],['Realize the commit.','Manageable.','Critical.'],['Show the progress.','Manageable.','Standard.'],['Talk to the lazy one.','Manageable.','Standard.'],['Help the others with the quiz.','Manageable.','Critical.'],['DOLOR.','Unmanageable.','Critical.']];
+    showTable("Supervise the team's tasks.", e, 'none');
+
+    but.off();
+    but.on('click', function(){
+        console.log('Closing table...');
+        mod.modal('hide');
+        setTimeout(() => {table.empty(); }, 2000);
+    });
+} // UC18: Supervise Team
+function cheStL(){ // UC19: Check Student_List
+    table.empty();
+    but.show();
+    $("#modalDiag").addClass('modal-xl modal-dialog-scrollable');
+
+    var cap= $("<caption style='caption-side: top; color: black;'></caption>")
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>COURSE: </label>"));
+    var sel= $("<select type='text' class='form-control-file col-sm-2' id='wc1' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    cap.append(tr);
+    table.append(cap);
+
+    tit.html('UC19: Check Student_List');
+    but.html('DONE');
+    let e=[['ID','NAME','EMAIL', 'SEMESTER', 'EXPERIENCE','KNOWLEDGE'],
+        [1,'Maria Paulina', 'mapa@unal.edu.co',4, 5, 8],
+        [2,'Jairo', 'jaiRon@unal.edu.co',3, 2, 2],
+        [3,'Cristo', 'crimejia@unal.edu.co', 4, 5, 8],
+        [4,'Chamo', 'cupcakesong@eeeee.ar',4,10,12]];
+    showTable("", e, 'none');
+    but.off();
+    but.on('click', function(){
+        console.log('Closing table...');
+        mod.modal('hide');
+        setTimeout(() => {table.empty(); }, 2000);
+    });
+} // UC19: Check Student_List
+function crePro(){// UC20: Create Project
+    table.empty();
+    but.show();
+    tit.html('UC20: Create Project');
+    but.html('SAVE');
+
+    var tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>NAME: </label>"));
+    tr.append($("<input id='name' class='form-control col' type='text' required>"));
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    tr.append($("<label class='col-sm-3 text-right'>DEADLINE: </label>"));
+    tr.append($("<input id='deadline' class='form-control  col' type='date' required>"));
+    table.append(tr);
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>COURSE: </label>"));
+    var sel= $("<select type='text' class='form-control col' id='wc1' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    but.off();
+    but.click(function(){
+        var activity={};
+        e.forEach(function(r){
+            activity[r]=document.getElementById(r).value;
+        });
+        console.log('SAVING THE ACTIVITY...');
+        setTimeout(() => { console.log(activity); }, 2000);
+        mod.modal('hide');
+        table.empty();
+    });
+} // UC20: Create Project
+function cheTas(){// UC21: Check Task
+    table.empty();
+    but.show();
+    $("#modalDiag").addClass('modal-xl modal-dialog-scrollable');
+    tit.html('UC21: Check Task');
+    but.html('DONE');
+
+    var cap= $("<caption style='caption-side: top; color: black;'></caption>")
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>TEAM: </label>"));
+    var sel= $("<select type='text' class='form-control-file col-sm-2' id='wc1' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    cap.append(tr);
+    table.append(cap);
+    let e=[['NAME','DIFFICULTY','TYPE','STATE','STUDENT'],
+        ['Realize the commit.','Easy','standard','finalized','Maria Paulina'],
+        ['Show the progress.','Easy','standard','finalized','Jairo'],
+        ['Talk to the lazy one.','Medium','critical','not finalized','Cristo'],
+        ['Help the others with the quiz.','Hard', 'critical', 'not finalized','none']]
+    showTable("Teams tasks", e, 'none');
+    but.off();
+    but.on('click', function(){
+        console.log('Closing table...');
+        mod.modal('hide');
+        setTimeout(() => {table.empty(); }, 2000);
+    });
+} // UC21: Check Task
+function makInq(){// UC22: Make Inquiry
+    table.empty();
+    but.show();
+    tit.html('UC22: Make Inquiry');
+    but.html('SAVE');
+    table.append($("<p>Choose your name, write your feedback and then push 'SAVE' in order to send it.</p>"));
+
+    var tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    a= $("<select id='students' class='form-control col-lg'></select>");
+    f= ['Jairo Andrés.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    tr.append($("<label class='col-sm-3 text-right'>NAME: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    table.append($("<textarea id='pf2' class='form-control' placeholder='Description' required></textarea>"));
+    but.off();
+    but.click(function(){
+        let feedback= {'Author':$('#pf1').val(), 'Commentary':$('#pf2').val()}
+        console.log('SAVING THE FEEDBACK...');
+        setTimeout(() => { console.log("Feedback:\n\n- Author: "+a+"\n- Feedback: "+b); }, 2000);
+        mod.modal('hide');
+        table.empty();
+    });
+} // UC22: Make Inquiry
+function desCou(){// UC23: Design Course
+    table.empty();
+    but.show();
+    tit.html('UC23: Design Course');
+    but.html('SAVE');
+
+    var cap= $("<caption style='caption-side: top; color: black;'></caption>")
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>ACTIVITY: </label>"));
+    var sel= $("<select type='text' class='form-control-file col-sm-2' id='wc1' required></select>");
+    sel.append($("<option>Carlos Mario</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    cap.append(tr);
+    table.append(cap);
+
+    let e=['id','name','start_date','total_activities'];
+    let type=['number','text','date','number'];
+    showForm('Complete the form in order to design the course.', e, 1, type);
+    but.off();
+    but.click(function(){
+        var activity={};
+        e.forEach(function(r){
+            activity[r]=document.getElementById(r).value;
+        });
+        console.log('SAVING THE ACTIVITY...');
+        setTimeout(() => { console.log(activity); }, 2000);
+        mod.modal('hide');
+        table.empty();
+    });
+} // UC23: Design Course
+function vieEva(){// UC24: Views Evaluation
+    table.empty();
+    but.show();
+    tit.html('UC24: Views Evaluation');
+    but.html('DONE');
+    table.append($("<p>Select your name and the activity to see the evaluation.</p>"));
+    $("#modalDiag").addClass('modal-xl modal-dialog-scrollable');
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label class='col-sm-3'>ACTIVITY: </label>"));
+    var sel= $("<select type='text' class='form-control-file col-sm-2' id='wc1' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    tr= $("<tr scope='row' class='form-inline my-2 text-right'></tr>");
+    a= $("<select id='students' class='form-control col-lg'></select>");
+    f= ['Jairo Andrés Cortés Roncancio.', 'Cristian Mejía Martínez.','María Paulina García Velásquez.','Luis Felipe Moreno Chamorro.'];
+    f.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','student')) });
+    tr.append($("<label class='col-sm-3 text-right'>STUDENT: </label>"))
+    tr.append(a);
+    table.append(tr);
+
+    table.append($("<tr>EVALUATION</tr>"))
+    table.append($("<tr><th class='col-sm-3'>RUBRIC</th><th class='col-sm-3'>PERCENTAGE</th><th class='col' style='min-width: 100px;'>GRADE</th></tr>"));
+    var rub= ['Code fullness','Presentation','Progress report','Consistency','Functions'];
+    var per= [0.5, 0.1, 0.1, 0.2, 0.1];
+    var grad= [5, 3, 2, 4, 3, 5];
+    for (let i in rub){
+        tr=$("<tr scope='row'></tr>");
+        tr.append($("<td class='col-sm-3'></td>").html(rub[i]));
+        tr.append($("<td class='col-sm-3'></td>").html(per[i]));
+        tr.append($("<td class='col-sm-3'></td>").html(grad[i]));
+        table.append(tr);
+    }
+    var total= 4.3;
+    table.append($("<tr scope='row' class='form-inline my-2 text-right'></tr>").html('Total: '+total));
+    var feed= "Nice job!"
+    table.append($("<tr scope='row' class='form-inline my-2 text-right'></tr>").html('Feedback: '+feed));
+} // UC24: Views Evaluation
+function vieTem(){// UC25: View Template
+    table.empty();
+    but.show();
+    tit.html('UC25: View Template');
+    //     lan.forEach(function (r){ a.append($("<option></option>").html(r).attr('id',r).attr('name','language')) });
+    //     table.append(a);
+    //     table.append($("<tr scope='row' class='form-inline my-2'></tr>").append($("<label>Documentation: </label><input type='file' class='form-control-file ml-3 w-50' id='wc2' required>")));
+
+    var tr= $("<tr scope='row' class='form-inline my-2'></tr>");
+    tr.append($("<label>COURSE: </label>"));
+    var sel= $("<select type='text' class='form-control col' id='code' required></select>");
+    sel.append($("<option>1</option>"));
+    sel.append($("<option>2</option>"));
+    sel.append($("<option>3</option>"));
+    sel.append($("<option>4</option>"));
+    sel.append($("<option>5</option>"));
+    sel.append($("<option>6</option>"));
+    sel.append($("<option>7</option>"));
+    tr.append(sel)
+    table.append(tr);
+
+    table.append($("<textarea id='area' class='form-control col' placeholder='Select a course and the template will appear here.'></textarea>"));
+
+    but.html('DONE');
+    but.off();
+    but.on('click', function(){
+        mod.modal('hide');
+        setTimeout(() => { $("#modalDiag").attr("class", 'modal-dialog modal-dialog-centered');}, 1000);
+        setTimeout(() => { table.empty(); }, 1000);
+    });
+} // UC25: View Template
+
+// KEEP PERFORMANCE INDICATORS //
+function getCourseaverage() { // KPI-1. Knowledge increment
+    table.empty();
+    but.show();
+    tit.html('KPI-1. Knowledge increment');
+    but.html('Get courseaverage');
+    table.append($("<p>Press '+' to add another student and write the grade of each one. Press 'Get Grade' to calculate the courseaverage.</p>"));
     table.append($("<p>Formula: sum (grade) / total students</p>"));
     table.append($("<tr></tr>").append("<td class='pr-0' width='414.4px'><input id='gr1' placeholder='Grade' class='form-control pr-0' name='grad' type='number' required></td><td width='14.4px' height='38.2px'></td>"));
     table.append($("<caption class='m-0 p-0'><svg id='add' style='caption-side: bottom; color: #212529;' width=\"2.5em\" height=\"2.5em\" viewBox=\"0 0 16 16\" class=\"bi bi-file-plus-fill m-0 float-right\" fill=\"currentColor\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" d=\"M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM8.5 6a.5.5 0 0 0-1 0v1.5H6a.5.5 0 0 0 0 1h1.5V10a.5.5 0 0 0 1 0V8.5H10a.5.5 0 0 0 0-1H8.5V6z\"/></svg></caption>"))
@@ -567,19 +1597,19 @@ function getGrade() { // KPI-1 - Knowledge increase
     but.off();
     but.click(function(){ // this will be the future getGrade(), the outer is just design.
         let a=$("input[name ='grad']");
-        var grade=0;
+        var courseaverage=0;
         let l=a.length;
-        for(let i=0; i<l; i++) grade+=(a[i].value/l);
-        console.log('Grade: '+number_format(grade, 2));
+        for(let i=0; i<l; i++) courseaverage+=(a[i].value/l);
+        console.log('courseaverage: '+number_format(courseaverage, 2));
         mod.modal('hide');
         setTimeout(() => { table.empty();} , 1000);
-        return grade;
+        return courseaverage;
     });
 }               // KPI-1 - Knowledge increase
-function getActivityPerformed(){ // KPI-2 - Skills increase
+function getActivityPerformed(){ // KPI-2. Skill increment
     table.empty();
     but.show();
-    tit.html('KPI-2 - Skills increase');
+    tit.html('KPI-2. Skill increment');
     but.html('Get ActivityPerformed');
     table.append($("<p>Write the number of completed activities and the total of activities then push 'Get ActivityPerformed' to calculate activityPerformed.</p>"));
     table.append($("<p>Formula: (completed activities / total activities) * 100</p>"));
@@ -594,11 +1624,11 @@ function getActivityPerformed(){ // KPI-2 - Skills increase
         return activityPerformed;
     });
 }    // KPI-2 - Skills increase
-function getMajorAdvance(){ // KPI-3 - Student’s grades availability
+function getAverage(){ // KPI-3 - Grade´s history availability
     table.empty();
     but.show();
-    tit.html('KP-3 - Student’s grades availability');
-    but.html('Get MajorAdvance');
+    tit.html('KP-Grade´s history availability');
+    but.html('Get average');
     table.append($("<p>Press '+' to add another student and write the grade of each one. Press 'Get MajorAdvance' to calculate majorAdvance.</p>"));
     table.append($("<p>Formula: sum (student grade) / total students</p>"));
     table.append($("<tr></tr>").append("<td class='pr-0' width='414.4px'><input id='gr1' placeholder='Grade' class='form-control pr-0' name='grad' type='number' required></td><td width='14.4px' height='38.2px'></td>"));
@@ -614,37 +1644,37 @@ function getMajorAdvance(){ // KPI-3 - Student’s grades availability
     but.off();
     but.click(function(){ // this will be the future getMajorAdvance(), the outer is just design.
         let a=$("input[name ='grad']");
-        var majorAdvance=0;
+        var average=0;
         let l=a.length;
-        for(let i=0; i<l; i++) majorAdvance+=(a[i].value/l);
-        console.log('MajorAdvance: '+number_format(majorAdvance, 2));
+        for(let i=0; i<l; i++) average+=(a[i].value/l);
+        console.log('average: '+number_format(average, 2));
         mod.modal('hide');
         setTimeout(() => { table.empty();} , 1000);
-        return majorAdvance;
+        return average;
     });
 }         // KPI-3 - Student’s grades availability
-function getActivityAvailability(){ // KPI-4 - Activities availability
+function getCourseprogress(){ // KPI-4. Course progress
     table.empty();
     but.show();
-    tit.html('KPI-4 - Activities availability');
-    but.html('Get ActivityAvailability');
+    tit.html('KPI-4. Course progress');
+    but.html('Get courseprogress');
     table.append($("<p>Write the number of finished activities and the total of activities then push 'Get ActivityAvailability' to calculate activityAvailability.</p>"));
     table.append($("<p>Formula: finished activities / total_activities </p>"));
     table.append($("<input id='a1' class='form-control' placeholder='finished activities' type='number' required>"));
     table.append($("<input id='a2' class='form-control' placeholder='total activities' type='number' required>"));
     but.off();
     but.click(function(){
-        let activityAvailability= $('#a1').val()/$('#a2').val();
-        console.log('ActivityAvailability: '+number_format(activityAvailability, 2));
+        let courseprogress= $('#a1').val()/$('#a2').val();
+        console.log('ActivityAvailability: '+number_format(courseprogress, 2));
         mod.modal('hide');
         setTimeout(() => { table.empty();} , 1000);
-        return activityAvailability;
+        return courseprogress;
     });
 } // KPI-4 - Activities availability
 function getDeadline(){ // KPI-5 - Project's deadline control
     table.empty();
     but.show();
-    tit.html('KPI-5 - Project\'s deadline control');
+    tit.html("KPI-5 - Project's deadline control");
     but.html('Get Deadline');
     table.append($("<p>Write the delivery activity (the due date) and the delivery date (when the team commits the activity) then push 'Get Deadline' to calculate deadline.</p>"));
     table.append($("<p>Formula: delivery_activity - delivery_date</p>"));
@@ -659,10 +1689,10 @@ function getDeadline(){ // KPI-5 - Project's deadline control
         return deadline;
     });
 }             // KPI-5 - Project's deadline control
-function getSprintsPerformed(){ // KPI-6 - Projects delivery
+function getSprintsPerformed(){ // KPI-6. Course participation
     table.empty();
     but.show();
-    tit.html('KPI-6 - Projects delivery');
+    tit.html('KPI-6. Course participation');
     but.html('Get SprintsPerformed');
     table.append($("<p>Write the number of commits and the total of sprints then push 'Get SprintsPerformed' to calculate sprintsPerformed.</p>"));
     table.append($("<p>Formula: (commits number / total sprint)*100</p>"));
@@ -697,18 +1727,14 @@ function getTeamSize(){ // KPI-7 - Team management
 }             // KPI-7 - Team management
 
 // DATABASE 27
-// objetos= [student, requirement, design, system, repository, task, code, documentation, project, inquiry, team, tuition, skill, industry_representative, major, university, teacher, evaluation, template, student_list, course, monitor, scrum_model, sprint, feedback, activity, rubric]
-
-var data={};
+// objetos= [student, requirement, system, task, code, documentation, project, inquiry, team, tuition, industry_representative, major, university, teacher, evaluation, template, student_list, course, monitor, scrum_model, sprint, feedback, activity, rubric]
 
 $(document).ready( loadData() );
 function loadData(){
     // checks if each object is in database, if not it creates it.
     if (! localStorage.student) localStorage.setItem('student',JSON.stringify([]));
     if (! localStorage.requirement) localStorage.setItem('requirement',JSON.stringify([]));
-    if (! localStorage.design) localStorage.setItem('design',JSON.stringify([]));
     if (! localStorage.system) localStorage.setItem('system',JSON.stringify([]));
-    if (! localStorage.repository) localStorage.setItem('repository',JSON.stringify([]));
     if (! localStorage.task) localStorage.setItem('task',JSON.stringify([]));
     if (! localStorage.code) localStorage.setItem('code',JSON.stringify([]));
     if (! localStorage.documentation) localStorage.setItem('documentation',JSON.stringify([]));
@@ -716,7 +1742,6 @@ function loadData(){
     if (! localStorage.inquiry) localStorage.setItem('inquiry',JSON.stringify([]));
     if (! localStorage.team) localStorage.setItem('team',JSON.stringify([]));
     if (! localStorage.tuition) localStorage.setItem('tuition',JSON.stringify([]));
-    if (! localStorage.skill) localStorage.setItem('skill',JSON.stringify([]));
     if (! localStorage.industry_representative) localStorage.setItem('industry_representative',JSON.stringify([]));
     if (! localStorage.major) localStorage.setItem('major',JSON.stringify([]));
     if (! localStorage.university) localStorage.setItem('university',JSON.stringify([]));
@@ -731,125 +1756,78 @@ function loadData(){
     if (! localStorage.feedback) localStorage.setItem('feedback',JSON.stringify([]));
     if (! localStorage.activity) localStorage.setItem('activity',JSON.stringify([]));
     if (! localStorage.rubric) localStorage.setItem('rubric',JSON.stringify([]));
-
-    // adds each element to the object 'data' for easier usage.
-    data['student']=JSON.parse(localStorage.getItem('student'));
-    data['requirement']=JSON.parse(localStorage.getItem('requirement'));
-    data['design']=JSON.parse(localStorage.getItem('design'));
-    data['system']=JSON.parse(localStorage.getItem('system'));
-    data['repository']=JSON.parse(localStorage.getItem('repository'));
-    data['task']=JSON.parse(localStorage.getItem('task'));
-    data['code']=JSON.parse(localStorage.getItem('code'));
-    data['documentation']=JSON.parse(localStorage.getItem('documentation'));
-    data['project']=JSON.parse(localStorage.getItem('project'));
-    data['inquiry']=JSON.parse(localStorage.getItem('inquiry'));
-    data['team']=JSON.parse(localStorage.getItem('team'));
-    data['tuition']=JSON.parse(localStorage.getItem('tuition'));
-    data['skil']=JSON.parse(localStorage.getItem('skill'));
-    data['industry_representative']=JSON.parse(localStorage.getItem('industry_representative'));
-    data['major']=JSON.parse(localStorage.getItem('major'));
-    data['university']=JSON.parse(localStorage.getItem('university'));
-    data['teacher']=JSON.parse(localStorage.getItem('teacher'));
-    data['evaluation']=JSON.parse(localStorage.getItem('evaluation'));
-    data['template']=JSON.parse(localStorage.getItem('template'));
-    data['student_list']=JSON.parse(localStorage.getItem('student_list'));
-    data['course']=JSON.parse(localStorage.getItem('course'));
-    data['monitor']=JSON.parse(localStorage.getItem('monitor'));
-    data['scrum_model']=JSON.parse(localStorage.getItem('scrum_model'));
-    data['sprint']=JSON.parse(localStorage.getItem('sprint'));
-    data['feedback']=JSON.parse(localStorage.getItem('feedback'));
-    data['activity']=JSON.parse(localStorage.getItem('activity'));
 }
 
 // HARD-RESET
 function resetValues(){ localStorage.clear(); };
 
 // OOP - CRUD
-function Student(name){
-    this.name=name;
-    this.login= (a) => {
-        console.log(a);
-        console.log(name);
+class Student{
+    constructor(id, name, address, email, cellphone, semester, average, experience, knowledge) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.email = email;
+        this.cellphone = cellphone;
+        this.semester = semester;
+        this.average = average;
+        this.experience = experience;
+        this.knowledge = knowledge;
+
+        var aux= JSON.parse(localStorage.getItem('student'));
+        aux.push(this);
+        localStorage.setItem('student',JSON.stringify(aux));
     }
-
-    var aux= JSON.parse(localStorage.getItem('student'));
-    aux.push(this);
-    localStorage.setItem('student',JSON.stringify(aux));
 }
+class Requirement{
+    constructor(name){
+        this.name=name;
 
-function Requirement(){
-    this.name=name;
-    this.login= (a) => {
-        console.log(a);
-        console.log(name);
+        var aux= JSON.parse(localStorage.getItem('requirement'));
+        aux.push(this);
+        localStorage.setItem('requirement',JSON.stringify(aux));
     }
-
-    var aux= JSON.parse(localStorage.getItem('requirement'));
-    aux.push(this);
-    localStorage.setItem('requirement',JSON.stringify(aux));
+    extracts= () => {} //TODO
 }
+class System{
+    constructor(id, name){
+        this.id=id;
+        this.name=name;
 
-function Design(){
-    this.name=name;
-    this.login= (a) => {
-        console.log(a);
-        console.log(name);
+        var aux= JSON.parse(localStorage.getItem('system'));
+        aux.push(this);
+        localStorage.setItem('system',JSON.stringify(aux));
     }
-
-    var aux= JSON.parse(localStorage.getItem('design'));
-    aux.push(this);
-    localStorage.setItem('design',JSON.stringify(aux));
 }
+class Task{
+    constructor(name, difficulty, type, state, submission, delegation_state){
+        this.name=name;
+        this.difficulty=difficulty;
+        this.type=type;
+        this.state=state;
+        this.submission=submission;
+        this.delegation_state=delegation_state;
 
-function System(){
-    this.name=name;
-    this.login= (a) => {
-        console.log(a);
-        console.log(name);
+        var aux= JSON.parse(localStorage.getItem('task'));
+        aux.push(this);
+        localStorage.setItem('task',JSON.stringify(aux));
     }
-
-    var aux= JSON.parse(localStorage.getItem('system'));
-    aux.push(this);
-    localStorage.setItem('system',JSON.stringify(aux));
 }
+class Code{
+    constructor() {
+        this.name = name;
+        this.login = (a) => {
+            console.log(a);
+            console.log(name);
+        }
 
-function Repository(){
-    this.name=name;
-    this.login= (a) => {
-        console.log(a);
-        console.log(name);
+        var aux = JSON.parse(localStorage.getItem('code'));
+        aux.push(this);
+        localStorage.setItem('code', JSON.stringify(aux));
     }
-
-    var aux= JSON.parse(localStorage.getItem('repository'));
-    aux.push(this);
-    localStorage.setItem('repository',JSON.stringify(aux));
 }
-
-function Task(){
-    this.name=name;
-    this.login= (a) => {
-        console.log(a);
-        console.log(name);
-    }
-
-    var aux= JSON.parse(localStorage.getItem('task'));
-    aux.push(this);
-    localStorage.setItem('task',JSON.stringify(aux));
-}
-
-function Code(){
-    this.name=name;
-    this.login= (a) => {
-        console.log(a);
-        console.log(name);
-    }
-
-    var aux= JSON.parse(localStorage.getItem('code'));
-    aux.push(this);
-    localStorage.setItem('code',JSON.stringify(aux));
-}
-
-function Documentation(){
+/*
+class Documentation(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -860,8 +1838,7 @@ function Documentation(){
     aux.push(this);
     localStorage.setItem('documentation',JSON.stringify(aux));
 }
-
-function Project(){
+class Project(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -872,8 +1849,7 @@ function Project(){
     aux.push(this);
     localStorage.setItem('project',JSON.stringify(aux));
 }
-
-function Inquiry(){
+class Inquiry(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -884,8 +1860,7 @@ function Inquiry(){
     aux.push(this);
     localStorage.setItem('inquiry',JSON.stringify(aux));
 }
-
-function Team(){
+class Team(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -896,8 +1871,7 @@ function Team(){
     aux.push(this);
     localStorage.setItem('team',JSON.stringify(aux));
 }
-
-function Tuition(){
+class Tuition(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -908,20 +1882,7 @@ function Tuition(){
     aux.push(this);
     localStorage.setItem('tuition',JSON.stringify(aux));
 }
-
-function Skill(){
-    this.name=name;
-    this.login= (a) => {
-        console.log(a);
-        console.log(name);
-    }
-
-    var aux= JSON.parse(localStorage.getItem('skill'));
-    aux.push(this);
-    localStorage.setItem('skill',JSON.stringify(aux));
-}
-
-function Industry_representative(){
+class Industry_representative(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -932,8 +1893,7 @@ function Industry_representative(){
     aux.push(this);
     localStorage.setItem('industry_representative',JSON.stringify(aux));
 }
-
-function Major(){
+class Major(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -944,8 +1904,7 @@ function Major(){
     aux.push(this);
     localStorage.setItem('major',JSON.stringify(aux));
 }
-
-function University(){
+class University(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -956,8 +1915,7 @@ function University(){
     aux.push(this);
     localStorage.setItem('university',JSON.stringify(aux));
 }
-
-function Teacher(){
+class Teacher(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -968,8 +1926,7 @@ function Teacher(){
     aux.push(this);
     localStorage.setItem('teacher',JSON.stringify(aux));
 }
-
-function Evaluation(){
+class Evaluation(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -980,8 +1937,7 @@ function Evaluation(){
     aux.push(this);
     localStorage.setItem('evaluation',JSON.stringify(aux));
 }
-
-function Template(){
+class Template(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -992,8 +1948,7 @@ function Template(){
     aux.push(this);
     localStorage.setItem('template',JSON.stringify(aux));
 }
-
-function Student_list(){
+class Student_list(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -1004,8 +1959,7 @@ function Student_list(){
     aux.push(this);
     localStorage.setItem('student_list',JSON.stringify(aux));
 }
-
-function Course(){
+class Course(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -1016,8 +1970,7 @@ function Course(){
     aux.push(this);
     localStorage.setItem('course',JSON.stringify(aux));
 }
-
-function Monitor(){
+class Monitor(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -1028,8 +1981,7 @@ function Monitor(){
     aux.push(this);
     localStorage.setItem('monitor',JSON.stringify(aux));
 }
-
-function Scrum_model(){
+class Scrum_model(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -1040,8 +1992,7 @@ function Scrum_model(){
     aux.push(this);
     localStorage.setItem('scrum_model',JSON.stringify(aux));
 }
-
-function Sprint(){
+class Sprint(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -1052,8 +2003,7 @@ function Sprint(){
     aux.push(this);
     localStorage.setItem('sprint',JSON.stringify(aux));
 }
-
-function Feedback(){
+class Feedback(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -1064,8 +2014,7 @@ function Feedback(){
     aux.push(this);
     localStorage.setItem('feedback',JSON.stringify(aux));
 }
-
-function Activity(){
+class Activity(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -1076,8 +2025,7 @@ function Activity(){
     aux.push(this);
     localStorage.setItem('activity',JSON.stringify(aux));
 }
-
-function Rubric(){
+class Rubric(){
     this.name=name;
     this.login= (a) => {
         console.log(a);
@@ -1087,14 +2035,13 @@ function Rubric(){
     var aux= JSON.parse(localStorage.getItem('rubric'));
     aux.push(this);
     localStorage.setItem('rubric',JSON.stringify(aux));
-}
-
+}*/
 // CREATE
-var s1= new Student('Ricado');
-//s1.login('buenas');
+var s1= new Student('Cristo');
+s1.login('buenas');
 
 // READ
-// data['rubric']=JSON.parse(localStorage.getItem('rubric'));
+// console.log(JSON.parse(localStorage.getItem('rubric')));
 
 // UPDATE TODO FUNCTION INSIDE OOP
 
