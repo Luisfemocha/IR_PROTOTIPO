@@ -1,0 +1,33 @@
+{
+  "area_of_concern":[
+    {"name":"Customer", "color":"Green"},
+    {"name":"Solution", "color":"Yellow"},
+    {"name":"Endeavor", "color":"Blue"}
+  ],
+  "phase":[
+    {"name":"Software context", "area_of_concern":"Customer"},
+    {"name":"Problem analysis", "area_of_concern":"Solution"},
+    {"name":"Solution proposals", "area_of_concern":"Solution"},
+    {"name":"Conceptual schema", "area_of_concern":"Solution"}
+  ],
+  "sequence":[
+    {"phase": "Software context", "activity_space": "Prepare to do the work"},
+    {"phase": "Software context", "activity_space": "Explore the opportunity"},
+    {"phase": "Software context", "activity_space": "Understand the opportunity"},
+    {"phase": "Software context", "activity_space": "Understand the requirements"},
+    {"phase": "Software context", "activity_space": "Coordinate the work"},
+    {"phase": "Problem analysis", "activity_space": "Understand the requirements"},
+    {"phase": "Problem analysis", "activity_space": "Understand the opportunity"},
+    {"phase": "Problem analysis", "activity_space": "Explore the opportunity"},
+    {"phase": "Problem analysis", "activity_space": "Coordinate the work"},
+    {"phase": "Solution proposals", "activity_space": "Understand the requirements"},
+    {"phase": "Solution proposals", "activity_space": "Shape the software system"},
+    {"phase": "Solution proposals", "activity_space": "Explore the opportunity"},
+    {"phase": "Solution proposals", "activity_space": "Prepare to do the work"},
+    {"phase": "Solution proposals", "activity_space": "Coordinate the work"},
+    {"phase": "Conceptual schema", "activity_space": "Understand the opportunity"},
+    {"phase": "Conceptual schema", "activity_space": "Shape the software system"},
+    {"phase": "Conceptual schema", "activity_space": "Understand the requirements"},
+    {"phase": "Conceptual schema", "activity_space": "Coordinate the work"}
+  ]
+}

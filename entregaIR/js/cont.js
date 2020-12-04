@@ -934,7 +934,7 @@ function delTas(){ // UC07: Delegate Task
             }
             aux.push(r);
         });
-        localStorage.setItem('task',JSON.stringify(aux))
+        localStorage.setItem('task',JSON.stringify(aux)) // PUSH / SET
         mod.modal('hide');
         setTimeout(() => {table.empty(); }, 2000);
     });

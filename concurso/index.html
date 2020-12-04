@@ -1,0 +1,1442 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<header>
+    <!-- navbar -->
+</header>
+<main>
+    <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" id="modalDiag">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="titModal"></h5>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <table class="table mr-3 needs-validation was-validated mb-0" id='modalTable'></table>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary close" onclick="$('#modal').modal('hide')" type="button">CLOSE</button>
+                    <button class="btn btn-primary" id='aceptarModal' type="button"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <svg style="left: 0px; top: 0px; width: 100%; height: 100%; display: block; min-width: 717px; min-height: 285px; background-color: transparent; background-image: none;">
+        <defs>
+            <filter id="dropShadow">
+                <feGaussianBlur in="SourceAlpha" result="blur" stdDeviation="1.7"></feGaussianBlur>
+                <feOffset dx="3" dy="3" in="blur" result="offsetBlur"></feOffset>
+                <feFlood flood-color="#3D4574" flood-opacity="0.4" result="offsetColor"></feFlood>
+                <feComposite in="offsetColor" in2="offsetBlur" operator="in" result="offsetBlur"></feComposite>
+                <feBlend in="SourceGraphic" in2="offsetBlur"></feBlend>
+            </filter>
+        </defs>
+        <g transform="scale(0.57,0.57)translate(1604,14)" transformOrigin="0 0">
+            <g></g>
+            <g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -650 99.5 L -630 99.5 L -630 99 L -629.37 99" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -650 99.5 L -630 99.5 L -630 99 L -629.37 99" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -624.12 99 L -631.12 102.5 L -629.37 99 L -631.12 95.5 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="41" pointer-events="all" stroke="#000000" width="125" x="-775"
+                          y="79"></rect>
+                </g>
+                <g style="" onclick="modalIndex(9)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 123px; height: 1px; padding-top: 100px; margin-left: -774px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Work_Product
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -650 99.5 L -630 99.5 L -630 99 L -634.12 99" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -650 99.5 L -630 99.5 L -630 99 L -634.12 99" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -624.12 99 L -634.12 104 L -634.12 94 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-593"
+                          y="180"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 200px; margin-left: -592px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -543 99 L -514.12 99" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -543 99 L -514.12 99" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -504.12 99 L -514.12 104 L -514.12 94 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-623"
+                          y="79"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 99px; margin-left: -622px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="40" pointer-events="all" stroke="#000000" width="120" x="-776"
+                          y="340"></rect>
+                </g>
+                <g style="" onclick="modalIndex(10)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 360px; margin-left: -775px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Alpha
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -656 360 L -636 360 L -643 360 L -634.12 360" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -656 360 L -636 360 L -643 360 L -634.12 360" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -624.12 360 L -634.12 365 L -634.12 355 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#7f00ff" height="40" pointer-events="all" stroke="#000000" width="120" x="-643"
+                          y="238"></rect>
+                </g>
+                <g style="" onclick="modalIndex(11)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 258px; margin-left: -642px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #FFFFFF; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Manifest
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -583 380 L -583 433 L -514.12 433" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -583 380 L -583 433 L -514.12 433" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -504.12 433 L -514.12 438 L -514.12 428 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-623"
+                          y="340"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 360px; margin-left: -622px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-775"
+                          y="180"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 200px; margin-left: -774px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Image
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -603 119 L -603 200 L -643.88 200" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -603 119 L -603 200 L -643.88 200" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -653.88 200 L -643.88 195 L -643.88 205 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="40" pointer-events="all" stroke="#000000" width="120" x="-1057"
+                          y="177"></rect>
+                </g>
+                <g style="" onclick="modalIndex(6)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 197px; margin-left: -1056px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Activity
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -676 258 L -656 258 L -663 258 L -654.12 258" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -676 258 L -656 258 L -663 258 L -654.12 258" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -644.12 258 L -654.12 263 L -654.12 253 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -855 177 L -855 130.12" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -855 177 L -855 130.12" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -855 120.12 L -850 130.12 L -860 130.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -855 217 L -855 237 L -855 218 L -855 226.88" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -855 217 L -855 237 L -855 218 L -855 226.88" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -855 236.88 L -860 226.88 L -850 226.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-895"
+                          y="177"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 197px; margin-left: -894px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-915"
+                          y="79"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 99px; margin-left: -914px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1069 140 L -1049 140 L -1057 140 L -1048.12 140" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1069 140 L -1049 140 L -1057 140 L -1048.12 140" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1038.12 140 L -1048.12 145 L -1048.12 135 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="40" pointer-events="all" stroke="#000000" width="120" x="-1189"
+                          y="120"></rect>
+                </g>
+                <g style="" onclick="modalIndex(5)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 140px; margin-left: -1188px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Activity_space
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -997 120 L -997 51.12" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -997 120 L -997 51.12" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -997 41.12 L -992 51.12 L -1002 51.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1017 120 L -1017 90 L -1240 90 L -1240 168.88" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1017 120 L -1017 90 L -1240 90 L -1240 168.88" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1240 178.88 L -1245 168.88 L -1235 168.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-1037"
+                          y="120"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 140px; margin-left: -1036px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-1057"
+                          y="0"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 20px; margin-left: -1056px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-503"
+                          y="413"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 433px; margin-left: -502px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-776"
+                          y="413"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 433px; margin-left: -775px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -937 433 L -906.12 433" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -937 433 L -906.12 433" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -896.12 433 L -906.12 438 L -906.12 428 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="40" pointer-events="all" stroke="#000000" width="120" x="-1057"
+                          y="413"></rect>
+                </g>
+                <g style="" onclick="modalIndex(7)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 433px; margin-left: -1056px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Competency
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -815 433 L -795 433 L -796 433 L -787.12 433" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -815 433 L -795 433 L -796 433 L -787.12 433" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -777.12 433 L -787.12 438 L -787.12 428 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -855 413 L -855 289.12" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -855 413 L -855 289.12" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -855 279.12 L -850 289.12 L -860 289.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-895"
+                          y="413"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 433px; margin-left: -894px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -795 258 L -775 258 L -776 258 L -767.12 258" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -795 258 L -775 258 L -776 258 L -767.12 258" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -757.12 258 L -767.12 263 L -767.12 253 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-915"
+                          y="238"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 258px; margin-left: -914px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Capability
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1189 360 L -1169 360 L -1189 360 L -1180.12 360" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1189 360 L -1169 360 L -1189 360 L -1180.12 360" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1170.12 360 L -1180.12 365 L -1180.12 355 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="40" pointer-events="all" stroke="#000000" width="130" x="-1319"
+                          y="340"></rect>
+                </g>
+                <g style="" onclick="modalIndex(4)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 128px; height: 1px; padding-top: 360px; margin-left: -1318px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Area_of_concern
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1089 360 L -1069 360 L -1077 360 L -1068.12 360" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1089 360 L -1069 360 L -1077 360 L -1068.12 360" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1058.12 360 L -1068.12 365 L -1068.12 355 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1109 340 L -1109 260 L -1068.12 260" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1109 340 L -1109 260 L -1068.12 260" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1058.12 260 L -1068.12 265 L -1068.12 255 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1109 380 L -1109 390 L -997 390 L -997 401.88" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1109 380 L -1109 390 L -997 390 L -997 401.88" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -997 411.88 L -1002 401.88 L -992 401.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1129 380 L -1129 400 L -1129 393 L -1129 401.88" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1129 380 L -1129 400 L -1129 393 L -1129 401.88" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1129 411.88 L -1134 401.88 L -1124 401.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1129 340 L -1129 171.12" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1129 340 L -1129 171.12" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1129 161.12 L -1124 171.12 L -1134 171.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-1169"
+                          y="340"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 360px; margin-left: -1168px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-1057"
+                          y="238"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 258px; margin-left: -1056px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-1057"
+                          y="340"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 360px; margin-left: -1056px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Color
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1151.5 433 C -1151.5 444.05 -1141.43 453 -1129 453 C -1116.57 453 -1106.5 444.05 -1106.5 433 C -1106.5 421.95 -1116.57 413 -1129 413 C -1141.43 413 -1151.5 421.95 -1151.5 433"
+                          fill="#ff9999" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 433px; margin-left: -1150px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        4
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="40" pointer-events="all" stroke="#000000" width="120" x="-1590"
+                          y="69"></rect>
+                </g>
+                <g style="" onclick="modalIndex(1)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;" width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 89px; margin-left: -1589px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Phase
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1470 89 L -1441.12 89" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1470 89 L -1441.12 89" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1431.12 89 L -1441.12 94 L -1441.12 84 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1390 69 L -1376 69 L -1376 51.12" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1390 69 L -1376 69 L -1376 51.12" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1376 41.12 L -1371 51.12 L -1381 51.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1350 89 L -1270 89 L -1270 168.88" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1350 89 L -1270 89 L -1270 168.88" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1270 178.88 L -1275 168.88 L -1265 168.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-1430"
+                          y="69"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 89px; margin-left: -1429px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-1436"
+                          y="0"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 20px; margin-left: -1435px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -443 119 L -443 226.88" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -443 119 L -443 226.88" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -443 236.88 L -448 226.88 L -438 226.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-503"
+                          y="79"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 99px; margin-left: -502px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Responsibility
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -655 20 L -624.12 20" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -655 20 L -624.12 20" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -614.12 20 L -624.12 25 L -624.12 15 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="40" pointer-events="all" stroke="#000000" width="120" x="-775"
+                          y="0"></rect>
+                </g>
+                <g style="" onclick="modalIndex(8)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 20px; margin-left: -774px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Role
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -573 40 L -573 50 L -443 50 L -443 67.88" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -573 40 L -573 50 L -443 50 L -443 67.88" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -443 77.88 L -448 67.88 L -438 67.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-613"
+                          y="0"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 20px; margin-left: -612px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-503"
+                          y="0"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 20px; margin-left: -502px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -533 20 L -513 20 L -523 20 L -514.12 20" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -533 20 L -513 20 L -523 20 L -514.12 20" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -504.12 20 L -514.12 25 L -514.12 15 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -795 360 L -775 360 L -796 360 L -787.12 360" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -795 360 L -775 360 L -796 360 L -787.12 360" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -777.12 360 L -787.12 365 L -787.12 355 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -840 360 C -840 371.05 -829.93 380 -817.5 380 C -805.07 380 -795 371.05 -795 360 C -795 348.95 -805.07 340 -817.5 340 C -829.93 340 -840 348.95 -840 360"
+                          fill="#ff9999" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 360px; margin-left: -839px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        4
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-1324"
+                          y="270"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 290px; margin-left: -1323px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1530 160 L -1530 293 L -1447.12 293" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1530 160 L -1530 293 L -1447.12 293" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1437.12 293 L -1447.12 298 L -1447.12 288 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1394 313 L -1394 333 L -1394 323 L -1394 331.88" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1394 313 L -1394 333 L -1394 323 L -1394 331.88" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1394 341.88 L -1399 331.88 L -1389 331.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="84" x="-1436"
+                          y="273"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 82px; height: 1px; padding-top: 293px; margin-left: -1435px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="40" pointer-events="all" stroke="#000000" width="120" x="-1584"
+                          y="413"></rect>
+                </g>
+                <g style="" onclick="modalIndex(3)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 433px; margin-left: -1583px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Method
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-1324"
+                          y="413"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 433px; margin-left: -1323px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Name
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1464 433 L -1444 433 L -1454 433 L -1445.12 433" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1464 433 L -1444 433 L -1454 433 L -1445.12 433" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1435.12 433 L -1445.12 438 L -1445.12 428 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1354 433 L -1334 433 L -1344 433 L -1335.12 433" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1354 433 L -1334 433 L -1344 433 L -1335.12 433" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1325.12 433 L -1335.12 438 L -1335.12 428 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1394 413 L -1394 393 L -1394 403 L -1394 394.12" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1394 413 L -1394 393 L -1394 403 L -1394 394.12" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1394 384.12 L -1389 394.12 L -1399 394.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-1434"
+                          y="413"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 433px; margin-left: -1433px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-1454"
+                          y="343"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 363px; margin-left: -1453px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Composition
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1330 200 L -1362.88 200" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1330 200 L -1362.88 200" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1372.88 200 L -1362.88 195 L -1362.88 205 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" stroke="#000000" width="120" x="-1330"
+                          y="180"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 200px; margin-left: -1329px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Sequence
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -937 197 L -906.12 197" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -937 197 L -906.12 197" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -896.12 197 L -906.12 202 L -906.12 192 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1454 200 L -1474 200 L -1455 200 L -1463.88 200" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1454 200 L -1474 200 L -1455 200 L -1463.88 200" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1473.88 200 L -1463.88 195 L -1463.88 205 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-1454"
+                          y="180"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 200px; margin-left: -1453px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1520 200 C -1520 211.05 -1509.93 220 -1497.5 220 C -1485.07 220 -1475 211.05 -1475 200 C -1475 188.95 -1485.07 180 -1497.5 180 C -1509.93 180 -1520 188.95 -1520 200"
+                          fill="#66ff66" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 200px; margin-left: -1519px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -575 316 C -575 327.05 -564.93 336 -552.5 336 C -540.07 336 -530 327.05 -530 316 C -530 304.95 -540.07 296 -552.5 296 C -564.93 296 -575 304.95 -575 316"
+                          fill="#66ff66" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 316px; margin-left: -574px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        2
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1109 340 L -1109 197 L -1068.12 197" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1109 340 L -1109 197 L -1068.12 197" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1058.12 197 L -1068.12 202 L -1068.12 192 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1149 340 L -1149 319.5 L -1157.5 319.5 L -1157.5 310.12" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1149 340 L -1149 319.5 L -1157.5 319.5 L -1157.5 310.12" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1157.5 300.12 L -1152.5 310.12 L -1162.5 310.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1180 279 C -1180 290.05 -1169.93 299 -1157.5 299 C -1145.07 299 -1135 290.05 -1135 279 C -1135 267.95 -1145.07 259 -1157.5 259 C -1169.93 259 -1180 267.95 -1180 279"
+                          fill="#66ffb3" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 279px; margin-left: -1179px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        6
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1561.5 182 L -1561.5 162 L -1560 162 L -1560 171.12" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1561.5 182 L -1561.5 162 L -1560 162 L -1560 171.12" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1560 161.12 L -1555 171.12 L -1565 171.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1584 202 C -1584 213.05 -1573.93 222 -1561.5 222 C -1549.07 222 -1539 213.05 -1539 202 C -1539 190.95 -1549.07 182 -1561.5 182 C -1573.93 182 -1584 190.95 -1584 202"
+                          fill="#66ffb3" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 202px; margin-left: -1583px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        6
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1149 380 L -1149 390 L -1176 390 L -1176 401.88" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1149 380 L -1149 390 L -1176 390 L -1176 401.88" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1176 411.88 L -1181 401.88 L -1171 401.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1199 433 C -1199 444.05 -1188.93 453 -1176.5 453 C -1164.07 453 -1154 444.05 -1154 433 C -1154 421.95 -1164.07 413 -1176.5 413 C -1188.93 413 -1199 421.95 -1199 433"
+                          fill="#66b2ff" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 433px; margin-left: -1198px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        3
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1530 43 L -1530 63 L -1530 49 L -1530 57.88" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1530 43 L -1530 63 L -1530 49 L -1530 57.88" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -1530 67.88 L -1535 57.88 L -1525 57.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1552.5 23 C -1552.5 34.05 -1542.43 43 -1530 43 C -1517.57 43 -1507.5 34.05 -1507.5 23 C -1507.5 11.95 -1517.57 3 -1530 3 C -1542.43 3 -1552.5 11.95 -1552.5 23"
+                          fill="#66b2ff" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 23px; margin-left: -1551px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        3
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1109 340 L -1109 314 L -1041.12 314" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1109 340 L -1109 314 L -1041.12 314" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1031.12 314 L -1041.12 319 L -1041.12 309 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1030 314 C -1030 325.05 -1019.93 334 -1007.5 334 C -995.07 334 -985 325.05 -985 314 C -985 302.95 -995.07 294 -1007.5 294 C -1019.93 294 -1030 302.95 -1030 314"
+                          fill="#b266ff" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 314px; margin-left: -1029px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        5
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -795 20 L -775 20 L -795 20 L -786.12 20" fill="none" pointer-events="stroke"
+                          stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -795 20 L -775 20 L -795 20 L -786.12 20" fill="none" pointer-events="stroke"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -776.12 20 L -786.12 25 L -786.12 15 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -840 20 C -840 31.05 -829.93 40 -817.5 40 C -805.07 40 -795 31.05 -795 20 C -795 8.95 -805.07 0 -817.5 0 C -829.93 0 -840 8.95 -840 20"
+                          fill="#b266ff" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 20px; margin-left: -839px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        5
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ff8000" height="40" pointer-events="all" stroke="#000000" width="120" x="-1590"
+                          y="120"></rect>
+                </g>
+                <g style="" onclick="modalIndex(2)">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 140px; margin-left: -1589px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        Practice
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -483 258 L -511.88 258" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -483 258 L -511.88 258" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -521.88 258 L -511.88 253 L -511.88 263 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-483"
+                          y="238"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 258px; margin-left: -482px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-756"
+                          y="238"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 258px; margin-left: -755px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -583 340 L -583 289.12" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -583 340 L -583 289.12" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -583 279.12 L -578 289.12 L -588 289.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1530 343 L -1530 319 L -1501.12 319" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1530 343 L -1530 319 L -1501.12 319" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1491.12 319 L -1501.12 324 L -1501.12 314 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <rect fill="#ffffff" height="40" pointer-events="all" rx="20" ry="20" stroke="#000000" width="80" x="-1570"
+                          y="343"></rect>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 363px; margin-left: -1569px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        has
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1490 319 C -1490 330.05 -1479.93 339 -1467.5 339 C -1455.07 339 -1445 330.05 -1445 319 C -1445 307.95 -1455.07 299 -1467.5 299 C -1479.93 299 -1490 307.95 -1490 319"
+                          fill="#ff00ff" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 319px; margin-left: -1489px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        1
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -638.5 314 C -638.5 325.05 -628.43 334 -616 334 C -603.57 334 -593.5 325.05 -593.5 314 C -593.5 302.95 -603.57 294 -616 294 C -628.43 294 -638.5 302.95 -638.5 314"
+                          fill="#ff00ff" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="">
+                    <g>
+                        <foreignObject height="100%" pointer-events="none" style="overflow: visible; text-align: left;"
+                                       width="100%">
+                            <div style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 43px; height: 1px; padding-top: 314px; margin-left: -637px;">
+                                <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                    <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">
+                                        1
+                                    </div>
+                                </div>
+                            </div>
+                        </foreignObject>
+                    </g>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -612.99 293 L -612.99 289.12" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -612.99 293 L -612.99 289.12" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -613 279.12 L -607.99 289.11 L -617.99 289.12 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1454 363 L -1478.88 363" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1454 363 L -1478.88 363" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1488.88 363 L -1478.88 358 L -1478.88 368 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -1352 293 L -1335.12 293" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -1352 293 L -1335.12 293" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -1325.12 293 L -1335.12 298 L -1335.12 288 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -563 119 L -563 168.88" fill="none" pointer-events="stroke" stroke="white"
+                          stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -563 119 L -563 168.88" fill="none" pointer-events="stroke" stroke="#000000"
+                          stroke-miterlimit="10"></path>
+                    <path d="M -563 178.88 L -568 168.88 L -558 168.88 Z" fill="#000000" pointer-events="all"
+                          stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+                <g style="visibility: visible;" transform="translate(0.5,0.5)">
+                    <path d="M -548.99 296 L -553 296 L -553 289.12" fill="none" pointer-events="stroke" stroke="white" stroke-miterlimit="10" stroke-width="9" visibility="hidden"></path>
+                    <path d="M -548.99 296 L -553 296 L -553 289.12" fill="none" pointer-events="stroke" stroke="#000000" stroke-miterlimit="10"></path>
+                    <path d="M -553 279.12 L -548 289.12 L -558 289.12 Z" fill="#000000" pointer-events="all" stroke="#000000" stroke-miterlimit="10"></path>
+                </g>
+            </g>
+            <g></g>
+            <g></g>
+        </g>
+    </svg>
+    <div class="form-inline">
+        <a class="btn btn-primary col-sm-2 mx-1" onclick="resetValues();">Reset</a>
+        <a download="data.json" id="downloadData" class="btn btn-primary mx-1 col-sm-2">Download</a>
+        <label class="col-sm mx-1">DataFile:</label>
+        <input class="form-control custom-file col mx-1" type="file" id="dataFile">
+    </div>
+</main>
+<footer>
+
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="controlador.js"></script>
+</body>
+</html>
