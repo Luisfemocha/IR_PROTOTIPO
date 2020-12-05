@@ -1,943 +1,4015 @@
 {
-  "area_of_concern":[
-    {"name":"Customer", "color":"Green"},
-    {"name":"Solution", "color":"Yellow"},
-    {"name":"Endeavor", "color":"Blue"}
+  "area_of_concern": [
+    {
+      "name": "Customer",
+      "color": "Green"
+    },
+    {
+      "name": "Solution",
+      "color": "Yellow"
+    },
+    {
+      "name": "Endeavor",
+      "color": "Blue"
+    }
   ],
-  "phase":[
-    {"name":"Software context", "area_of_concern":"Customer"},
-    {"name":"Problem analysis", "area_of_concern":"Solution"},
-    {"name":"Solution proposals", "area_of_concern":"Solution"},
-    {"name":"Conceptual schema", "area_of_concern":"Solution"}
+  "phase": [
+    {
+      "name": "Software context",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Problem analysis",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Solution proposals",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Conceptual schema",
+      "area_of_concern": "Solution"
+    }
   ],
-  "sequence":[
-    {"phase": "Software context", "activity_space": "Prepare to do the work"},
-    {"phase": "Software context", "activity_space": "Explore the opportunity"},
-    {"phase": "Software context", "activity_space": "Understand the opportunity"},
-    {"phase": "Software context", "activity_space": "Understand the requirements"},
-    {"phase": "Software context", "activity_space": "Coordinate the work"},
-    {"phase": "Problem analysis", "activity_space": "Understand the requirements"},
-    {"phase": "Problem analysis", "activity_space": "Understand the opportunity"},
-    {"phase": "Problem analysis", "activity_space": "Explore the opportunity"},
-    {"phase": "Problem analysis", "activity_space": "Coordinate the work"},
-    {"phase": "Solution proposals", "activity_space": "Understand the requirements"},
-    {"phase": "Solution proposals", "activity_space": "Shape the software system"},
-    {"phase": "Solution proposals", "activity_space": "Explore the opportunity"},
-    {"phase": "Solution proposals", "activity_space": "Prepare to do the work"},
-    {"phase": "Solution proposals", "activity_space": "Coordinate the work"},
-    {"phase": "Conceptual schema", "activity_space": "Understand the opportunity"},
-    {"phase": "Conceptual schema", "activity_space": "Shape the software system"},
-    {"phase": "Conceptual schema", "activity_space": "Understand the requirements"},
-    {"phase": "Conceptual schema", "activity_space": "Coordinate the work"}
+  "sequence": [
+    {
+      "phase": "Software context",
+      "activity_space": "Prepare to do the work"
+    },
+    {
+      "phase": "Software context",
+      "activity_space": "Explore the opportunity"
+    },
+    {
+      "phase": "Software context",
+      "activity_space": "Understand the opportunity"
+    },
+    {
+      "phase": "Software context",
+      "activity_space": "Understand the requirements"
+    },
+    {
+      "phase": "Software context",
+      "activity_space": "Coordinate the work"
+    },
+    {
+      "phase": "Problem analysis",
+      "activity_space": "Understand the requirements"
+    },
+    {
+      "phase": "Problem analysis",
+      "activity_space": "Understand the opportunity"
+    },
+    {
+      "phase": "Problem analysis",
+      "activity_space": "Explore the opportunity"
+    },
+    {
+      "phase": "Problem analysis",
+      "activity_space": "Coordinate the work"
+    },
+    {
+      "phase": "Solution proposals",
+      "activity_space": "Understand the requirements"
+    },
+    {
+      "phase": "Solution proposals",
+      "activity_space": "Shape the software system"
+    },
+    {
+      "phase": "Solution proposals",
+      "activity_space": "Explore the opportunity"
+    },
+    {
+      "phase": "Solution proposals",
+      "activity_space": "Prepare to do the work"
+    },
+    {
+      "phase": "Solution proposals",
+      "activity_space": "Coordinate the work"
+    },
+    {
+      "phase": "Conceptual schema",
+      "activity_space": "Understand the opportunity"
+    },
+    {
+      "phase": "Conceptual schema",
+      "activity_space": "Shape the software system"
+    },
+    {
+      "phase": "Conceptual schema",
+      "activity_space": "Understand the requirements"
+    },
+    {
+      "phase": "Conceptual schema",
+      "activity_space": "Coordinate the work"
+    }
   ],
-  "activity_space":[
-    {"name":"Explore the opportunity", "area_of_concern":"Customer"},
-    {"name":"Understand the opportunity", "area_of_concern":"Customer"},
-    {"name":"Ensure stakeholder satisfaction", "area_of_concern":"Customer"},
-    {"name":"Use the software system", "area_of_concern":"Customer"},
-    {"name":"Understand the requirements", "area_of_concern":"Solution"},
-    {"name":"Shape the software system", "area_of_concern":"Solution"},
-    {"name":"Implement the software system", "area_of_concern":"Solution"},
-    {"name":"Test the software system", "area_of_concern":"Solution"},
-    {"name":"Deploy the software system", "area_of_concern":"Solution"},
-    {"name":"Operate the software system", "area_of_concern":"Solution"},
-    {"name":"Prepare to do the work", "area_of_concern":"Endeavor"},
-    {"name":"Coordinate the work", "area_of_concern":"Endeavor"},
-    {"name":"Support the team", "area_of_concern":"Endeavor"},
-    {"name":"Track health and progress of the alphas", "area_of_concern":"Endeavor"},
-    {"name":"Stop the work", "area_of_concern":"Endeavor"}
+  "activity_space": [
+    {
+      "name": "Explore the opportunity",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Understand the opportunity",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Ensure stakeholder satisfaction",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Use the software system",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Understand the requirements",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Shape the software system",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Implement the software system",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Test the software system",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Deploy the software system",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Operate the software system",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Prepare to do the work",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Coordinate the work",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Support the team",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Track health and progress of the alphas",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Stop the work",
+      "area_of_concern": "Endeavor"
+    }
   ],
-  "activity":[
-    {"name":"Define roles and responsibilities", "area_of_concern":"Endeavor"},
-    {"name":"Explain the method", "area_of_concern":"Endeavor"},
-    {"name":"Check documentation", "area_of_concern":"Customer"},
-    {"name":"Develop stakeholder-analyst interview", "area_of_concern":"Customer"},
-    {"name":"Summarize the information related to the actors, objects and functions", "area_of_concern":"Customer"},
-    {"name":"Identify internal and external actors in the organization", "area_of_concern":"Customer"},
-    {"name":"Establish a common language", "area_of_concern":"Customer"},
-    {"name":"Verify consistency", "area_of_concern":"Customer"},
-    {"name":"Establish common language", "area_of_concern":"Solution"},
-    {"name":"Verify consistency", "area_of_concern":"Solution"},
-    {"name":"Structure organization information", "area_of_concern":"Solution"},
-    {"name":"Verify consistency", "area_of_concern":"Solution"},
-    {"name":"Manage task realization", "area_of_concern":"Endeavor"},
-    {"name":"Report project progress", "area_of_concern":"Endeavor"},
-
-    {"name":"Characterize the problem domain", "area_of_concern":"Solution"},
-    {"name":"Develop the data dictionary", "area_of_concern":"Solution"},
-    {"name":"Verify consistency", "area_of_concern":"Customer"},
-    {"name":"Establish process limitations", "area_of_concern":"Customer"},
-    {"name":"Characterize problem domain", "area_of_concern":"Customer"},
-
-    {"name":"Develop new organizational chart", "area_of_concern":"Solution"},
-    {"name":"Develop new process diagram", "area_of_concern":"Solution"},
-    {"name":"Specify software application functionality", "area_of_concern":"Solution"},
-    {"name":"Establish critical success factors", "area_of_concern":"Customer"},
-    {"name":"Establish the solution value", "area_of_concern":"Endeavor"},
-
-    {"name":"Develop the alpha prototype", "area_of_concern":"Customer"},
-    {"name":"Develop the alpha prototype", "area_of_concern":"Solution"},
-    {"name":"Develop the beta prototype", "area_of_concern":"Customer"},
-    {"name":"Develop the beta prototype", "area_of_concern":"Solution"},
-    {"name":"Provide the bases for the final application construction", "area_of_concern":"Solution"},
-    {"name":"Specify software application functionality", "area_of_concern":"Solution"}
+  "activity": [
+    {
+      "name": "Define roles and responsibilities",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Explain the method",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Check documentation",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Develop stakeholder-analyst interview",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Summarize the information related to the actors, objects and functions",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Identify internal and external actors in the organization",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Establish a common language",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Verify consistency",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Establish common language",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Verify consistency",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Structure organization information",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Verify consistency",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Manage task realization",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Report project progress",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Characterize the problem domain",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Develop the data dictionary",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Verify consistency",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Establish process limitations",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Characterize problem domain",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Develop new organizational chart",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Develop new process diagram",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Specify software application functionality",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Establish critical success factors",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Establish the solution value",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Develop the alpha prototype",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Develop the alpha prototype",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Develop the beta prototype",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Develop the beta prototype",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Provide the bases for the final application construction",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Specify software application functionality",
+      "area_of_concern": "Solution"
+    }
   ],
-  "competency":[
-    {"name":"Stakeholder representation","area_of_concern":"Customer"},
-    {"name":"Analysis","area_of_concern":"Solution"},
-    {"name":"Development","area_of_concern":"Solution"},
-    {"name":"Testing","area_of_concern":"Solution"},
-    {"name":"Leadership","area_of_concern":"Endeavor"},
-    {"name":"Management","area_of_concern":"Endeavor"}
+  "competency": [
+    {
+      "name": "Stakeholder representation",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Analysis",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Development",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Testing",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Leadership",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Management",
+      "area_of_concern": "Endeavor"
+    }
   ],
-  "capability":[
-    {"activity":"Characterize the problem domain","competency":"Analysis"},
-    {"activity":"Characterize the problem domain","competency":"Stakeholder representation"},
-    {"activity":"Check documentation","competency":"Analysis"},
-    {"activity":"Check documentation","competency":"Stakeholder representation"},
-    {"activity":"Define roles and responsibilities","competency":"Leadership"},
-    {"activity":"Define roles and responsibilities","competency":"Management"},
-    {"activity":"Develop the alpha prototype","competency":"Development"},
-    {"activity":"Develop the beta prototype","competency":"Development"},
-    {"activity":"Develop new organizational chart","competency":"Analysis"},
-    {"activity":"Develop new process diagram","competency":"Analysis"},
-    {"activity":"Develop stakeholder-analyst interview","competency":"Analysis"},
-    {"activity":"Develop the data dictionary","competency":"Analysis"},
-    {"activity":"Establish common language","competency":"Analysis"},
-    {"activity":"Establish common language","competency":"Stakeholder representation"},
-    {"activity":"Establish critical success factors","competency":"Analysis"},
-    {"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    {"activity":"Establish the solution value","competency":"Management"},
-    {"activity":"Explain the method","competency":"Leadership"},
-    {"activity":"Identify internal and external actors in the organization","competency":"Stakeholder representation"},
-    {"activity":"Manage task realization","competency":"Management"},
-    {"activity":"Provide the bases for the final application construction","competency":"Development"},
-    {"activity":"Report project progress","competency":"Management"},
-    {"activity":"Specify software application functionality","competency":"Analysis"},
-    {"activity":"Structure organization information","competency":"Analysis"},
-    {"activity":"Structure organization information","competency":"Stakeholder representation"},
-    {"activity":"Summarize the information related to the actors, objects and functions","competency":"Analysis"},
-    {"activity":"Verify consistency","competency":"Analysis"}
+  "capability": [
+    {
+      "activity": "Characterize the problem domain",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Characterize the problem domain",
+      "competency": "Stakeholder representation"
+    },
+    {
+      "activity": "Check documentation",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Check documentation",
+      "competency": "Stakeholder representation"
+    },
+    {
+      "activity": "Define roles and responsibilities",
+      "competency": "Leadership"
+    },
+    {
+      "activity": "Define roles and responsibilities",
+      "competency": "Management"
+    },
+    {
+      "activity": "Develop the alpha prototype",
+      "competency": "Development"
+    },
+    {
+      "activity": "Develop the beta prototype",
+      "competency": "Development"
+    },
+    {
+      "activity": "Develop new organizational chart",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Develop new process diagram",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Develop stakeholder-analyst interview",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Develop the data dictionary",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Establish common language",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Establish common language",
+      "competency": "Stakeholder representation"
+    },
+    {
+      "activity": "Establish critical success factors",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Establish process limitations",
+      "competency": "Stakeholder representation"
+    },
+    {
+      "activity": "Establish the solution value",
+      "competency": "Management"
+    },
+    {
+      "activity": "Explain the method",
+      "competency": "Leadership"
+    },
+    {
+      "activity": "Identify internal and external actors in the organization",
+      "competency": "Stakeholder representation"
+    },
+    {
+      "activity": "Manage task realization",
+      "competency": "Management"
+    },
+    {
+      "activity": "Provide the bases for the final application construction",
+      "competency": "Development"
+    },
+    {
+      "activity": "Report project progress",
+      "competency": "Management"
+    },
+    {
+      "activity": "Specify software application functionality",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Structure organization information",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Structure organization information",
+      "competency": "Stakeholder representation"
+    },
+    {
+      "activity": "Summarize the information related to the actors, objects and functions",
+      "competency": "Analysis"
+    },
+    {
+      "activity": "Verify consistency",
+      "competency": "Analysis"
+    }
   ],
-  "alpha":[
-    {"name":"Opportunity", "area_of_concern":"Customer"},
-    {"name":"Stakeholders", "area_of_concern":"Customer"},
-    {"name":"Requirements", "area_of_concern":"Solution"},
-    {"name":"Software system", "area_of_concern":"Solution"},
-    {"name":"Work", "area_of_concern":"Endeavor"},
-    {"name":"Team", "area_of_concern":"Endeavor"},
-    {"name":"Way of working", "area_of_concern":"Endeavor"}
+  "alpha": [
+    {
+      "name": "Opportunity",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Stakeholders",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Requirements",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Software system",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Work",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Team",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Way of working",
+      "area_of_concern": "Endeavor"
+    }
   ],
-  "role":[
-    {"name":"Project director", "area_of_concern":"Endeavor"},
-    {"name":"Stakeholder", "area_of_concern":"Customer"},
-    {"name":"Developer", "area_of_concern":"Solution"}
+  "role": [
+    {
+      "name": "Project director",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Stakeholder",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Analyst",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Developer",
+      "area_of_concern": "Solution"
+    }
   ],
-  "practice":[
-    {"name":"Assignment of responsibilities based on competencies", "area_of_concern":"Endeavor"},
-    {"name":"Appropriate training of the team", "area_of_concern":"Endeavor"},
-    {"name":"Text-based modeling of the requirements", "area_of_concern":"Customer"},
-    {"name":"Visual modeling of software systems", "area_of_concern":"Solution"},
-    {"name":"Right management of requirements", "area_of_concern":"Solution"},
-    {"name":"Systematic control and monitoring of the work", "area_of_concern":"Endeavor"},
-    {"name":"Quantitative assessment of work effort and cost", "area_of_concern":"Endeavor"}
+  "practice": [
+    {
+      "name": "Assignment of responsibilities based on competencies",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Appropriate training of the team",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Text-based modeling of the requirements",
+      "area_of_concern": "Customer"
+    },
+    {
+      "name": "Visual modeling of software systems of software systems",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Right management of requirements",
+      "area_of_concern": "Solution"
+    },
+    {
+      "name": "Systematic control and monitoring of the work",
+      "area_of_concern": "Endeavor"
+    },
+    {
+      "name": "Quantitative assessment of work effort and cost",
+      "area_of_concern": "Endeavor"
+    }
   ],
-  "method":[
-    {"name":"UNC-Method"}
+  "method": [
+    {
+      "name": "UNC-Method"
+    }
   ],
-  "composition":[
-    {"method":"UNC-Method", "practice":"Responsibility assignation"},
-    {"method":"UNC-Method", "practice":"Staff training"},
-    {"method":"UNC-Method", "practice":"Domain objects modeling"},
-    {"method":"UNC-Method", "practice":"Visual modeling"},
-    {"method":"UNC-Method", "practice":"Requirement management"},
-    {"method":"UNC-Method", "practice":"Process control and monitoring"},
-    {"method":"UNC-Method", "practice":"Determination of work endeavor and cost"}
+  "composition": [
+    {
+      "method": "UNC-Method",
+      "practice": "Assignment of responsibilities based on competencies"
+    },
+    {
+      "method": "UNC-Method",
+      "practice": "Appropriate training of the team"
+    },
+    {
+      "method": "UNC-Method",
+      "practice": "Text-based modeling of the requirements"
+    },
+    {
+      "method": "UNC-Method",
+      "practice": "Visual modeling of software systems"
+    },
+    {
+      "method": "UNC-Method",
+      "practice": "Right management of requirements"
+    },
+    {
+      "method": "UNC-Method",
+      "practice": "Systematic control and monitoring of the work"
+    },
+    {
+      "method": "UNC-Method",
+      "practice": "Quantitative assessment of work effort and cost"
+    }
   ],
-  "responsibility":[
-    {"work_product":{"name":"List of roles and responsibilities", "image":""}, "role":"Project director"},
-    {"work_product":{"name":"UNC-Method guide", "image":""}, "role":"Project director"},
-    {"work_product":{"name":"Digital files", "image":"DigitalFiles.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Controlled dialogue", "image":"ControlledDialogue.png"}, "role":"Stakeholder"},
-    {"work_product":{"name":"Controlled dialogue", "image":"ControlledDialogue.png"}, "role":"Analyst"},
-    {"work_product":{"name":"Controlled dialogue", "image":"ControlledDialogue.png"}, "role":"Project director"},
-    {"work_product":{"name":"Elicitation cards", "image":"ElicitationCards.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Domain model", "image":"Domain model.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Organizational chart", "image":"OrganizationalChart.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Pre-conceptual schema", "image":"Pre-conceptualSchema.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Executable pre-conceptual schemas", "image":"ExecutablePre-conceptualSchemas.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Documental traceability table", "image":"DocumentalTraceabilityTable.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Kanban board", "image":"KanbanBoard.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Alpha progress report", "image":"AlphasAdvanceReport.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Business rules", "image":"BusinessRules.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Explanatory table of process diagram", "image":"ExplanatoryTable OfProcessDiagram.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Process diagram", "image":"ProcessDiagram.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Data dictionary", "image":"DataDictionary.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Event interaction graph", "image":"EventInteractionGraph.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Cause-and-effect diagram", "image":"Cause-and-effectDiagram.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Problem percentage assignation table", "image":"ProblemPercentageAssignationTable.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Goal diagram", "image":"GoalDiagram.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Goal percentage assignation table", "image":"GoalPercentageAssignationTable.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Pre-conceptual schema with goals", "image":"Pre-conceptualSchemaWithGoals.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Pre-conceptual schema with problems", "image":"Pre-conceptualSchemaWithProblems.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Explanatory tables of use cases", "image":"ExplanatoryTablesOfUseCases.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Use cases", "image":"UseCases.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"User interface flow diagram", "image":"UserInterfaceFlow Diagram.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Solution value", "image":"SolutionValue.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Solution cost", "image":"SolutionCost.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Critical success factors", "image":"CriticalSuccessFactors.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Indicator summary", "image":"IndicatorSummary.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"New process diagram", "image":"NewProcessDiagram.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"New organizational chart", "image":"OrganizationalChart.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Alpha prototype", "image":"AlphaPrototype.jpg"}, "role":"Developer"},
-    {"work_product":{"name":"Source code examples", "image":"SourceCodeExamples.jpg"}, "role":"Developer"},
-    {"work_product":{"name":"Pre-conceptual-schema-based specifications", "image":"Pre-conceptual-schema-basedSpecifications.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Class diagram", "image":"ClassDiagram.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Communication diagrams", "image":"CommunicationDiagrams.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"State machine diagrams", "image":"StateMachineDiagrams.jpg"}, "role":"Analyst"},
-    {"work_product":{"name":"Beta prototype", "image":"BetaPrototype.jpg"}, "role":"Developer"}
+  "responsibility": [
+    {
+      "work_product": {
+        "name": "List of roles and responsibilities",
+        "image": "ListOfRolesAndResponsibilities.png"
+      },
+      "role": "Project director"
+    },
+    {
+      "work_product": {
+        "name": "UNC-Method guide",
+        "image": "UNC-MethodGuide.png"
+      },
+      "role": "Project director"
+    },
+    {
+      "work_product": {
+        "name": "Digital files",
+        "image": "DigitalFiles.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Controlled dialogue",
+        "image": "ControlledDialogue.png"
+      },
+      "role": "Stakeholder"
+    },
+    {
+      "work_product": {
+        "name": "Controlled dialogue",
+        "image": "ControlledDialogue.png"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Controlled dialogue",
+        "image": "ControlledDialogue.png"
+      },
+      "role": "Project director"
+    },
+    {
+      "work_product": {
+        "name": "Elicitation cards",
+        "image": "ElicitationCards.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Domain model",
+        "image": "Domain model.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Organizational chart",
+        "image": "OrganizationalChart.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Pre-conceptual schema",
+        "image": "Pre-conceptualSchema.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Executable pre-conceptual schemas",
+        "image": "ExecutablePre-conceptualSchemas.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Documental traceability table",
+        "image": "DocumentalTraceabilityTable.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Kanban board",
+        "image": "KanbanBoard.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Alpha progress report",
+        "image": "AlphasAdvanceReport.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Business rules",
+        "image": "BusinessRules.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Explanatory table of process diagram",
+        "image": "ExplanatoryTable OfProcessDiagram.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Process diagram",
+        "image": "ProcessDiagram.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Data dictionary",
+        "image": "DataDictionary.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Event interaction graph",
+        "image": "EventInteractionGraph.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Cause-and-effect diagram",
+        "image": "Cause-and-effectDiagram.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Problem percentage assignation table",
+        "image": "ProblemPercentageAssignationTable.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Goal diagram",
+        "image": "GoalDiagram.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Goal percentage assignation table",
+        "image": "GoalPercentageAssignationTable.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Pre-conceptual schema with goals",
+        "image": "Pre-conceptualSchemaWithGoals.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Pre-conceptual schema with problems",
+        "image": "Pre-conceptualSchemaWithProblems.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Explanatory tables of use cases",
+        "image": "ExplanatoryTablesOfUseCases.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Use cases",
+        "image": "UseCases.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "User interface flow diagram",
+        "image": "UserInterfaceFlow Diagram.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Solution value",
+        "image": "SolutionValue.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Solution cost",
+        "image": "SolutionCost.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Critical success factors",
+        "image": "CriticalSuccessFactors.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Indicator summary",
+        "image": "IndicatorSummary.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "New process diagram",
+        "image": "NewProcessDiagram.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "New organizational chart",
+        "image": "OrganizationalChart.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Alpha prototype",
+        "image": "AlphaPrototype.jpg"
+      },
+      "role": "Developer"
+    },
+    {
+      "work_product": {
+        "name": "Source code examples",
+        "image": "SourceCodeExamples.jpg"
+      },
+      "role": "Developer"
+    },
+    {
+      "work_product": {
+        "name": "Pre-conceptual-schema-based specifications",
+        "image": "Pre-conceptual-schema-basedSpecifications.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Class diagram",
+        "image": "ClassDiagram.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Communication diagrams",
+        "image": "CommunicationDiagrams.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "State machine diagrams",
+        "image": "StateMachineDiagrams.jpg"
+      },
+      "role": "Analyst"
+    },
+    {
+      "work_product": {
+        "name": "Beta prototype",
+        "image": "BetaPrototype.jpg"
+      },
+      "role": "Developer"
+    }
   ],
-  "work_product":[
-    {"name":"List of roles and responsibilities", "image":""},
-    {"name":"UNC-Method guide", "image":""},
-    {"name":"Digital files", "image":""},
-    {"name":"Controlled dialogue", "image":""},
-    {"name":"Elicitation cards", "image":""},
-    {"name":"Domain model", "image":""},
-    {"name":"Organizational chart", "image":""},
-    {"name":"Pre-conceptual schema", "image":""},
-    {"name":"Executable pre-conceptual schemas", "image":""},
-    {"name":"Documental traceability table", "image":""},
-    {"name":"Kanban board", "image":""},
-    {"name":"Alpha progress report", "image":""},
-    {"name":"Business rules", "image":""},
-    {"name":"Explanatory table of process diagram", "image":""},
-    {"name":"Process diagram", "image":""},
-    {"name":"Data dictionary", "image":""},
-    {"name":"Event interaction graph", "image":""},
-    {"name":"Cause-and-effect diagram", "image":""},
-    {"name":"Problem percentage assignation table", "image":""},
-    {"name":"Goal diagram", "image":""},
-    {"name":"Goal percentage assignation table", "image":""},
-    {"name":"Pre-conceptual schema with goals", "image":""},
-    {"name":"Pre-conceptual schema with problems", "image":""},
-    {"name":"Explanatory tables of use cases", "image":""},
-    {"name":"Use cases", "image":""},
-    {"name":"User interface flow diagram", "image":""},
-    {"name":"Solution value", "image":""},
-    {"name":"Solution cost", "image":""},
-    {"name":"Critical success factors", "image":""},
-    {"name":"Indicator summary", "image":""},
-    {"name":"New process diagram", "image":""},
-    {"name":"New organizational chart", "image":""},
-    {"name":"Alpha prototype", "image":""},
-    {"name":"Source code examples", "image":""},
-    {"name":"Pre-conceptual-schema-based specifications", "image":""},
-    {"name":"Class diagram", "image":""},
-    {"name":"Communication diagrams", "image":""},
-    {"name":"State machine diagrams", "image":""},
-    {"name":"Beta prototype", "image":""}
+  "work_product": [
+    {
+      "name": "List of roles and responsibilities",
+      "image": "ListOfRolesAndResponsibilities.png"
+    },
+    {
+      "name": "UNC-Method guide",
+      "image": "UNC-MethodGuide.png"
+    },
+    {
+      "name": "Digital files",
+      "image": "DigitalFiles.jpg"
+    },
+    {
+      "name": "Controlled dialogue",
+      "image": "ControlledDialogue.png"
+    },
+    {
+      "name": "Elicitation cards",
+      "image": "ElicitationCards.jpg"
+    },
+    {
+      "name": "Domain model",
+      "image": "Domain model.jpg"
+    },
+    {
+      "name": "Organizational chart",
+      "image": "OrganizationalChart.jpg"
+    },
+    {
+      "name": "Pre-conceptual schema",
+      "image": "Pre-conceptualSchema.jpg"
+    },
+    {
+      "name": "Executable pre-conceptual schemas",
+      "image": "ExecutablePre-conceptualSchemas.jpg"
+    },
+    {
+      "name": "Documental traceability table",
+      "image": "DocumentalTraceabilityTable.jpg"
+    },
+    {
+      "name": "Kanban board",
+      "image": "KanbanBoard.jpg"
+    },
+    {
+      "name": "Alpha progress report",
+      "image": "AlphasAdvanceReport.jpg"
+    },
+    {
+      "name": "Business rules",
+      "image": "BusinessRules.jpg"
+    },
+    {
+      "name": "Explanatory table of process diagram",
+      "image": "ExplanatoryTable OfProcessDiagram.jpg"
+    },
+    {
+      "name": "Process diagram",
+      "image": "ProcessDiagram.jpg"
+    },
+    {
+      "name": "Data dictionary",
+      "image": "DataDictionary.jpg"
+    },
+    {
+      "name": "Event interaction graph",
+      "image": "EventInteractionGraph.jpg"
+    },
+    {
+      "name": "Cause-and-effect diagram",
+      "image": "Cause-and-effectDiagram.jpg"
+    },
+    {
+      "name": "Problem percentage assignation table",
+      "image": "ProblemPercentageAssignationTable.jpg"
+    },
+    {
+      "name": "Goal diagram",
+      "image": "GoalDiagram.jpg"
+    },
+    {
+      "name": "Goal percentage assignation table",
+      "image": "GoalPercentageAssignationTable.jpg"
+    },
+    {
+      "name": "Pre-conceptual schema with goals",
+      "image": "Pre-conceptualSchemaWithGoals.jpg"
+    },
+    {
+      "name": "Pre-conceptual schema with problems",
+      "image": "Pre-conceptualSchemaWithProblems.jpg"
+    },
+    {
+      "name": "Explanatory tables of use cases",
+      "image": "ExplanatoryTablesOfUseCases.jpg"
+    },
+    {
+      "name": "Use cases",
+      "image": "UseCases.jpg"
+    },
+    {
+      "name": "User interface flow diagram",
+      "image": "UserInterfaceFlow Diagram.jpg"
+    },
+    {
+      "name": "Solution value",
+      "image": "SolutionValue.jpg"
+    },
+    {
+      "name": "Solution cost",
+      "image": "SolutionCost.jpg"
+    },
+    {
+      "name": "Critical success factors",
+      "image": "CriticalSuccessFactors.jpg"
+    },
+    {
+      "name": "Indicator summary",
+      "image": "IndicatorSummary.jpg"
+    },
+    {
+      "name": "New process diagram",
+      "image": "NewProcessDiagram.jpg"
+    },
+    {
+      "name": "New organizational chart",
+      "image": "OrganizationalChart.jpg"
+    },
+    {
+      "name": "Alpha prototype",
+      "image": "AlphaPrototype.jpg"
+    },
+    {
+      "name": "Source code examples",
+      "image": "SourceCodeExamples.jpg"
+    },
+    {
+      "name": "Pre-conceptual-schema-based specifications",
+      "image": "Pre-conceptual-schema-basedSpecifications.jpg"
+    },
+    {
+      "name": "Class diagram",
+      "image": "ClassDiagram.jpg"
+    },
+    {
+      "name": "Communication diagrams",
+      "image": "CommunicationDiagrams.jpg"
+    },
+    {
+      "name": "State machine diagrams",
+      "image": "StateMachineDiagrams.jpg"
+    },
+    {
+      "name": "Beta prototype",
+      "image": "BetaPrototype.jpg"
+    }
   ],
-  "manifest":[
-    {"composition":{"method":"UNC-Method", "practice":"Responsibility assignation"},
-    "sequence":{"phase":"Software context", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"List of roles and responsibilities", "image":""}, "role":"Project director"},
-    "capability":{"activity":"Define roles and responsibilities","competency":"Management"},
-    "alpha":"Team"},
-    {"composition":{"method":"UNC-Method", "practice":"Responsibility assignation"},
-    "sequence":{"phase":"Software context", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"List of roles and responsibilities", "image":""}, "role":"Project director"},
-    "capability":{"activity":"Define roles and responsibilities","competency":"Leadership"},
-    "alpha":"Team"},
-    {"composition":{"method":"UNC-Method", "practice":"Staff training"},
-    "sequence":{"phase":"Software context", "activity_space":"Coordinate the work"},
-    "responsibility":{"work_product":{"name":"UNC-Method guide", "image":""}, "role":"Project director"},
-    "capability":	{"activity":"Explain the method","competency":"Leadership"},
-    "alpha":"Way of working"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Digital files", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Develop stakeholder-analyst interview","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Check documentation","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Check documentation","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Stakeholder"},
-    "capability":	{"activity":"Check documentation","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Project director"},
-    "capability":	{"activity":"Check documentation","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Check documentation","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Stakeholder"},
-    "capability":	{"activity":"Check documentation","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Stakeholder"},
-    "capability":	{"activity":"Develop stakeholder-analyst interview","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Project director"},
-    "capability":	{"activity":"Develop stakeholder-analyst interview","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Develop stakeholder-analyst interview","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Develop stakeholder-analyst interview","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Digital files", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Develop stakeholder-analyst interview","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Summarize the information related to the actors, objects and functions","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Stakeholder"},
-    "capability":	{"activity":"Summarize the information related to the actors, objects and functions","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Project director"},
-    "capability":	{"activity":"Summarize the information related to the actors, objects and functions","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Summarize the information related to the actors, objects and functions","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Summarize the information related to the actors, objects and functions","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Identify internal and external actors in the organization","competency":"Stakeholder representation"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Identify internal and external actors in the organization","competency":"Stakeholder representation"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Project director"},
-    "capability":	{"activity":"Identify internal and external actors in the organization","competency":"Stakeholder representation"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Stakeholder"},
-    "capability":	{"activity":"Identify internal and external actors in the organization","competency":"Stakeholder representation"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Organizational chart", "image":""}, "role":"Analyst"},
-    "capability":	{"activity":"Identify internal and external actors in the organization","competency":"Stakeholder representation"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Domain model", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish common language","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Domain model", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Domain objects modeling"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Organizational chart", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish common language","competency":"Analysis"},
-    "alpha":"Requirement"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Structure organization information","competency":"Stakeholder representation"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Structure organization information","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Documental traceability table", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Structure organization information","competency":"Stakeholder representation"},
-    "alpha":"Requirement"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Structure organization information","competency":"Analysis"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Controlled dialogue", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Structure organization information","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Documental traceability table", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Structure organization information","competency":"Stakeholder representation"},
-    "alpha":"Requirement"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirement"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Executable pre-conceptual schemas", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirement"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Software context", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Documental traceability table", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirement"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Software context", "activity_space":"Coordinate the work"},
-    "responsibility":{"work_product":{"name":"Kanban board", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Manage task realization","competency":"Management"},
-    "alpha":"Work"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Software context", "activity_space":"Coordinate the work"},
-    "responsibility":{"work_product":{"name":"Alpha progress report", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Report project progress","competency":"Management"},
-    "alpha":"Work"},
-
-
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Business rules", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Stakeholder representation"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Stakeholder representation"},
-    "alpha":"Opponent"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":"Explanatory table of process diagram", "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Stakeholder representation"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Process diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Stakeholder representation"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":"Event interaction graph", "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Stakeholder representation"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Business rules", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Analysis"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Analysis"},
-    "alpha":"Opponent"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":"Explanatory table of process diagram", "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Process diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Event interaction graph", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize the problem domain","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Develop the data dictionary","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Organizational chart", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Develop the data dictionary","competency":"Analysis"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Process diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Develop the data dictionary","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Data dictionary", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Develop the data dictionary","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Organizational chart", "image":""}, "role":"Analyst"},
-    "capability":{"activity":{"name":"Event interaction graph", "image":""},"competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":"Explanatory table of process diagram", "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Process diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Data dictionary", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Requirement management"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Event interaction graph", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Business rules", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Cause-and-effect diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":"Problem percentage assignation table", "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":"Goal diagram", "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":"Goal percentage assignation table", "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":"Pre-conceptual schema with goals", "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema with problems", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Business rules", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema with goals", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema with problems", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Business rules", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Business rules", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Stakeholder"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Business rules", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema with goals", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema with problems", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish process limitations","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Elicitation cards", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize problem domain","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Business rules", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize problem domain","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Cause-and-effect diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize problem domain","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Problem percentage assignation table", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize problem domain","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Goal diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize problem domain","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Goal percentage assignation table", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize problem domain","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema with goals", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize problem domain","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Text-based modeling of the requirements"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema with problems", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Characterize problem domain","competency":"Stakeholder representation"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Coordinate the work"},
-    "responsibility":{"work_product":{"name":"Kanban board", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Manage task realization","competency":"Management"},
-    "alpha":"Team"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Coordinate the work"},
-    "responsibility":{"work_product":{"name":"Alpha progress report", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Report project progress","competency":"Management"},
-    "alpha":"Team"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Problem analysis", "activity_space":"Coordinate the work"},
-    "responsibility":{"work_product":{"name":"Alpha progress report", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Report project progress","competency":"Management"},
-    "alpha":"Way of working"},
-
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"New organizational chart", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Develop new organizational chart","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"New process diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Develop new process diagram","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":"Explanatory table of process diagram", "role":"Analyst"},
-    "capability":{"activity":"Develop new process diagram","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Data dictionary", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Develop new process diagram","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Use cases", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"User interface flow diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"New organizational chart", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Process diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":"Explanatory table of process diagram", "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Data dictionary", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Explanatory table of process diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Use cases", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"User interface flow diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"Use cases", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Software system"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"User interface flow diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Software system"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":"Pre-conceptual", "role":"Analyst"},
-    "capability":{"activity":"Establish critical success factors","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Goal diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish critical success factors","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Goal percentage assignation table", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish critical success factors","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Indicator summary", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish critical success factors","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Explore the opportunity"},
-    "responsibility":{"work_product":{"name":"Critical success factors", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish critical success factors","competency":"Analysis"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"Use cases", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish the solution value","competency":"Management"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"New process diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish the solution value","competency":"Management"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"New process diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish the solution value","competency":"Management"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"Goal diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish the solution value","competency":"Management"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"Goal percentage assignation table", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish the solution value","competency":"Management"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"Cause-and-effect diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish the solution value","competency":"Management"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"Problem percentage assignation table", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish the solution value","competency":"Management"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"Solution value", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish the solution value","competency":"Management"},
-    "alpha":"Work"},
-    {"composition":{"method":"UNC-Method", "practice":"Quantitative assessment of work effort and cost"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Prepare to do the work"},
-    "responsibility":{"work_product":{"name":"Solution cost", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Establish the solution value","competency":"Management"},
-    "alpha":"Work"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Coordinate the work"},
-    "responsibility":{"work_product":{"name":"Kanban board", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Manage task realization","competency":"Management"},
-    "alpha":"Team"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Coordinate the work"},
-    "responsibility":{"work_product":{"name":"Alpha progress report", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Report project progress","competency":"Management"},
-    "alpha":"Team"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Solution proposals", "activity_space":"Coordinate the work"},
-    "responsibility":{"work_product":{"name":"Alpha progress report", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Report project progress","competency":"Management"},
-    "alpha":"Way of working"},
-
-
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Alpha prototype", "image":""}, "role":"Developer"},
-    "capability":{"activity":"Develop the alpha prototype","competency":"Development"},
-    "alpha":"Opportunity"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Understand the opportunity"},
-    "responsibility":{"work_product":{"name":"Alpha prototype", "image":""}, "role":"Developer"},
-    "capability":{"activity":"Develop the alpha prototype","competency":"Development"},
-    "alpha":"Stakeholders"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"Source code examples", "image":""}, "role":"Developer"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Software system"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"Alpha prototype", "image":""}, "role":"Developer"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Software system"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"Alpha prototype", "image":""}, "role":"Developer"},
-    "capability":{"activity":"Develop the alpha prototype","competency":"Development"},
-    "alpha":"Software system"},
-    {"composition":{"method":"UNC-Method", "practice":"Right management of requirements"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"Source code examples", "image":""}, "role":"Developer"},
-    "capability":{"activity":"Provide the bases for the final application construction","competency":"Development"},
-    "alpha":"Software system"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual schema", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual-schema-based specifications", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Class diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"Communication diagrams", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Understand the requirements"},
-    "responsibility":{"work_product":{"name":"State machine diagrams", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Specify software application functionality","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual-schema-based specifications", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"Class diagram", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"Communication diagrams", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"State machine diagrams", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Verify consistency","competency":"Analysis"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Visual modeling of software systems"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Shape the software system"},
-    "responsibility":{"work_product":{"name":"Pre-conceptual-schema-based specifications", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Develop the alpha prototype","competency":"Development"},
-    "alpha":"Requirements"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Coordinate activities"},
-    "responsibility":{"work_product":{"name":"Kanban board", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Manage task realization","competency":"Management"},
-    "alpha":"Team"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Coordinate activities"},
-    "responsibility":{"work_product":"Alphas progress report", "role":"Analyst"},
-    "capability":{"activity":"Report project progress","competency":"Management"},
-    "alpha":"Team"},
-    {"composition":{"method":"UNC-Method", "practice":"Systematic control and monitoring of the work"},
-    "sequence":{"phase":"Conceptual schema", "activity_space":"Coordinate activities"},
-    "responsibility":{"work_product":{"name":"Alpha progress report", "image":""}, "role":"Analyst"},
-    "capability":{"activity":"Report project progress","competency":"Management"},
-    "alpha":"Way of working"}
+  "manifest": [
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Assignment of responsibilities based on competencies"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "List of roles and responsibilities",
+          "image": "ListOfRolesAndResponsibilities.png"
+        },
+        "role": "Project director"
+      },
+      "capability": {
+        "activity": "Define roles and responsibilities",
+        "competency": "Management"
+      },
+      "alpha": "Team"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Assignment of responsibilities based on competencies"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "List of roles and responsibilities",
+          "image": "ListOfRolesAndResponsibilities.png"
+        },
+        "role": "Project director"
+      },
+      "capability": {
+        "activity": "Define roles and responsibilities",
+        "competency": "Leadership"
+      },
+      "alpha": "Team"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Appropriate training of the team"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Coordinate the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "UNC-Method guide",
+          "image": "UNC-MethodGuide.png"
+        },
+        "role": "Project director"
+      },
+      "capability": {
+        "activity": "Explain the method",
+        "competency": "Leadership"
+      },
+      "alpha": "Way of working"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Digital files",
+          "image": "DigitalFiles.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop stakeholder-analyst interview",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Check documentation",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Check documentation",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Stakeholder"
+      },
+      "capability": {
+        "activity": "Check documentation",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Project director"
+      },
+      "capability": {
+        "activity": "Check documentation",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Check documentation",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Stakeholder"
+      },
+      "capability": {
+        "activity": "Check documentation",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Stakeholder"
+      },
+      "capability": {
+        "activity": "Develop stakeholder-analyst interview",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Project director"
+      },
+      "capability": {
+        "activity": "Develop stakeholder-analyst interview",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop stakeholder-analyst interview",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop stakeholder-analyst interview",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Digital files",
+          "image": "DigitalFiles.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop stakeholder-analyst interview",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Summarize the information related to the actors, objects and functions",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Stakeholder"
+      },
+      "capability": {
+        "activity": "Summarize the information related to the actors, objects and functions",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Project director"
+      },
+      "capability": {
+        "activity": "Summarize the information related to the actors, objects and functions",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Summarize the information related to the actors, objects and functions",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Summarize the information related to the actors, objects and functions",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Identify internal and external actors in the organization",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Identify internal and external actors in the organization",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Project director"
+      },
+      "capability": {
+        "activity": "Identify internal and external actors in the organization",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Stakeholder"
+      },
+      "capability": {
+        "activity": "Identify internal and external actors in the organization",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Organizational chart",
+          "image": "OrganizationalChart.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Identify internal and external actors in the organization",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Domain model",
+          "image": "Domain model.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish common language",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Domain model",
+          "image": "Domain model.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Organizational chart",
+          "image": "OrganizationalChart.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema",
+          "image": "Pre-conceptualSchema.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish common language",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirement"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Structure organization information",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Structure organization information",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Documental traceability table",
+          "image": "DocumentalTraceabilityTable.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Structure organization information",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Requirement"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Structure organization information",
+        "competency": "Analysis"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Controlled dialogue",
+          "image": "ControlledDialogue.png"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Structure organization information",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Documental traceability table",
+          "image": "DocumentalTraceabilityTable.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Structure organization information",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Requirement"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema",
+          "image": "Pre-conceptualSchema.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirement"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Executable pre-conceptual schemas",
+          "image": "ExecutablePre-conceptualSchemas.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirement"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Documental traceability table",
+          "image": "DocumentalTraceabilityTable.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirement"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Coordinate the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Kanban board",
+          "image": "KanbanBoard.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Manage task realization",
+        "competency": "Management"
+      },
+      "alpha": "Work"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Software context",
+        "activity_space": "Coordinate the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha progress report",
+          "image": "AlphasAdvanceReport.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Report project progress",
+        "competency": "Management"
+      },
+      "alpha": "Work"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Business rules",
+          "image": "BusinessRules.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": "Explanatory table of process diagram",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Process diagram",
+          "image": "ProcessDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": "Event interaction graph",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Business rules",
+          "image": "BusinessRules.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Analysis"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": "Explanatory table of process diagram",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Process diagram",
+          "image": "ProcessDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Event interaction graph",
+          "image": "EventInteractionGraph.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize the problem domain",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop the data dictionary",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Organizational chart",
+          "image": "OrganizationalChart.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop the data dictionary",
+        "competency": "Analysis"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Process diagram",
+          "image": "ProcessDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop the data dictionary",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Data dictionary",
+          "image": "DataDictionary.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop the data dictionary",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Organizational chart",
+          "image": "OrganizationalChart.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": {
+          "name": "Event interaction graph",
+          "image": "EventInteractionGraph.jpg"
+        },
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": "Explanatory table of process diagram",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Process diagram",
+          "image": "ProcessDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Data dictionary",
+          "image": "DataDictionary.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Event interaction graph",
+          "image": "EventInteractionGraph.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Business rules",
+          "image": "BusinessRules.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Cause-and-effect diagram",
+          "image": "Cause-and-effectDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": "Problem percentage assignation table",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": "Goal diagram",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": "Goal percentage assignation table",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": "Pre-conceptual schema with goals",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema with problems",
+          "image": "Pre-conceptualSchemaWithProblems.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Business rules",
+          "image": "BusinessRules.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema with goals",
+          "image": "Pre-conceptualSchemaWithGoals.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema with problems",
+          "image": "Pre-conceptualSchemaWithProblems.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Business rules",
+          "image": "BusinessRules.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Business rules",
+          "image": "BusinessRules.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Stakeholder"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Business rules",
+          "image": "BusinessRules.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema with goals",
+          "image": "Pre-conceptualSchemaWithGoals.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema with problems",
+          "image": "Pre-conceptualSchemaWithProblems.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish process limitations",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Elicitation cards",
+          "image": "ElicitationCards.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Business rules",
+          "image": "BusinessRules.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Cause-and-effect diagram",
+          "image": "Cause-and-effectDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Problem percentage assignation table",
+          "image": "ProblemPercentageAssignationTable.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Goal diagram",
+          "image": "GoalDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Goal percentage assignation table",
+          "image": "GoalPercentageAssignationTable.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema with goals",
+          "image": "Pre-conceptualSchemaWithGoals.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Text-based modeling of the requirements"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema with problems",
+          "image": "Pre-conceptualSchemaWithProblems.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Characterize problem domain",
+        "competency": "Stakeholder representation"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Coordinate the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Kanban board",
+          "image": "KanbanBoard.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Manage task realization",
+        "competency": "Management"
+      },
+      "alpha": "Team"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Coordinate the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha progress report",
+          "image": "AlphasAdvanceReport.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Report project progress",
+        "competency": "Management"
+      },
+      "alpha": "Team"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Problem analysis",
+        "activity_space": "Coordinate the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha progress report",
+          "image": "AlphasAdvanceReport.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Report project progress",
+        "competency": "Management"
+      },
+      "alpha": "Way of working"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "New organizational chart",
+          "image": "OrganizationalChart.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop new organizational chart",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "New process diagram",
+          "image": "NewProcessDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop new process diagram",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": "Explanatory table of process diagram",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop new process diagram",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Data dictionary",
+          "image": "DataDictionary.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop new process diagram",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Use cases",
+          "image": "UseCases.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "User interface flow diagram",
+          "image": "UserInterfaceFlow Diagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "New organizational chart",
+          "image": "OrganizationalChart.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Process diagram",
+          "image": "ProcessDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": "Explanatory table of process diagram",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Data dictionary",
+          "image": "DataDictionary.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Explanatory table of process diagram",
+          "image": "ExplanatoryTable OfProcessDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Use cases",
+          "image": "UseCases.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "User interface flow diagram",
+          "image": "UserInterfaceFlow Diagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Use cases",
+          "image": "UseCases.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Software system"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "User interface flow diagram",
+          "image": "UserInterfaceFlow Diagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Software system"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": "Pre-conceptual",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish critical success factors",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Goal diagram",
+          "image": "GoalDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish critical success factors",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Goal percentage assignation table",
+          "image": "GoalPercentageAssignationTable.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish critical success factors",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Indicator summary",
+          "image": "IndicatorSummary.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish critical success factors",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Explore the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Critical success factors",
+          "image": "CriticalSuccessFactors.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish critical success factors",
+        "competency": "Analysis"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Use cases",
+          "image": "UseCases.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish the solution value",
+        "competency": "Management"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "New process diagram",
+          "image": "NewProcessDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish the solution value",
+        "competency": "Management"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "New process diagram",
+          "image": "NewProcessDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish the solution value",
+        "competency": "Management"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Goal diagram",
+          "image": "GoalDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish the solution value",
+        "competency": "Management"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Goal percentage assignation table",
+          "image": "GoalPercentageAssignationTable.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish the solution value",
+        "competency": "Management"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Cause-and-effect diagram",
+          "image": "Cause-and-effectDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish the solution value",
+        "competency": "Management"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Problem percentage assignation table",
+          "image": "ProblemPercentageAssignationTable.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish the solution value",
+        "competency": "Management"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Solution value",
+          "image": "SolutionValue.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish the solution value",
+        "competency": "Management"
+      },
+      "alpha": "Work"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Quantitative assessment of work effort and cost"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Prepare to do the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Solution cost",
+          "image": "SolutionCost.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Establish the solution value",
+        "competency": "Management"
+      },
+      "alpha": "Work"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Coordinate the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Kanban board",
+          "image": "KanbanBoard.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Manage task realization",
+        "competency": "Management"
+      },
+      "alpha": "Team"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Coordinate the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha progress report",
+          "image": "AlphasAdvanceReport.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Report project progress",
+        "competency": "Management"
+      },
+      "alpha": "Team"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Solution proposals",
+        "activity_space": "Coordinate the work"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha progress report",
+          "image": "AlphasAdvanceReport.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Report project progress",
+        "competency": "Management"
+      },
+      "alpha": "Way of working"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha prototype",
+          "image": "AlphaPrototype.jpg"
+        },
+        "role": "Developer"
+      },
+      "capability": {
+        "activity": "Develop the alpha prototype",
+        "competency": "Development"
+      },
+      "alpha": "Opportunity"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Understand the opportunity"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha prototype",
+          "image": "AlphaPrototype.jpg"
+        },
+        "role": "Developer"
+      },
+      "capability": {
+        "activity": "Develop the alpha prototype",
+        "competency": "Development"
+      },
+      "alpha": "Stakeholders"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Source code examples",
+          "image": "SourceCodeExamples.jpg"
+        },
+        "role": "Developer"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Software system"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha prototype",
+          "image": "AlphaPrototype.jpg"
+        },
+        "role": "Developer"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Software system"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha prototype",
+          "image": "AlphaPrototype.jpg"
+        },
+        "role": "Developer"
+      },
+      "capability": {
+        "activity": "Develop the alpha prototype",
+        "competency": "Development"
+      },
+      "alpha": "Software system"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Right management of requirements"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Source code examples",
+          "image": "SourceCodeExamples.jpg"
+        },
+        "role": "Developer"
+      },
+      "capability": {
+        "activity": "Provide the bases for the final application construction",
+        "competency": "Development"
+      },
+      "alpha": "Software system"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual schema",
+          "image": "Pre-conceptualSchema.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual-schema-based specifications",
+          "image": "Pre-conceptual-schema-basedSpecifications.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Class diagram",
+          "image": "ClassDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Communication diagrams",
+          "image": "CommunicationDiagrams.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Understand the requirements"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "State machine diagrams",
+          "image": "StateMachineDiagrams.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Specify software application functionality",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual-schema-based specifications",
+          "image": "Pre-conceptual-schema-basedSpecifications.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Class diagram",
+          "image": "ClassDiagram.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Communication diagrams",
+          "image": "CommunicationDiagrams.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "State machine diagrams",
+          "image": "StateMachineDiagrams.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Verify consistency",
+        "competency": "Analysis"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Visual modeling of software systems of software systems"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Shape the software system"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Pre-conceptual-schema-based specifications",
+          "image": "Pre-conceptual-schema-basedSpecifications.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Develop the alpha prototype",
+        "competency": "Development"
+      },
+      "alpha": "Requirements"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Coordinate activities"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Kanban board",
+          "image": "KanbanBoard.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Manage task realization",
+        "competency": "Management"
+      },
+      "alpha": "Team"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Coordinate activities"
+      },
+      "responsibility": {
+        "work_product": "Alphas progress report",
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Report project progress",
+        "competency": "Management"
+      },
+      "alpha": "Team"
+    },
+    {
+      "composition": {
+        "method": "UNC-Method",
+        "practice": "Systematic control and monitoring of the work"
+      },
+      "sequence": {
+        "phase": "Conceptual schema",
+        "activity_space": "Coordinate activities"
+      },
+      "responsibility": {
+        "work_product": {
+          "name": "Alpha progress report",
+          "image": "AlphasAdvanceReport.jpg"
+        },
+        "role": "Analyst"
+      },
+      "capability": {
+        "activity": "Report project progress",
+        "competency": "Management"
+      },
+      "alpha": "Way of working"
+    }
   ]
 }

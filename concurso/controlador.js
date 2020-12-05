@@ -5,6 +5,20 @@ let tit=   $('#titModal');
 let but=   $("#aceptarModal");
 
 var data={};
+
+data.phase= (localStorage.phase)? JSON.parse(localStorage.phase) : [];
+data.practice= (localStorage.practice)? JSON.parse(localStorage.practice) : [];
+data.method= (localStorage.method)? JSON.parse(localStorage.method) : [];
+data.area_of_concern= (localStorage.area_of_concern)? JSON.parse(localStorage.area_of_concern) : [];
+data.activity_space= (localStorage.activity_space)? JSON.parse(localStorage.activity_space) : [];
+data.activity= (localStorage.activity)? JSON.parse(localStorage.activity) : [];
+data.competency= (localStorage.competency)? JSON.parse(localStorage.competency) : [];
+data.role= (localStorage.role)? JSON.parse(localStorage.role) : [];
+data.work_product= (localStorage.work_product)? JSON.parse(localStorage.work_product) : [];
+data.alpha= (localStorage.alpha)? JSON.parse(localStorage.alpha) : [];
+
+$("#downloadData").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
+
 function modalIndex(a){
     but.off();
     but= $("#aceptarModal");
@@ -58,7 +72,7 @@ $("#dataFile").on('change', function(){
     fr.readAsText(files.item(0));
 });
 
-$(document).ready( JSONtoLocal())
+//$(document).ready( JSONtoLocal())
 
 function JSONtoLocal() {
     sessionStorage.clear();
@@ -230,6 +244,7 @@ function tabPhas(){ // 1. phase
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -267,6 +282,7 @@ function tabPrac(){ // 2. practice
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -304,6 +320,7 @@ function tabMeth(){ // 3. method
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -341,6 +358,7 @@ function tabArea(){ // 4. area_of_concern
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -378,6 +396,7 @@ function tabAcSp(){ // 5. activity_space
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -415,6 +434,7 @@ function tabActi(){ // 6. activity
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -452,6 +472,7 @@ function tabComp(){ // 7. competency
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -489,6 +510,7 @@ function tabRole(){ // 8. role
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -505,7 +527,7 @@ function tabRole(){ // 8. role
 function tabWork(){ // 9. Work_Product
     table.empty();
     tit.html('Work_Product.');
-    let work_Products = JSON.parse(localStorage.getItem('work_Product'));
+    let work_Products = JSON.parse(localStorage.getItem('work_product'));
     let head=['name','image']
 
     table.append($("<caption style='caption-side: top'>Check each phase to work_Product the manifest.</caption>"));
@@ -517,15 +539,17 @@ function tabWork(){ // 9. Work_Product
         var row =$('<tr></tr>');
         row.append($("<td></td>").append($("<input name='checkbox' class='form-check-input checkbox' type='checkbox'>").val(j).attr('id',work_Products[j].name)));
 
-        for(i=0; i<head.length; i++) {
-            var td=$("<td class=''></td>").append("<p></p>").html(work_Products[j][head[i]]).attr('id',j+''+i)
-            row.append(td);
-        } // filling each column
+        var td=$("<td class=''></td>").append("<p></p>").html(work_Products[j].name);
+        row.append(td);
+
+        var td=$("<td class=''></td>").append($("<a target='_blank'></a>").html(work_Products[j].image).attr('href','work_product/'+work_Products[j].image));
+        row.append(td);
 
         table.append(row);
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -563,6 +587,7 @@ function tabAlph(){ // 10. alpha
     };
     but.html('SELECT');
 
+    but.show();
     but.on('click',function(){
         let id= $('input[name="checkbox"]:checked');
         var filter=[];
@@ -658,128 +683,157 @@ function manifes(){ // 11. manifest
     for (j in aux){
         var row =$('<tr></tr>');
         var a1=aux[j].alpha;
-        alpha.forEach((r)=>{
-            if (r.name == a1){
-                var a2= r.area_of_concern;
-                area_of_concern.forEach((h)=>{
-                    if (h.name == a2) {
-                        color= h.color;
-                    }
-                });
-            }
-        });
-        colorAtr= 'background-color: '+color;
-        var td=$("<td></td>").append("<p></p>").html(a1).addClass(color).attr('style',colorAtr);
-        row.append(td);
+        if (a1){
+            alpha.forEach((r)=>{
+                if (r.name == a1){
+                    var a2= r.area_of_concern;
+                    area_of_concern.forEach((h)=>{
+                        if (h.name == a2) {
+                            color= h.color;
+                        }
+                    });
+                }
+            });
+            colorAtr= 'background-color: '+color;
+            var td=$("<td></td>").append("<p></p>").html(a1).addClass(color).attr('style',colorAtr);
+            row.append(td);
+        }
+        else{
+            var td;
+            row.append($("<td></td>").append("<p></p>"));
+        }
 
         var c1=aux[j].capability.activity;
-        activity.forEach((r)=>{
-            if (r.name == c1){
-                var c2= r.area_of_concern;
-                area_of_concern.forEach((h)=>{
-                    if (h.name == c2) {
-                        color= h.color;
-                    }
-                });
-            }
-        });
-        colorAtr= 'background-color: '+color;
-        td=$("<td></td>").append("<p></p>").html(c1).addClass(color).attr('style',colorAtr);
-        row.append(td);
+        if (c1) {
+            activity.forEach((r) => {
+                if (r.name == c1) {
+                    var c2 = r.area_of_concern;
+                    area_of_concern.forEach((h) => {
+                        if (h.name == c2) {
+                            color = h.color;
+                        }
+                    });
+                }
+            });
+            colorAtr = 'background-color: ' + color;
+            td = $("<td></td>").append("<p></p>").html(c1).addClass(color).attr('style', colorAtr);
+            row.append(td);
+        }
+        else{
+            row.append($("<td></td>").append("<p></p>"));
+        }
 
         var comp1=aux[j].capability.competency;
-        competency.forEach((r)=>{
-            if (r.name == comp1){
-                var comp2= r.area_of_concern;
-                area_of_concern.forEach((h)=>{
-                    if (h.name == comp2) {
-                        color= h.color;
-                    }
-                });
-            }
-        });
-        colorAtr= 'background-color: '+color;
-        td=$("<td></td>").append("<p></p>").html(comp1).addClass(color).attr('style',colorAtr);
-        row.append(td);
+        if (comp1) {
+            competency.forEach((r) => {
+                if (r.name == comp1) {
+                    var comp2 = r.area_of_concern;
+                    area_of_concern.forEach((h) => {
+                        if (h.name == comp2) {
+                            color = h.color;
+                        }
+                    });
+                }
+            });
+            colorAtr = 'background-color: ' + color;
+            td = $("<td></td>").append("<p></p>").html(comp1).addClass(color).attr('style', colorAtr);
+            row.append(td);
+        }
+        else{
+            row.append($("<td></td>").append("<p></p>"));
+        }
 
         td=$("<td class=''></td>").append("<p></p>").html(aux[j].composition.method);
         row.append(td);
 
         var p1=aux[j].composition.practice;
-        practice.forEach((r)=>{
-            if (r.name == p1){
-                var p2= r.area_of_concern;
-                area_of_concern.forEach((h)=>{
-                    if (h.name == p2) {
-                        color= h.color;
-                    }
-                });
-            }
-        });
-        colorAtr= 'background-color: '+color;
-        td=$("<td class=''></td>").append("<p></p>").html(p1).addClass(color).attr('style',colorAtr);
-        row.append(td);
+        if (p1) {
+            practice.forEach((r) => {
+                if (r.name == p1) {
+                    var p2 = r.area_of_concern;
+                    area_of_concern.forEach((h) => {
+                        if (h.name == p2) {
+                            color = h.color;
+                        }
+                    });
+                }
+            });
+            colorAtr = 'background-color: ' + color;
+            td = $("<td class=''></td>").append("<p></p>").html(p1).addClass(color).attr('style', colorAtr);
+            row.append(td);
+        }
+        else{
+            row.append($("<td></td>").append("<p></p>"));
+        }
 
         var r1=aux[j].responsibility.role;
-        role.forEach((r)=>{
-            if (r.name == r1){
-                var r2= r.area_of_concern;
-                area_of_concern.forEach((h)=>{
-                    if (h.name == r2) {
-                        color= h.color;
-                    }
-                });
-            }
-        });
-        colorAtr= 'background-color: '+color;
-        td=$("<td class=''></td>").append("<p></p>").html(r1).addClass(color).attr('style',colorAtr);
-        row.append(td);
+        if (r1) {
+            role.forEach((r) => {
+                if (r.name == r1) {
+                    var r2 = r.area_of_concern;
+                    area_of_concern.forEach((h) => {
+                        if (h.name == r2) {
+                            color = h.color;
+                        }
+                    });
+                }
+            });
+            colorAtr = 'background-color: ' + color;
+            td = $("<td class=''></td>").append("<p></p>").html(r1).addClass(color).attr('style', colorAtr);
+            row.append(td);
+        }
+        else{
+            row.append($("<td></td>").append("<p></p>"));
+        }
 
         td=$("<td class=''></td>").append("<p></p>").html(aux[j].responsibility.work_product.name);
         row.append(td);
 
-        td=$("<td class=''></td>").append("<a target='blank'>IMAGE</a>").attr('href', aux[j].responsibility.work_product.image);
+        td=$("<td class=''></td>").append($("<a target='_blank'></a>").html(aux[j].responsibility.work_product.image).attr('href','work_product/'+aux[j].responsibility.work_product.image));
         row.append(td);
 
         var s1=aux[j].sequence.activity_space;
-        activity_space.forEach((r)=>{
-            if (r.name == s1){
-                var s2= r.area_of_concern;
-                area_of_concern.forEach((h)=>{
-                    if (h.name == s2) {
-                        color= h.color;
-                    }
-                });
-            }
-        });
-        colorAtr= 'background-color: '+color;
-        td=$("<td class=''></td>").append("<p></p>").html(s1).addClass(color).attr('style',colorAtr);
-        row.append(td);
+        if (s1) {
+            activity_space.forEach((r) => {
+                if (r.name == s1) {
+                    var s2 = r.area_of_concern;
+                    area_of_concern.forEach((h) => {
+                        if (h.name == s2) {
+                            color = h.color;
+                        }
+                    });
+                }
+            });
+            colorAtr = 'background-color: ' + color;
+            td = $("<td class=''></td>").append("<p></p>").html(s1).addClass(color).attr('style', colorAtr);
+            row.append(td);
+        }
+        else{
+            row.append($("<td></td>").append("<p></p>"));
+        }
 
         var ph1=aux[j].sequence.phase;
-        phase.forEach((r)=>{
-            if (r.name == ph1){
-                var ph2= r.area_of_concern;
-                area_of_concern.forEach((h)=>{
-                    if (h.name == ph2) {
-                        color= h.color;
-                    }
-                });
-            }
-        });
-        colorAtr= 'background-color: '+color;
-        td=$("<td class=''></td>").append("<p></p>").html(ph1).addClass(color).attr('style',colorAtr);
-        row.append(td);
+        if (ph1) {
+            phase.forEach((r) => {
+                if (r.name == ph1) {
+                    var ph2 = r.area_of_concern;
+                    area_of_concern.forEach((h) => {
+                        if (h.name == ph2) {
+                            color = h.color;
+                        }
+                    });
+                }
+            });
+            colorAtr = 'background-color: ' + color;
+            td = $("<td class=''></td>").append("<p></p>").html(ph1).addClass(color).attr('style', colorAtr);
+            row.append(td);
+        }
+        else{
+            row.append($("<td></td>").append("<p></p>"));
+        }
 
         table.append(row);
     };
-    but.html('DONE');
 
-    but.on('click',function(){
-        mod.modal('hide');
-        setTimeout(() => {
-            table.empty();
-        } , 1000);
-        but.off();
-    });
+    but.hide();
 } // 11. manifest
