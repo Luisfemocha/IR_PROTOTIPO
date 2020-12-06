@@ -689,6 +689,11 @@ function tabAlph(){ // 10. alpha
 
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
+    
+    let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
+    var color;
+    var colorBool;
+    var colorAtr;
 
     for (j in alphas){
         var row =$('<tr></tr>');
