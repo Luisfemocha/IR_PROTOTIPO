@@ -888,8 +888,8 @@ function manifes(){ // 11. manifest
         if (sessionStorage.role && sessionStorage.role!="[]"){
             if (sessionStorage.role.indexOf(r.responsibility.role)<0) return false;
         }
-        if (sessionStorage.work_prodct && sessionStorage.work_prodct!="[]"){
-            if (sessionStorage.work_prodct.indexOf(r.responsibility.work_product.name)<0) return false;
+        if (sessionStorage.work_product && sessionStorage.work_product!="[]"){
+            if (sessionStorage.work_product.indexOf(r.responsibility.work_product.name)<0) return false;
         }
         if (sessionStorage.alpha && sessionStorage.alpha!="[]"){
             if (sessionStorage.alpha.indexOf(r.alpha)<0) return false;
