@@ -72,8 +72,6 @@ $("#dataFile").on('change', function(){
     fr.readAsText(files.item(0));
 });
 
-//$(document).ready( JSONtoLocal())
-
 function JSONtoLocal() {
     sessionStorage.clear();
     console.log(data);
@@ -190,6 +188,8 @@ function JSONtoLocal() {
 function resetValues(){
     localStorage.clear();
     sessionStorage.clear();
+    document.getElementById('dataFile').value='';
+    data={};
 };
 
 //GET
@@ -224,6 +224,7 @@ function tabPhas(){ // 1. phase
     table.empty();
     tit.html('Phase.');
     let phases = JSON.parse(localStorage.getItem('phase'));
+
     let head=['name','area_of_concern']
 
     table.append($("<caption style='caption-side: top'>Check each phase to filter the manifest.</caption>"));
@@ -231,9 +232,27 @@ function tabPhas(){ // 1. phase
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
 
+    let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
+    var color;
+    var colorBool;
+    var colorAtr;
+
     for (j in phases){
         var row =$('<tr></tr>');
         row.append($("<td></td>").append($("<input name='checkbox' class='form-check-input checkbox' type='checkbox'>").val(j).attr('id',phases[j].name)));
+
+        colorBool=false;
+        var a_o_c= phases[j].area_of_concern;
+        area_of_concern.forEach((h) => {
+            if (h.name == a_o_c) {
+                color = h.color;
+                colorBool= true;
+            }
+        });
+        if (colorBool) {
+            colorAtr = 'background-color: ' + color;
+            row.addClass(color).attr('style', colorAtr);
+        }
 
         for(i=0; i<head.length; i++) {
             var td=$("<td class=''></td>").append("<p></p>").html(phases[j][head[i]]).attr('id',j+''+i)
@@ -269,9 +288,27 @@ function tabPrac(){ // 2. practice
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
 
+    let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
+    var color;
+    var colorBool;
+    var colorAtr;
+
     for (j in practices){
         var row =$('<tr></tr>');
         row.append($("<td></td>").append($("<input name='checkbox' class='form-check-input checkbox' type='checkbox'>").val(j).attr('id',practices[j].name)));
+
+        colorBool=false;
+        var a_o_c= practices[j].area_of_concern;
+        area_of_concern.forEach((h) => {
+            if (h.name == a_o_c) {
+                color = h.color;
+                colorBool= true;
+            }
+        });
+        if (colorBool) {
+            colorAtr = 'background-color: ' + color;
+            row.addClass(color).attr('style', colorAtr);
+        }
 
         for(i=0; i<head.length; i++) {
             var td=$("<td class=''></td>").append("<p></p>").html(practices[j][head[i]]).attr('id',j+''+i)
@@ -345,9 +382,16 @@ function tabArea(){ // 4. area_of_concern
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
 
+    var color;
+    var colorAtr;
+
     for (j in area_of_concerns){
         var row =$('<tr></tr>');
         row.append($("<td></td>").append($("<input name='checkbox' class='form-check-input checkbox' type='checkbox'>").val(j).attr('id',area_of_concerns[j].name)));
+
+        var a_o_c= area_of_concerns[j].color;
+        colorAtr = 'background-color: ' + a_o_c;
+        row.addClass(a_o_c).attr('style', colorAtr);
 
         for(i=0; i<head.length; i++) {
             var td=$("<td class=''></td>").append("<p></p>").html(area_of_concerns[j][head[i]]).attr('id',j+''+i)
@@ -383,9 +427,27 @@ function tabAcSp(){ // 5. activity_space
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
 
+    let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
+    var color;
+    var colorBool;
+    var colorAtr;
+
     for (j in activity_spaces){
         var row =$('<tr></tr>');
         row.append($("<td></td>").append($("<input name='checkbox' class='form-check-input checkbox' type='checkbox'>").val(j).attr('id',activity_spaces[j].name)));
+
+        colorBool=false;
+        var a_o_c= activity_spaces[j].area_of_concern;
+        area_of_concern.forEach((h) => {
+            if (h.name == a_o_c) {
+                color = h.color;
+                colorBool= true;
+            }
+        });
+        if (colorBool) {
+            colorAtr = 'background-color: ' + color;
+            row.addClass(color).attr('style', colorAtr);
+        }
 
         for(i=0; i<head.length; i++) {
             var td=$("<td class=''></td>").append("<p></p>").html(activity_spaces[j][head[i]]).attr('id',j+''+i)
@@ -421,9 +483,27 @@ function tabActi(){ // 6. activity
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
 
+    let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
+    var color;
+    var colorBool;
+    var colorAtr;
+
     for (j in activities){
         var row =$('<tr></tr>');
         row.append($("<td></td>").append($("<input name='checkbox' class='form-check-input checkbox' type='checkbox'>").val(j).attr('id',activities[j].name)));
+
+        colorBool=false;
+        var a_o_c= activities[j].area_of_concern;
+        area_of_concern.forEach((h) => {
+            if (h.name == a_o_c) {
+                color = h.color;
+                colorBool= true;
+            }
+        });
+        if (colorBool) {
+            colorAtr = 'background-color: ' + color;
+            row.addClass(color).attr('style', colorAtr);
+        }
 
         for(i=0; i<head.length; i++) {
             var td=$("<td class=''></td>").append("<p></p>").html(activities[j][head[i]]).attr('id',j+''+i)
@@ -459,9 +539,27 @@ function tabComp(){ // 7. competency
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
 
+    let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
+    var color;
+    var colorBool;
+    var colorAtr;
+
     for (j in competencies){
         var row =$('<tr></tr>');
         row.append($("<td></td>").append($("<input name='checkbox' class='form-check-input checkbox' type='checkbox'>").val(j).attr('id',competencies[j].name)));
+
+        colorBool=false;
+        var a_o_c= competencies[j].area_of_concern;
+        area_of_concern.forEach((h) => {
+            if (h.name == a_o_c) {
+                color = h.color;
+                colorBool= true;
+            }
+        });
+        if (colorBool) {
+            colorAtr = 'background-color: ' + color;
+            row.addClass(color).attr('style', colorAtr);
+        }
 
         for(i=0; i<head.length; i++) {
             var td=$("<td class=''></td>").append("<p></p>").html(competencies[j][head[i]]).attr('id',j+''+i)
@@ -497,9 +595,27 @@ function tabRole(){ // 8. role
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
 
+    let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
+    var color;
+    var colorBool;
+    var colorAtr;
+
     for (j in roles){
         var row =$('<tr></tr>');
         row.append($("<td></td>").append($("<input name='checkbox' class='form-check-input checkbox' type='checkbox'>").val(j).attr('id',roles[j].name)));
+
+        colorBool=false;
+        var a_o_c= roles[j].area_of_concern;
+        area_of_concern.forEach((h) => {
+            if (h.name == a_o_c) {
+                color = h.color;
+                colorBool= true;
+            }
+        });
+        if (colorBool) {
+            colorAtr = 'background-color: ' + color;
+            row.addClass(color).attr('style', colorAtr);
+        }
 
         for(i=0; i<head.length; i++) {
             var td=$("<td class=''></td>").append("<p></p>").html(roles[j][head[i]]).attr('id',j+''+i)
@@ -578,6 +694,19 @@ function tabAlph(){ // 10. alpha
         var row =$('<tr></tr>');
         row.append($("<td></td>").append($("<input name='checkbox' class='form-check-input checkbox' type='checkbox'>").val(j).attr('id',alphas[j].name)));
 
+        colorBool=false;
+        var a_o_c= alphas[j].area_of_concern;
+        area_of_concern.forEach((h) => {
+            if (h.name == a_o_c) {
+                color = h.color;
+                colorBool= true;
+            }
+        });
+        if (colorBool) {
+            colorAtr = 'background-color: ' + color;
+            row.addClass(color).attr('style', colorAtr);
+        }
+
         for(i=0; i<head.length; i++) {
             var td=$("<td class=''></td>").append("<p></p>").html(alphas[j][head[i]]).attr('id',j+''+i)
             row.append(td);
@@ -606,12 +735,88 @@ function manifes(){ // 11. manifest
     let manifests = JSON.parse(localStorage.getItem('manifest'));
     var aux=[];
     $("#modalDiag").attr('class', "modal-dialog mx-0")
+    let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
 
-    if (sessionStorage.area_of_concern){ // THIS FILTER DOES NOT AFFECT THE MANIFEST ITSELF BUT THE COMPETENCY FILTER WHICH DOES.
-        let competencies = JSON.parse(localStorage.getItem('competency'));
+    let phase = JSON.parse(localStorage.getItem('phase'));
+    let practice = JSON.parse(localStorage.getItem('practice'));
+    let activity_space = JSON.parse(localStorage.getItem('activity_space'));
+    let activity = JSON.parse(localStorage.getItem('activity'));
+    let competency = JSON.parse(localStorage.getItem('competency'));
+    let role = JSON.parse(localStorage.getItem('role'));
+    let alpha = JSON.parse(localStorage.getItem('alpha'));
+
+    if (sessionStorage.area_of_concern){ // THIS FILTER DOES NOT AFFECT THE MANIFEST ITSELF BUT THE OTHER ENTITIES THAT DO.
+        if (sessionStorage.phase){
+            var aux1=JSON.parse(sessionStorage.phase);
+            phase.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('phase', JSON.stringify(aux1))
+        }
+        else{
+            var aux1=[];
+            phase.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('phase', JSON.stringify(aux1))
+        }
+
+        if (sessionStorage.practice){
+            var aux1=JSON.parse(sessionStorage.practice);
+            practice.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('practice', JSON.stringify(aux1))
+        }
+        else{
+            var aux1=[];
+            practice.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('practice', JSON.stringify(aux1))
+        }
+
+        if (sessionStorage.activity_space){
+            var aux1=JSON.parse(sessionStorage.activity_space);
+            activity_space.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('activity_space', JSON.stringify(aux1))
+        }
+        else{
+            var aux1=[];
+            activity_space.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('activity_space', JSON.stringify(aux1))
+        }
+
+        if (sessionStorage.activity){
+            var aux1=JSON.parse(sessionStorage.activity);
+            activity.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('activity', JSON.stringify(aux1))
+        }
+        else{
+            var aux1=[];
+            activity.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('activity', JSON.stringify(aux1))
+        }
+
         if (sessionStorage.competency){
             var aux1=JSON.parse(sessionStorage.competency);
-            competencies.forEach( (c) =>{
+            competency.forEach( (c) =>{
                 if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
             })
             console.log(aux1);
@@ -619,11 +824,45 @@ function manifes(){ // 11. manifest
         }
         else{
             var aux1=[];
-            competencies.forEach( (c) =>{
+            competency.forEach( (c) =>{
                 if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
             })
             console.log(aux1);
             sessionStorage.setItem('competency', JSON.stringify(aux1))
+        }
+
+        if (sessionStorage.role){
+            var aux1=JSON.parse(sessionStorage.role);
+            role.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('role', JSON.stringify(aux1))
+        }
+        else{
+            var aux1=[];
+            role.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('role', JSON.stringify(aux1))
+        }
+
+        if (sessionStorage.alpha){
+            var aux1=JSON.parse(sessionStorage.alpha);
+            alpha.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('alpha', JSON.stringify(aux1))
+        }
+        else{
+            var aux1=[];
+            alpha.forEach( (c) =>{
+                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+            })
+            console.log(aux1);
+            sessionStorage.setItem('alpha', JSON.stringify(aux1))
         }
     }
 
@@ -668,168 +907,182 @@ function manifes(){ // 11. manifest
     table.append($("<thead id='header'><tr id='headerInside'></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
 
-    let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
 
-    let phase = JSON.parse(localStorage.getItem('phase'));
-    let practice = JSON.parse(localStorage.getItem('practice'));
-    let activity_space = JSON.parse(localStorage.getItem('activity_space'));
-    let activity = JSON.parse(localStorage.getItem('activity'));
-    let competency = JSON.parse(localStorage.getItem('competency'));
-    let role = JSON.parse(localStorage.getItem('role'));
-    let alpha = JSON.parse(localStorage.getItem('alpha'));
     var color;
     var colorAtr;
+    var colorBool;
+    var td; // AUXILIAR VARIABLE FOR EACH T.D. (TABLE DATA CELL)
 
     for (j in aux){
         var row =$('<tr></tr>');
         var a1=aux[j].alpha;
-        if (a1){
-            alpha.forEach((r)=>{
-                if (r.name == a1){
-                    var a2= r.area_of_concern;
-                    area_of_concern.forEach((h)=>{
-                        if (h.name == a2) {
-                            color= h.color;
-                        }
-                    });
-                }
-            });
-            colorAtr= 'background-color: '+color;
-            var td=$("<td></td>").append("<p></p>").html(a1).addClass(color).attr('style',colorAtr);
+        colorBool=false;
+        alpha.forEach((r)=>{
+            if (r.name == a1){
+                var a2= r.area_of_concern;
+                area_of_concern.forEach((h)=>{
+                    if (h.name == a2) {
+                        color= h.color;
+                        colorBool=true;
+                    }
+                });
+            }
+        });
+
+        if (colorBool) {
+            colorAtr = 'background-color: ' + color;
+            var td = $("<td></td>").append($("<p></p>").html(a1).addClass(color)).attr('style', colorAtr);
             row.append(td);
         }
-        else{
-            var td;
-            row.append($("<td></td>").append("<p></p>"));
+        else {
+            row.append($("<td></td>").append($("<p></p>")).html(a1));
         }
 
         var c1=aux[j].capability.activity;
-        if (c1) {
-            activity.forEach((r) => {
-                if (r.name == c1) {
-                    var c2 = r.area_of_concern;
-                    area_of_concern.forEach((h) => {
-                        if (h.name == c2) {
-                            color = h.color;
-                        }
-                    });
-                }
-            });
+        colorBool=false;
+        activity.forEach((r) => {
+            if (r.name == c1) {
+                var c2 = r.area_of_concern;
+                area_of_concern.forEach((h) => {
+                    if (h.name == c2) {
+                        color = h.color;
+                        colorBool= true;
+                    }
+                });
+            }
+        });
+
+        if (colorBool) {
             colorAtr = 'background-color: ' + color;
-            td = $("<td></td>").append("<p></p>").html(c1).addClass(color).attr('style', colorAtr);
+            td = $("<td></td>").append($("<p></p>").html(c1).addClass(color)).attr('style', colorAtr);
             row.append(td);
         }
         else{
-            row.append($("<td></td>").append("<p></p>"));
+            row.append($("<td></td>").append($("<p></p>")).html(c1));
         }
 
         var comp1=aux[j].capability.competency;
-        if (comp1) {
-            competency.forEach((r) => {
-                if (r.name == comp1) {
-                    var comp2 = r.area_of_concern;
-                    area_of_concern.forEach((h) => {
-                        if (h.name == comp2) {
-                            color = h.color;
-                        }
-                    });
-                }
-            });
+        colorBool= false;
+        competency.forEach((r) => {
+            if (r.name == comp1) {
+                var comp2 = r.area_of_concern;
+                area_of_concern.forEach((h) => {
+                    if (h.name == comp2) {
+                        color = h.color;
+                        colorBool= true;
+                    }
+                });
+            }
+        });
+
+        if (colorBool) {
             colorAtr = 'background-color: ' + color;
-            td = $("<td></td>").append("<p></p>").html(comp1).addClass(color).attr('style', colorAtr);
+            td = $("<td></td>").append($("<p></p>").html(comp1).addClass(color)).attr('style', colorAtr);
             row.append(td);
         }
         else{
-            row.append($("<td></td>").append("<p></p>"));
+            row.append($("<td></td>").append($("<p></p>")).html(comp1));
         }
 
-        td=$("<td class=''></td>").append("<p></p>").html(aux[j].composition.method);
+        td=$("<td class=''></td>").append($("<p></p>").html(aux[j].composition.method));
         row.append(td);
 
         var p1=aux[j].composition.practice;
-        if (p1) {
-            practice.forEach((r) => {
-                if (r.name == p1) {
-                    var p2 = r.area_of_concern;
-                    area_of_concern.forEach((h) => {
-                        if (h.name == p2) {
-                            color = h.color;
-                        }
-                    });
-                }
-            });
+        colorBool= false;
+        practice.forEach((r) => {
+            if (r.name == p1) {
+                var p2 = r.area_of_concern;
+                area_of_concern.forEach((h) => {
+                    if (h.name == p2) {
+                        color = h.color;
+                        colorBool= true;
+                    }
+                });
+            }
+        });
+
+        if (colorBool) {
             colorAtr = 'background-color: ' + color;
-            td = $("<td class=''></td>").append("<p></p>").html(p1).addClass(color).attr('style', colorAtr);
+            td = $("<td class=''></td>").append($("<p></p>").html(p1).addClass(color)).attr('style', colorAtr);
             row.append(td);
         }
         else{
-            row.append($("<td></td>").append("<p></p>"));
+            row.append($("<td></td>").append($("<p></p>")).html(p1));
         }
 
         var r1=aux[j].responsibility.role;
-        if (r1) {
-            role.forEach((r) => {
-                if (r.name == r1) {
-                    var r2 = r.area_of_concern;
-                    area_of_concern.forEach((h) => {
-                        if (h.name == r2) {
-                            color = h.color;
-                        }
-                    });
-                }
-            });
+        colorBool=false;
+        role.forEach((r) => {
+            if (r.name == r1) {
+                var r2 = r.area_of_concern;
+                area_of_concern.forEach((h) => {
+                    if (h.name == r2) {
+                        color = h.color;
+                        colorBool= true;
+                    }
+                });
+            }
+        });
+
+        if (colorBool) {
             colorAtr = 'background-color: ' + color;
-            td = $("<td class=''></td>").append("<p></p>").html(r1).addClass(color).attr('style', colorAtr);
+            td = $("<td class=''></td>").append($("<p></p>").html(r1).addClass(color)).attr('style', colorAtr);
             row.append(td);
         }
         else{
-            row.append($("<td></td>").append("<p></p>"));
+            row.append($("<td></td>").append($("<p></p>")).html(r1));
         }
 
-        td=$("<td class=''></td>").append("<p></p>").html(aux[j].responsibility.work_product.name);
+        td=$("<td class=''></td>").append($("<p></p>").html(aux[j].responsibility.work_product.name));
         row.append(td);
 
         td=$("<td class=''></td>").append($("<a target='_blank'></a>").html(aux[j].responsibility.work_product.image).attr('href','work_product/'+aux[j].responsibility.work_product.image));
         row.append(td);
 
         var s1=aux[j].sequence.activity_space;
-        if (s1) {
-            activity_space.forEach((r) => {
-                if (r.name == s1) {
-                    var s2 = r.area_of_concern;
-                    area_of_concern.forEach((h) => {
-                        if (h.name == s2) {
-                            color = h.color;
-                        }
-                    });
-                }
-            });
+        colorBool= false;
+        activity_space.forEach((r) => {
+            if (r.name == s1) {
+                var s2 = r.area_of_concern;
+                area_of_concern.forEach((h) => {
+                    if (h.name == s2) {
+                        color = h.color;
+                        colorBool=true;
+                    }
+                });
+            }
+        });
+
+        if (colorBool) {
             colorAtr = 'background-color: ' + color;
-            td = $("<td class=''></td>").append("<p></p>").html(s1).addClass(color).attr('style', colorAtr);
+            td = $("<td class=''></td>").append($("<p></p>").html(s1).addClass(color)).attr('style', colorAtr);
             row.append(td);
         }
         else{
-            row.append($("<td></td>").append("<p></p>"));
+            row.append($("<td></td>").append($("<p></p>")).html(s1));
         }
 
         var ph1=aux[j].sequence.phase;
-        if (ph1) {
-            phase.forEach((r) => {
-                if (r.name == ph1) {
-                    var ph2 = r.area_of_concern;
-                    area_of_concern.forEach((h) => {
-                        if (h.name == ph2) {
-                            color = h.color;
-                        }
-                    });
-                }
-            });
+        colorBool= false;
+        phase.forEach((r) => {
+            if (r.name == ph1) {
+                var ph2 = r.area_of_concern;
+                area_of_concern.forEach((h) => {
+                    if (h.name == ph2) {
+                        color = h.color;
+                        colorBool= true;
+                    }
+                });
+            }
+        });
+
+        if (colorBool) {
             colorAtr = 'background-color: ' + color;
-            td = $("<td class=''></td>").append("<p></p>").html(ph1).addClass(color).attr('style', colorAtr);
+            td = $("<td class=''></td>").append($("<p></p>").html(ph1).addClass(color)).attr('style', colorAtr);
             row.append(td);
         }
         else{
-            row.append($("<td></td>").append("<p></p>"));
+            row.append($("<td></td>").append($("<p></p>").html(ph1)));
         }
 
         table.append(row);
