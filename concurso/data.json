@@ -269,7 +269,7 @@
       "area_of_concern": "Customer"
     },
     {
-      "name": "Develop the alpha prototype",
+      "name": "Develop the alpha prototype I",
       "area_of_concern": "Solution"
     },
     {
@@ -4193,7 +4193,7 @@
         "role": "Analyst"
       },
       "capability": {
-        "activity": "Develop the alpha prototype",
+        "activity": "Develop the alpha prototype I",
         "competency": "Development"
       },
       "alpha": "Requirements"

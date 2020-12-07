@@ -191,7 +191,7 @@ function resetValues(){
     document.getElementById('dataFile').value='';
     data={};
     $("#downloadData").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
-};
+}
 
 //GET
 // JSON.parse(localStorage.getItem('estudiante'));
