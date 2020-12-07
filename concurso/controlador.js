@@ -190,6 +190,7 @@ function resetValues(){
     sessionStorage.clear();
     document.getElementById('dataFile').value='';
     data={};
+    $("#downloadData").attr('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(JSON.stringify(data)));
 };
 
 //GET
@@ -689,7 +690,7 @@ function tabAlph(){ // 10. alpha
 
     table.append($("<thead id='header'><tr id='headerInside'><td></td></tr></thead>"));
     head.forEach(function (r){ $("#headerInside").append($("<th scope='col'></th>").html(r)); });
-    
+
     let area_of_concern = JSON.parse(localStorage.getItem('area_of_concern'));
     var color;
     var colorBool;
@@ -750,157 +751,146 @@ function manifes(){ // 11. manifest
     let role = JSON.parse(localStorage.getItem('role'));
     let alpha = JSON.parse(localStorage.getItem('alpha'));
 
-    if (sessionStorage.area_of_concern){ // THIS FILTER DOES NOT AFFECT THE MANIFEST ITSELF BUT THE OTHER ENTITIES THAT DO.
-        if (sessionStorage.phase){
-            var aux1=JSON.parse(sessionStorage.phase);
-            phase.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('phase', JSON.stringify(aux1))
-        }
-        else{
-            var aux1=[];
-            phase.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('phase', JSON.stringify(aux1))
-        }
+    if (sessionStorage.area_of_concern && sessionStorage.area_of_concern!="[]"){ // THIS FILTER DOES NOT AFFECT THE MANIFEST ITSELF BUT THE OTHER ENTITIES THAT DO.
+        var aux1=[];
+        phase.forEach( (c) =>{
+            if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+        })
+        sessionStorage.setItem('area_phase', JSON.stringify(aux1))
 
-        if (sessionStorage.practice){
-            var aux1=JSON.parse(sessionStorage.practice);
-            practice.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('practice', JSON.stringify(aux1))
-        }
-        else{
-            var aux1=[];
-            practice.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('practice', JSON.stringify(aux1))
-        }
+        aux1=[];
+        practice.forEach( (c) =>{
+            if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+        })
+        sessionStorage.setItem('area_practice', JSON.stringify(aux1))
 
-        if (sessionStorage.activity_space){
-            var aux1=JSON.parse(sessionStorage.activity_space);
-            activity_space.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('activity_space', JSON.stringify(aux1))
-        }
-        else{
-            var aux1=[];
-            activity_space.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('activity_space', JSON.stringify(aux1))
-        }
+        aux1=[];
+        activity_space.forEach( (c) =>{
+            if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+        })
+        sessionStorage.setItem('area_activity_space', JSON.stringify(aux1))
 
-        if (sessionStorage.activity){
-            var aux1=JSON.parse(sessionStorage.activity);
-            activity.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('activity', JSON.stringify(aux1))
-        }
-        else{
-            var aux1=[];
-            activity.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('activity', JSON.stringify(aux1))
-        }
+        aux1=[];
+        activity.forEach( (c) =>{
+            if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+        })
+        sessionStorage.setItem('area_activity', JSON.stringify(aux1))
 
-        if (sessionStorage.competency){
-            var aux1=JSON.parse(sessionStorage.competency);
-            competency.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('competency', JSON.stringify(aux1))
-        }
-        else{
-            var aux1=[];
-            competency.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('competency', JSON.stringify(aux1))
-        }
+        aux1=[];
+        competency.forEach( (c) =>{
+            if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+        })
+        sessionStorage.setItem('area_competency', JSON.stringify(aux1))
 
-        if (sessionStorage.role){
-            var aux1=JSON.parse(sessionStorage.role);
-            role.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('role', JSON.stringify(aux1))
-        }
-        else{
-            var aux1=[];
-            role.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('role', JSON.stringify(aux1))
-        }
+        aux1=[];
+        role.forEach( (c) =>{
+            if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+        })
+        sessionStorage.setItem('area_role', JSON.stringify(aux1))
 
-        if (sessionStorage.alpha){
-            var aux1=JSON.parse(sessionStorage.alpha);
-            alpha.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('alpha', JSON.stringify(aux1))
-        }
-        else{
-            var aux1=[];
-            alpha.forEach( (c) =>{
-                if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
-            })
-            console.log(aux1);
-            sessionStorage.setItem('alpha', JSON.stringify(aux1))
+        aux1=[];
+        alpha.forEach( (c) =>{
+            if (sessionStorage.area_of_concern.indexOf(c.area_of_concern)>=0) aux1.push(c.name);
+        })
+        sessionStorage.setItem('area_alpha', JSON.stringify(aux1))
+
+        var show;
+        aux1=[];
+        manifests.forEach((r)=>{
+            show=false;
+            if (sessionStorage.area_phase!="[]"){
+                if (JSON.parse(sessionStorage.area_phase).indexOf(r.sequence.phase)>=0) show= true;
+            }
+            if (sessionStorage.area_practice!="[]"){
+                if (JSON.parse(sessionStorage.area_practice).indexOf(r.composition.practice)>=0) show= true;
+            }
+            if (sessionStorage.area_activity_space!="[]"){
+                if (JSON.parse(sessionStorage.area_activity_space).indexOf(r.sequence.activity_space)>=0) show= true;
+            }
+            if (sessionStorage.area_activity!="[]"){
+                if (JSON.parse(sessionStorage.area_activity).indexOf(r.capability.activity)>=0) show= true;
+            }
+            if (sessionStorage.area_competency!="[]"){
+                if (JSON.parse(sessionStorage.area_competency).indexOf(r.capability.competency)>=0) show= true;
+            }
+            if (sessionStorage.area_role!="[]"){
+                if (JSON.parse(sessionStorage.area_role).indexOf(r.responsibility.role)>=0) show= true;
+            }
+            if (sessionStorage.area_alpha!="[]"){
+                if (JSON.parse(sessionStorage.area_alpha).indexOf(r.alpha)>=0) show= true;
+            }
+            if (show) aux1.push(r);
+        });
+
+        aux1.forEach((r)=>{
+            if (sessionStorage.phase && sessionStorage.phase!="[]"){
+                if (sessionStorage.phase.indexOf(r.sequence.phase)<0) return false;
+            }
+            if (sessionStorage.practice && sessionStorage.practice!="[]"){
+                if (sessionStorage.practice.indexOf(r.composition.practice)<0) return false;
+            }
+            if (sessionStorage.method && sessionStorage.method!="[]"){
+                if (sessionStorage.method.indexOf(r.composition.method)<0) return false;
+            }
+            if (sessionStorage.activity_space && sessionStorage.activity_space!="[]"){
+                if (sessionStorage.activity_space.indexOf(r.sequence.activity_space)<0) return false;
+            }
+            if (sessionStorage.activity && sessionStorage.activity!="[]"){
+                if (sessionStorage.activity.indexOf(r.capability.activity)<0) return false;
+            }
+            if (sessionStorage.competency && sessionStorage.competency!="[]"){
+                if (sessionStorage.competency.indexOf(r.capability.competency)<0) return false;
+            }
+            if (sessionStorage.role && sessionStorage.role!="[]"){
+                if (sessionStorage.role.indexOf(r.responsibility.role)<0) return false;
+            }
+            if (sessionStorage.work_product && sessionStorage.work_product!="[]"){
+                if (sessionStorage.work_product.indexOf(r.responsibility.work_product.name)<0) return false;
+            }
+            if (sessionStorage.alpha && sessionStorage.alpha!="[]"){
+                if (sessionStorage.alpha.indexOf(r.alpha)<0) return false;
+            }
+            aux.push(r);
+        });
+    }
+    else {
+        // IF THE FILTER MUST BE DONE OR NOT
+        if ((sessionStorage.phase && sessionStorage.phase != "[]") || (sessionStorage.practice && sessionStorage.practice != "[]") || (sessionStorage.method && sessionStorage.method != "[]") || (sessionStorage.activity_space && sessionStorage.activity_space != "[]") || (sessionStorage.activity && sessionStorage.activity != "[]") || (sessionStorage.competency && sessionStorage.competency != "[]") || (sessionStorage.role && sessionStorage.role != "[]") || (sessionStorage.work_product && sessionStorage.work_product != "[]") || (sessionStorage.alpha && sessionStorage.alpha != "[]")) {
+            manifests.forEach((r) => {
+                if (sessionStorage.phase && sessionStorage.phase != "[]") {
+                    if (sessionStorage.phase.indexOf(r.sequence.phase) < 0) return false;
+                }
+                if (sessionStorage.practice && sessionStorage.practice != "[]") {
+                    if (sessionStorage.practice.indexOf(r.composition.practice) < 0) return false;
+                }
+                if (sessionStorage.method && sessionStorage.method != "[]") {
+                    if (sessionStorage.method.indexOf(r.composition.method) < 0) return false;
+                }
+                if (sessionStorage.activity_space && sessionStorage.activity_space != "[]") {
+                    if (sessionStorage.activity_space.indexOf(r.sequence.activity_space) < 0) return false;
+                }
+                if (sessionStorage.activity && sessionStorage.activity != "[]") {
+                    if (sessionStorage.activity.indexOf(r.capability.activity) < 0) return false;
+                }
+                if (sessionStorage.competency && sessionStorage.competency != "[]") {
+                    if (sessionStorage.competency.indexOf(r.capability.competency) < 0) return false;
+                }
+                if (sessionStorage.role && sessionStorage.role != "[]") {
+                    if (sessionStorage.role.indexOf(r.responsibility.role) < 0) return false;
+                }
+                if (sessionStorage.work_product && sessionStorage.work_product != "[]") {
+                    if (sessionStorage.work_product.indexOf(r.responsibility.work_product.name) < 0) return false;
+                }
+                if (sessionStorage.alpha && sessionStorage.alpha != "[]") {
+                    if (sessionStorage.alpha.indexOf(r.alpha) < 0) return false;
+                }
+                aux.push(r);
+            });
+        } else {
+            aux = manifests;
         }
     }
 
-    manifests.forEach((r)=>{
-        if (sessionStorage.phase && sessionStorage.phase!="[]"){
-            if (sessionStorage.phase.indexOf(r.sequence.phase)<0) return false;
-        }
-        if (sessionStorage.practice && sessionStorage.practice!="[]"){
-            if (sessionStorage.practice.indexOf(r.composition.practice)<0) return false;
-        }
-        if (sessionStorage.method && sessionStorage.method!="[]"){
-            if (sessionStorage.method.indexOf(r.composition.method)<0) return false;
-        }
-        if (sessionStorage.activity_space && sessionStorage.activity_space!="[]"){
-            if (sessionStorage.activity_space.indexOf(r.sequence.activity_space)<0) return false;
-        }
-        if (sessionStorage.activity && sessionStorage.activity!="[]"){
-            if (sessionStorage.activity.indexOf(r.capability.activity)<0) return false;
-        }
-        if (sessionStorage.competency && sessionStorage.competency!="[]"){
-            if (sessionStorage.competency.indexOf(r.capability.competency)<0) return false;
-        }
-        if (sessionStorage.role && sessionStorage.role!="[]"){
-            if (sessionStorage.role.indexOf(r.responsibility.role)<0) return false;
-        }
-        if (sessionStorage.work_product && sessionStorage.work_product!="[]"){
-            if (sessionStorage.work_product.indexOf(r.responsibility.work_product.name)<0) return false;
-        }
-        if (sessionStorage.alpha && sessionStorage.alpha!="[]"){
-            if (sessionStorage.alpha.indexOf(r.alpha)<0) return false;
-        }
-        aux.push(r);
-    });
     console.log(manifests);
     console.log(aux);
 
